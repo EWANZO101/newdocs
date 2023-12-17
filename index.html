@@ -27,6 +27,8 @@
 
         h1 {
             font-size: 2.5em;
+            color: #ffffff; /* Ensure text color is visible against the background */
+            margin-bottom: 20px; /* Add space between header and buttons */
         }
 
         main {
@@ -35,27 +37,20 @@
         }
 
         .navbar {
-    background-color: red; /* Change to red */
-    padding: 10px 0; /* Keep padding */
-}
-
-        .navbar .max-width {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 1200px; /* Adjust this value to fit your layout */
-            margin: 0 auto; /* Centers the navbar horizontally */
-            padding: 0 20px;
+            background-color: red;
+            padding: 10px 0;
+            text-align: center; /* Center the navbar content */
         }
 
         .menu {
             list-style-type: none;
-            display: flex;
-            align-items: center;
+            display: inline-block; /* Display menu items in a line */
+            margin: 0;
+            padding: 0;
         }
 
         .menu li {
+            display: inline-block; /* Display menu items in a line */
             margin-right: 15px;
         }
 
@@ -89,7 +84,6 @@
     </style>
 </head>
 <body>
-  
     <main>
         <nav class="navbar">
             <div class="max-width">
@@ -104,14 +98,13 @@
                     <!-- Login and Signup links -->
                     <li><a href="login.html" class="menu-btn">Login</a></li>
                     <li><a href="signup.html" class="menu-btn">Signup</a></li>
-                    <header>
-                        <h1>Welcome to Swift Peak Hosting Documentation</h1>
-                    </header>
                 </ul>
             </div>
         </nav>
+        <header>
+            <h1>Welcome to Swift Peak Hosting Documentation</h1>
+        </header>
     </main>
-    
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
