@@ -36,84 +36,79 @@
         }
 
         /* Navbar styling */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            padding: 30px 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.5);
+        }
 
-        /* ... (unchanged) ... */
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar .menu li {
+            margin-right: 15px;
+        }
+
+        .navbar .menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: crimson;
+        }
 
         /* Home section styling */
-        .home {
-            display: flex;
-            background: url("images/img-counts-bg.png") no-repeat center;
-            height: 100vh;
-            color: #fff;
-            min-height: 500px;
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Ubuntu', sans-serif;
-            align-items: center;
-            justify-content: center;
-        }
 
-        .home .home-content {
-            text-align: center;
-        }
-
-        .home .home-content .text-1 {
-            font-size: 27px;
-            margin-bottom: 20px;
-        }
-
-        .home .home-content .text-2 {
-            font-size: 75px;
-            font-weight: 600;
-            margin-left: -3px;
-            margin-bottom: 20px;
-        }
-
-        .home .home-content .text-3 {
-            font-size: 40px;
-            margin: 5px 0;
-        }
-
-        .home .home-content .text-3 span {
-            color: crimson;
-            font-weight: 500;
-        }
-
-        .home .home-content a {
-            display: inline-block;
-            background: crimson;
-            color: #fff;
-            font-size: 25px;
-            padding: 12px 36px;
-            margin-top: 20px;
-            font-weight: 400;
-            border-radius: 6px;
-            border: 2px solid crimson;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .home .home-content a:hover {
-            color: crimson;
-            background: none;
-        }
+        /* ... (unchanged) ... */
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="max-width">
+            <ul class="menu">
+                <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
+                <li><a href="about.html" class="menu-btn">About</a></li>
+                <li><a href="services.html" class="menu-btn">Services</a></li>
+                <li><a href="coming_soon.html" class="menu-btn">Staffdocs</a></li>
+                <li><a href="#teams" class="menu-btn">#Teams</a></li>
+                <li><a href="TOS.html" class="menu-btn">T&C</a></li>
+                <li><a href="urls.html" class="menu-btn">quick links</a></li>
+                <!-- Login and Signup links -->
+                <li><a href="login.html" class="menu-btn">Login</a></li>
+                <li><a href="signup.html" class="menu-btn">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main>
-        <nav class="navbar">
-            <!-- ... (unchanged) ... -->
-        </nav>
         <header>
             <h1>Welcome to Swift Peak Hosting Documentation</h1>
         </header>
         <section class="home">
             <div class="max-width">
                 <div class="home-content">
-                    <div class="text-1">Your text here</div>
-                    <div class="text-2">Your text here</div>
-                    <div class="text-3">Your text here <span>with span</span></div>
-                    <a href="#">Your Button</a>
+                    <div class="text-1">welcome </div>
+                    <div class="text-2">TO </div>
+                    <div class="text-3"> Swift peak hosting docs<span>with span</span></div>
+                    <a href="#"></a>
                 </div>
             </div>
         </section>
