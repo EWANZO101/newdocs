@@ -1,90 +1,48 @@
-/* Resetting default styles */
-* {
+/* Reset default margin and padding */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Body styles */
-  body {
+}
+
+/* Dark modern background and text styles */
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
     font-family: Arial, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.1em;
     line-height: 1.6;
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #1e1e1e;
-    padding: 20px 0;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .logo h1 {
-    font-size: 24px;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    color: #ffffff;
-    text-decoration: none;
-  }
-  
-  /* Hero section styles */
-  #hero {
-    background-image: url('path/to/your-image.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+footer {
     text-align: center;
-  }
-  
-  .hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  /* Other sections styles (About, Services, Contact) */
-  section {
-    padding: 80px 20px;
-  }
-  
-  section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  /* Footer styles */
-  footer {
-    background-color: #1e1e1e;
-    text-align: center;
-    padding: 20px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-  
+    padding: 10px 0;
+    background-color: #333333;
+}
+footer p {
+    font-size: 0.9em;
+}
