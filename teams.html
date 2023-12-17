@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <style>
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4; /* Default background color */
+    }
+    /* Styles for the teams section */
+    .teams {
+      background-color: #333; /* Dark gray background */
+      color: #fff; /* Text color */
+      padding: 50px 0;
+      text-align: center;
+    }
+    .title {
+      margin-bottom: 30px;
+    }
+    .carousel {
+      display: flex;
+      justify-content: center;
+    }
+    .card {
+      margin: 0 10px;
+    }
+    .box {
+      background-color: #444; /* Darker gray box background */
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    .box img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+    .text {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #ccc; /* Light gray text */
+    }
+  </style>
+</head>
+<body>
+  <!-- Teams section start -->
+  <section class="teams" id="teams">
+    <div class="max-width">
+      <h2 class="title">Our teams</h2>
+      <div class="carousel owl-carousel">
+        <div class="card">
+          <div class="box">
+            <img src="https://via.placeholder.com/150" alt="Director">
+            <div class="text">Director</div>
+            <p>#</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="https://via.placeholder.com/150" alt="Ast Director">
+            <div class="text">Ast Director</div>
+            <p>#</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="https://via.placeholder.com/150" alt="Management Team">
+            <div class="text">Management Team</div>
+            <p>#</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <img src="https://via.placeholder.com/150" alt="CustomerSupport">
+            <div class="text">CustomerSupport</div>
+            <p>#</p>
+          </div>
+        </div>
+        <!-- Add more team members as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Your existing content and scripts -->
+
+  <!-- Owl Carousel script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script>
+    // Initialize Owl Carousel
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        responsive:{
+          0:{
+            items:1,
+            nav:true
+          },
+          600:{
+            items:3,
+            nav:false
+          },
+          1000:{
+            items:4,
+            nav:true,
+            loop:false
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

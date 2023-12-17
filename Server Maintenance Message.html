@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Server Maintenance Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5; /* Light mode background color */
+      color: #333; /* Light mode text color */
+    }
+    body.dark-mode {
+      background-color: #333; /* Dark mode background color */
+      color: #f5f5f5; /* Dark mode text color */
+    }
+    h1 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    .discord-link {
+      color: #0077FF;
+      text-decoration: none;
+    }
+    .toggle-btn {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background-color: #0077FF;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h1>Sorry for the Inconvenience!</h1>
+  <p>under Development</p>
+  <p>Thank you for your patience!</p>
+  <p>Check out our <a href="https://discord.gg/yJ3q26TJKp" class="discord-link" target="_blank">Discord</a> for more current updates.</p>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+</body>
+</html>

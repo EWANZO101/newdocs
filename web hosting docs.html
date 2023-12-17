@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+            background-color: #fff; /* Default background color */
+            transition: background-color 0.5s ease, color 0.5s ease; /* Transition for background and text color */
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.5s ease, color 0.5s ease; /* Transition for background and text color */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Slider Styles */
+        .dark-mode-slider {
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-text {
+            margin-right: 10px;
+        }
+
+        /* Style the toggle switch */
+        .dark-mode-toggle {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: #ccc;
+            outline: none;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style the slider circle */
+        .dark-mode-toggle::before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Move the circle when toggled */
+        input.dark-mode-toggle:checked::before {
+            transform: translateX(30px);
+        }
+
+        /* Adjust colors for checked state */
+        input.dark-mode-toggle:checked {
+            background-color: #3d9970; /* Green color when checked */
+        }
+
+        /* Adjust colors for circle when checked */
+        input.dark-mode-toggle:checked::before {
+            background-color: #fff; /* White color when checked */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Minecraft Server Documentation</h1>
+        <div class="dark-mode-slider">
+            <span class="dark-mode-text">Dark Mode:</span>
+            <label class="switch">
+                <input type="checkbox" class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Your content goes here -->
+
+    <section>
+        <h2>Introduction</h2>
+        <p>#</p>
+    </section>
+
+    <section>
+        <h2>Getting Started</h2>
+        <p>#</p>
+        <ol>
+            <li>#</li>
+            <li>#</li>
+            <li>#</li>
+            <li># </li>
+            <li>#</li>
+            <li>#</li>
+            <li>#</li>
+            <li>#</li>
+            <div class="command">#</div>
+        </ol>
+    </section>
+
+    <section>
+        <h2>How Do I Join My Server?</h2>
+        <p>#</p>
+        <!-- Include a list of server rules -->
+    </section>
+    <style>
+        .command {
+            background-color: #f0f0f0; /* Light grayish-green color */
+            color: #003366; /* Dark blue color for text */
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <section>
+        <h2>Basic  Commands</h2>
+        <p>Here are some essential commands to enhance your gameplay:</p>
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <div class="command">#
+        <!-- Include more commands as needed -->
+    </section>
+
+    <section>
+        <h2>Plugins</h2>
+        <p>Here are some Popular Plugins Big servers use.</p>
+        <div class="command"> <a href="#">EssentialsX</a> </div>
+        <div class="command"> <a href="#">WorldEdit</a> </div>
+        <div class="command"> <a href="#">Vault</a> </div>
+        <div class="command"> <a href="#">LuckPerms</a> </div>
+        <div class="command"> <a href="#">TabList</a> </div>
+        <!-- List and describe server plugins -->
+    </section>
+
+
+    <footer>
+        <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function checkTime() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+
+            // Set the start and end hour for dark mode
+            const startHour = 17; // 8 PM (24-hour format)
+            const endHour = 10; // 6 AM (24-hour format)
+
+            const body = document.body;
+
+            // Check if the current hour is within the specified range for dark mode
+            if (currentHour >= startHour || currentHour < endHour) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        }
+
+        // Call the function initially and then every minute (for real-time updates)
+        checkTime();
+        setInterval(checkTime, 60000); // Check every minute
+    </script>
+    <script>
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        const body = document.querySelector('body');
+
+        darkModeToggle.addEventListener('change', function() {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

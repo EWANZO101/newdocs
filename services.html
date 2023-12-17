@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pricing</title>
+  <style>
+    /* Dark Mode Styles */
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('path_to_background_image.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .pricing-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 50px 0;
+    }
+    
+    /* Pricing Card Styles */
+    .pricing-card {
+      width: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .pricing-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .pricing-card h2,
+    .pricing-card p {
+      color: #fff;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 5px;
+    }
+
+    .plan {
+      padding: 15px;
+      border: 1px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    /* Web Hosting Image Styles */
+    .web-hosting-image {
+      width: 150px;
+      height: auto;
+      border: 1px solid #fff;
+      margin: 20px auto;
+      display: block;
+    }
+
+    /* Web Hosting Plans Section Styles */
+    .web-hosting-plans {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 50px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .view-plans-btn {
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  
+        /* Add flashing animation */
+        @keyframes flashing {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        /* Apply flashing animation to the announcement */
+        .announcement {
+            font-size: 30px;
+            color: red;
+            animation: flashing 1.9s infinite;
+        }
+        .pricing-card h3 {
+      display: none;
+    }
+    </style>
+</head>
+<body>
+  <section class="announcement" style="font-size: 25px; color: red; text-align: center;">
+    <div style="width: 80%; margin: 0 auto;">
+      <!-- Your text goes here -->
+      We're in the process of relocating our servers, so we're unable to take on new clients at the moment. We expect to resume services by January 15, 2024.
+    </div>
+  </section>
+  <section>
+    <h1>Swift Peak Hosting Prices</h1>
+    <div class="pricing-section">
+      <div class="pricing-card">
+        <h2>FiveM Hosting</h2>
+        <p>£/month</p>
+        <button id="viewFivemPlans">View FiveM Plans</button>
+      </div>
+    
+      <div class="pricing-card">
+        <h2>Minecraft Plans</h2>
+        <p>£/month</p>
+        <button id="viewMinecraftPlans">View Minecraft Plans</button>
+      </div>
+    
+      <div class="pricing-card">
+        <h2>Rust Hosting</h2>
+        <p>£/month</p>
+        <button id="viewRustPlans">View Rust Plans</button>
+      </div>
+    
+      <div class="pricing-card">
+        <h2>Web Hosting</h2>
+        <p>Check out our plans</p>
+        <button id="viewWebHostingPlans">View Web Hosting Plans</button>
+      </div>
+    
+      <div class="pricing-card">
+        <h3>SnailyCAD</h3>
+        <p>£/month</p>
+        <button id="#snailyPlans"></button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("viewWebHostingPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'WebHostingplans.html';
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewRustPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'rustplans.html';
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewMinecraftPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'minecraftplans.html';
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewFivemPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'fivemplans.html';
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+</body>
+</html>

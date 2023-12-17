@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect Links</title>
+  <style>
+    body {
+      background-color: #333; /* Dark background color */
+      color: #fff; /* Text color */
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center; /* Center items horizontally */
+      align-items: center; /* Center items vertically */
+      height: 100vh; /* Full viewport height */
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    h2 {
+      text-align: center;
+    }
+    .links-container {
+      text-align: center; /* Center content horizontally */
+    }
+  </style>
+</head>
+<body>
+
+    <div class="links-container"> <!-- Wrapping links in a div for centering -->
+      <h2>check out links below </h2> <!-- Heading above the links -->
+      <ul>
+        <li><a href="https://phpmyadmin.swiftpeakhosting.co.uk" target="_blank">PHPMyAdmin</a></li>
+        <li><a href="https://proxmox.swiftpeakhosting.co.uk" target="_blank">Proxmox Panel</a></li>
+        <li><a href="https://store.swiftpeakhosting.co.uk/" target="_blank">Store</a></li>
+      </ul>
+    </div>
+
+  <script>
+    // Redirect function
+    function redirectTo(url) {
+      window.location.href = url;
+    }
+
+    // Adding click event listeners to the links
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default link behavior
+        redirectTo(this.getAttribute('href')); // Redirect to the clicked URL
+      });
+    });
+  </script>
+
+</body>
+</html>

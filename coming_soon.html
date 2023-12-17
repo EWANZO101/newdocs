@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        h1, p {
+            color: #ffcc00; /* Highlighted text color */
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .countdown {
+            font-size: 2em;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .toggle-label {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-checkbox {
+            display: none;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: #fff;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        .lighter-text {
+            color: #999;
+            font-weight: lighter;
+        }
+
+        body.dark-mode {
+            background-color: #222;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body class="light-mode"> <!-- Set default class to "light-mode" -->
+    <header>
+        <h1>Coming Soon Swift Peak Docs</h1>
+        <p class="lighter-text">Our website is under construction.</p>
+        <p class="lighter-text">We'll be back shortly!</p>
+
+        <!-- Countdown Timer (Optional) -->
+        <div class="countdown" id="countdown"></div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="toggle-container">
+            <label class="toggle-label">
+                <input type="checkbox" class="toggle-checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <script>
+        const launchDate = new Date('2024-01-15T00:00:00Z').getTime();
+
+        const timer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = `${days} days ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                clearInterval(timer);
+                document.getElementById('countdown').innerHTML = 'We are live!';
+            }
+        }, 1000);
+
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function initializeDarkMode() {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            if (darkModeToggle.checked) {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        window.onload = initializeDarkMode;
+    </script>
+</body>
+</html>

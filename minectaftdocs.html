@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Server Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px;
+            background-color: #fff; /* Default background color */
+            transition: background-color 0.5s ease, color 0.5s ease; /* Transition for background and text color */
+        }
+
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #333; /* Dark mode background color */
+            color: #fff; /* Dark mode text color */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.5s ease, color 0.5s ease; /* Transition for background and text color */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Slider Styles */
+        .dark-mode-slider {
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-text {
+            margin-right: 10px;
+        }
+
+        /* Style the toggle switch */
+        .dark-mode-toggle {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: #ccc;
+            outline: none;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Style the slider circle */
+        .dark-mode-toggle::before {
+            content: '';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #fff;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Move the circle when toggled */
+        input.dark-mode-toggle:checked::before {
+            transform: translateX(30px);
+        }
+
+        /* Adjust colors for checked state */
+        input.dark-mode-toggle:checked {
+            background-color: #3d9970; /* Green color when checked */
+        }
+
+        /* Adjust colors for circle when checked */
+        input.dark-mode-toggle:checked::before {
+            background-color: #fff; /* White color when checked */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #3498db;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Minecraft Server Documentation</h1>
+        <div class="dark-mode-slider">
+            <span class="dark-mode-text">Dark Mode:</span>
+            <label class="switch">
+                <input type="checkbox" class="dark-mode-toggle" onclick="toggleDarkMode()">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <!-- Your content goes here -->
+
+    <section>
+        <h2>Introduction</h2>
+        <p>Step into the expansive universe of Minecraft game server hosting with SwiftPeakHosting, where your gaming aspirations find a home. Our comprehensive documentation is your key to unlocking the full potential of hosting excellence. At SwiftPeakHosting, we take pride in providing a seamless and efficient platform for Minecraft enthusiasts to create, manage, and customize their gaming experiences. Delve into these detailed documents to navigate the intricacies of our hosting services, empowering you to optimize server performance, configure plugins, and ensure a smooth gameplay environment. Whether you're a seasoned server administrator or a newcomer seeking a user-friendly setup, our documentation is your go-to resource. Join us on this thrilling journey as we support your ambitions to build and host the ultimate Minecraft community. Welcome to SwiftPeakHosting – where hosting meets peak performance!</p>
+    </section>
+
+    <section>
+        <h2>Getting Started</h2>
+        <p>Follow these steps to launch your brand new Minecraft Server</p>
+        <ol>
+            <li>Launch Remote Desktop</li>
+            <li>Enter your server credentials. (all information will be on the website.)</li>
+            <li>Once you have access to your VPS, you'll find a folder named "Important-FIles" on the Desktop. Open This.</li>
+            <li>Next, You'll see the basic Papermc server files, with a (start.bat). Please open the (start.bat) with notepad or visual_studio_code. </li>
+            <li>There will be a PORT line, Where it says "Change-Port", please change this to the port we have assigned you on our website.</li>
+            <li>After these steps. Your server is almost ready!</li>
+            <li>Please launch the (start.bat), this will start setting up your server.</li>
+            <li>Now congratulations your server is setup with SwiftPeakHosting!</li>
+            <div class="command">All information about how to join the server is listed bellow.</div>
+        </ol>
+    </section>
+
+    <section>
+        <h2>How Do I Join My Server?</h2>
+        <p>To join your own Minecraft server, launch the Minecraft Java Edition on your computer. Click on "Multiplayer" and then "Add Server." Enter a name for your server and input the IP address/Domain Listed on our Website. Save the changes, select your server from the list, and click "Join Server" to enter your own Minecraft Server</p>
+        <!-- Include a list of server rules -->
+    </section>
+    <style>
+        .command {
+            background-color: #f0f0f0; /* Light grayish-green color */
+            color: #003366; /* Dark blue color for text */
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+    </style>
+    
+    <section>
+        <h2>Basic Minecraft Commands</h2>
+        <p>Here are some essential commands to enhance your gameplay:</p>
+        <div class="command">/help</div> - Displays a list of available commands.
+        <div class="command">/gamemode [mode] [player]</div> - Changes the game mode of a player (Survival, Creative, Adventure, or Spectator).
+        <div class="command">/give [player] [item] [amount]</div> - Gives items to a player.
+        <div class="command">/summon [entity]</div> - Summons an entity (mob or object) at the player's location.
+        <div class="command">/kill [target]</div> - Kills a player or entity.
+        <div class="command">/time set [value]</div> - Sets the time of the day (value can be day, night, or specific time).
+        <div class="command">/weather [weather] [duration]</div> - Changes the weather (clear, rain, or thunderstorm) and its duration.
+        <div class="command">/xp [amount] [player]</div> - Gives experience points to a player.
+        <div class="command">/tp [player] [x] [y] [z]</div> - Teleports a player to specific coordinates.
+        <div class="command">/say [message]</div> - Sends a message to all players in the server.
+        <!-- Include more commands as needed -->
+    </section>
+
+    <section>
+        <h2>Plugins</h2>
+        <p>Here are some Popular Plugins Big servers use.</p>
+        <div class="command"> <a href="https://www.spigotmc.org/resources/essentialsx.9089/">EssentialsX</a> </div>
+        <div class="command"> <a href="https://dev.bukkit.org/projects/worldedit">WorldEdit</a> </div>
+        <div class="command"> <a href="https://dev.bukkit.org/projects/vault">Vault</a> </div>
+        <div class="command"> <a href="https://luckperms.net/">LuckPerms</a> </div>
+        <div class="command"> <a href="https://www.spigotmc.org/resources/animated-tab-tablist.46229/">TabList</a> </div>
+        <!-- List and describe server plugins -->
+    </section>
+
+
+    <footer>
+        <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function checkTime() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+
+            // Set the start and end hour for dark mode
+            const startHour = 17; // 8 PM (24-hour format)
+            const endHour = 10; // 6 AM (24-hour format)
+
+            const body = document.body;
+
+            // Check if the current hour is within the specified range for dark mode
+            if (currentHour >= startHour || currentHour < endHour) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        }
+
+        // Call the function initially and then every minute (for real-time updates)
+        checkTime();
+        setInterval(checkTime, 60000); // Check every minute
+    </script>
+    <script>
+        const darkModeToggle = document.querySelector('.dark-mode-toggle');
+        const body = document.querySelector('body');
+
+        darkModeToggle.addEventListener('change', function() {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
