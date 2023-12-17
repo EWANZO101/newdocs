@@ -36,52 +36,122 @@
             padding: 20px;
         }
 
+        /* navbar styling */
         .navbar {
-            background-color: #3498db; /* Calm blue color */
-            padding: 10px 0;
-            text-align: center; /* Center the navbar content */
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            padding: 30px 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.3s ease;
         }
 
-        .menu {
-            list-style-type: none;
-            display: inline-block; /* Display menu items in a line */
-            margin: 0;
-            padding: 0;
+        .navbar.sticky {
+            padding: 15px 0;
+            background: black;
         }
 
-        .menu li {
-            display: inline-block; /* Display menu items in a line */
-            margin-right: 15px;
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        /* Styling for menu buttons */
-        .menu-btn {
+        .navbar .logo a {
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .navbar .logo a span {
+            color: yellowgreen;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.sticky .logo a span {
+            color: #fff;
+        }
+
+        .navbar .menu li {
+            list-style: none;
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #444444;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: background-color 0.3s ease;
         }
 
-        .menu-btn:hover {
-            background-color: #666666;
+        .navbar .menu li a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 25px;
+            transition: color 0.3s ease;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333333;
-            margin-top: auto; /* Pushes the footer to the bottom */
+        .navbar .menu li a:hover {
+            color: crimson;
         }
 
-        footer p {
-            font-size: 0.9em;
+        .navbar.sticky .menu li a:hover {
+            color: #fff;
         }
 
-        /* Rest of your styles... */
+        /* home section styling */
+        .home {
+            display: flex;
+            background: url("images/img-counts-bg.png") no-repeat center;
+            height: 100vh;
+            color: #fff;
+            min-height: 500px;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Ubuntu', sans-serif;
+        }
 
+        .home .max-width {
+            width: 100%;
+            display: flex;
+        }
+
+        .home .max-width .row {
+            margin-right: 0;
+        }
+
+        .home .home-content .text-1 {
+            font-size: 27px;
+        }
+
+        .home .home-content .text-2 {
+            font-size: 75px;
+            font-weight: 600;
+            margin-left: -3px;
+        }
+
+        .home .home-content .text-3 {
+            font-size: 40px;
+            margin: 5px 0;
+        }
+
+        .home .home-content .text-3 span {
+            color: crimson;
+            font-weight: 500;
+        }
+
+        .home .home-content a {
+            display: inline-block;
+            background: crimson;
+            color: #fff;
+            font-size: 25px;
+            padding: 12px 36px;
+            margin-top: 20px;
+            font-weight: 400;
+            border-radius: 6px;
+            border: 2px solid crimson;
+            transition: all 0.3s ease;
+        }
+
+        .home .home-content a:hover {
+            color: crimson;
+            background: none;
+        }
     </style>
 </head>
 <body>
@@ -105,6 +175,17 @@
         <header>
             <h1>Welcome to Swift Peak Hosting Documentation</h1>
         </header>
+        <section class="home">
+            <div class="max-width">
+                <!-- Home section content -->
+                <div class="home-content">
+                    <div class="text-1">Your text here</div>
+                    <div class="text-2">Your text here</div>
+                    <div class="text-3">Your text here <span>with span</span></div>
+                    <a href="#">Your Button</a>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
