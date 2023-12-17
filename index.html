@@ -18,10 +18,12 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text */
         }
 
         header {
-            text-align: center;
             padding: 20px 0;
         }
 
@@ -31,7 +33,6 @@
         }
 
         main {
-            flex: 1;
             padding: 20px;
         }
 
@@ -81,13 +82,10 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Swift Peak Hosting Documentation</h1>
-    </header>
-
     <nav class="navbar">
         <div class="max-width">
             <ul class="menu">
+                <!-- Your menu items here -->
                 <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
                 <li><a href="about.html" class="menu-btn">About</a></li>
                 <li><a href="services.html" class="menu-btn">Services</a></li>
@@ -102,10 +100,15 @@
         </div>
     </nav>
 
+    <header>
+        <h1>Welcome to Swift Peak Hosting Documentation</h1>
+    </header>
+
     <main>
         <section class="home">
             <div class="max-width">
                 <div class="home-content">
+                    <!-- Your home content here -->
                     <div class="text-1"></div>
                     <div class="text-2"></div>
                     <div class="text-3"><span></span></div>
