@@ -30,29 +30,33 @@
             padding: 20px;
         }
 
-        section {
-            margin-bottom: 30px;
+        nav.navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        h2 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
+        .navbar .max-width {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Adjust this value to fit your layout */
+            margin: 0 auto; /* Centers the navbar horizontally */
+            padding: 0 20px;
         }
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
+        .menu {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333333;
+        .menu li {
+            margin-right: 15px;
         }
 
-        footer p {
-            font-size: 0.9em;
-        }
+        /* Rest of your styles... */
     </style>
 </head>
 <body>
@@ -60,33 +64,26 @@
         <h1>Welcome to Swift Peak Hosting Documentation</h1>
     </header>
     <main>
-        <section>
-            <nav class="navbar">
-                <div class="max-width">
-                    <div class="logo"><a href="https://cdn.discordapp.com/attachments/442981760708378625/1182432405655666780/4rBkgcQ.png?ex=6584acfe&is=657237fe&hm=f4b9def6aacaea1070abf9e66b563da0e02e99f45df58b618185abbb4b327c76&">Swift Peak Hosting</a></div>
-                    <ul class="menu">
-                        <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
-                        <li><a href="about.html" class="menu-btn">About</a></li>
-                        <li><a href="services.html" class="menu-btn">Services</a></li>
-                        <li><a href="coming_soon.html" class="menu-btn">Staffdocs</a></li>
-                        <li><a href="#teams" class="menu-btn">#Teams</a></li>
-                        <li><a href="TOS.html" class="menu-btn">T&C</a></li>
-                        <li><a href="urls.html" class="menu-btn">quick links</a></li>
-                        <!-- Login and Signup links -->
-                        <li><a href="login.html" class="menu-btn">Login</a></li>
-                        <li><a href="signup.html" class="menu-btn">Signup</a></li>
-                    </ul>
-                    <div class="menu-btn">
-                        <!-- Include Font Awesome icon here if needed -->
-                        <!-- Example: <i class="fas fa-bars"></i> -->
-                    </div>
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="https://cdn.discordapp.com/attachments/442981760708378625/1182432405655666780/4rBkgcQ.png?ex=6584acfe&is=657237fe&hm=f4b9def6aacaea1070abf9e66b563da0e02e99f45df58b618185abbb4b327c76&">Swift Peak Hosting</a></div>
+                <ul class="menu">
+                    <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
+                    <li><a href="about.html" class="menu-btn">About</a></li>
+                    <li><a href="services.html" class="menu-btn">Services</a></li>
+                    <li><a href="coming_soon.html" class="menu-btn">Staffdocs</a></li>
+                    <li><a href="#teams" class="menu-btn">#Teams</a></li>
+                    <li><a href="TOS.html" class="menu-btn">T&C</a></li>
+                    <li><a href="urls.html" class="menu-btn">quick links</a></li>
+                    <!-- Login and Signup links -->
+                    <li><a href="login.html" class="menu-btn">Login</a></li>
+                    <li><a href="signup.html" class="menu-btn">Signup</a></li>
+                </ul>
+                <div class="menu-btn">
+                    <!-- Any additional content for the menu button -->
                 </div>
-            </nav>
-        </section>
-        <section>
-            <!-- Content for additional sections can be added here -->
-        </section>
-        <!-- Add more sections as needed -->
+            </div>
+        </nav>
     </main>
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
