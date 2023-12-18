@@ -221,45 +221,21 @@
                     // You can also add a visual cue to show the button is disabled, for example:
                     button.style.pointerEvents = 'none';
                     button.style.opacity = '0.5';
-                    alert(`The ${buttonId} button is currently disabled.`);
+                    alert(`This button is closed until January 15, 2024.`);
                 });
             }
         }
     
         // Set individual button states
-        function setButtonStates() {
-            handleButtonState('customerdocs');
-            handleButtonState('about');
-            handleButtonState('services');
-            handleButtonState('staffdocs');
-            handleButtonState('teams');
-            handleButtonState('tnc');
-            handleButtonState('links');
-            handleButtonState('login');
-            handleButtonState('signup');
-        }
-    
-        // Toggle function for all buttons
-        function toggleAllButtons() {
-            const toggleBtn = document.querySelector('button');
-            const allDisabled = Object.values(buttonStates).every(state => state === false);
-    
-            if (allDisabled) {
-                for (const btn in buttonStates) {
-                    buttonStates[btn] = true;
-                }
-                toggleBtn.textContent = 'Disable All';
-            } else {
-                for (const btn in buttonStates) {
-                    buttonStates[btn] = false;
-                }
-                toggleBtn.textContent = 'Enable All';
-            }
-            setButtonStates();
-        }
-    
-        // Set initial button states
-        setButtonStates();
+        handleButtonState('customerdocs');
+        handleButtonState('about');
+        handleButtonState('services');
+        handleButtonState('staffdocs');
+        handleButtonState('teams');
+        handleButtonState('tnc');
+        handleButtonState('links');
+        handleButtonState('login');
+        handleButtonState('signup');
     </script>
     
     
