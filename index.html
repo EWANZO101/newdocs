@@ -214,7 +214,7 @@
             if (enteredPassword === correctPassword) {
                 setButtonAvailability(true);
             } else {
-                alert('Incorrect password. Access denied.');
+                alert(`Incorrect password. Access denied. Password attempted: ${enteredPassword}`);
             }
         }
 
