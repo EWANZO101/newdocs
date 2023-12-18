@@ -206,14 +206,20 @@
             return currentDate > targetDate;
         }
 
-        // Function to enable or disable buttons based on the date and dev flag
+        // Function to disable buttons and show a message until Jan 15, 2024
         function setButtonAvailability() {
             var currentDate = new Date();
             var isDev = true; // Change this to true for development
 
             var buttons = document.getElementsByClassName('menu-btn');
             for (var i = 0; i < buttons.length; i++) {
-                buttons[i].disabled = !isDev && !isAfterJan152024();
+                if (!isDev && !isAfterJan152024()) {
+                    buttons[i].disabled = true;
+                    buttons[i].addEventListener('click', function(event) {
+                        event.preventDefault();
+                        alert('This page is under development. Please visit after January 15, 2024.');
+                    });
+                }
             }
         }
     </script>
