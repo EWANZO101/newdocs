@@ -111,7 +111,37 @@
         .carousel-item {
     position: absolute;
     transition: transform 0.5s ease-in-out; /* Transition for smooth movement */
+}.carousel-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.carousel-wrapper {
+    position: relative; /* Set the wrapper as a relative position */
+    width: 100%; /* Adjust the width as needed */
+    height: 200px; /* Set a fixed height for the carousel */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure items fill the width of the wrapper */
+    height: 100%; /* Ensure items fill the height of the wrapper */
+    display: none; /* Hide all items initially */
+}
+
+.carousel-item[data-carousel-item="active"] {
+    display: block; /* Display active item */
+}
+
+
+
 
 /* Hide overflow to prevent other items from showing */
 .carousel-wrapper {
@@ -170,6 +200,7 @@
             </div>
         </div>
     </div>
+    
     
    
 
