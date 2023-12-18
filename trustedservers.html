@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trusted Servers</title>
+    <!-- Add any necessary stylesheets or scripts -->
+    <style>
+        /* Add your CSS styles here */
+        .carousel-container {
+            /* Define carousel styles */
+        }
+
+        .carousel-wrapper {
+            /* Define wrapper styles */
+        }
+
+        .carousel-item {
+            /* Define individual item styles */
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel-container">
+    <div id="custom-controls-gallery" class="carousel-wrapper relative" data-carousel="slide">
+        <!-- Carousel wrapper and items here... -->
+        <!-- Item 1 -->
+        <div class="carousel-item" data-carousel-item>
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="block" width="100" height="100" alt="Item 1">
+        </div>
+        <!-- Item 2 -->
+        <div class="carousel-item" data-carousel-item="active">
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1182432405374644317/SwiftPeakBanner-removebg-preview.png?ex=658de77d&is=657b727d&hm=1fc8e9b778a6f20f6bc085207a49d94f87bbe86a0a92a7724f052392a8b45974" class="block" width="100" height="100" alt="Item 2">
+        </div>
+        <!-- Item 3 -->
+        <div class="carousel-item" data-carousel-item>
+            <img src="" class="block" width="100" height="100" alt="Item 3">
+        </div>
+        <!-- Item 4 -->
+        <div class="carousel-item" data-carousel-item>
+            <img src="#" class="block" width="100" height="100" alt="Item 4">
+        </div>
+        <!-- Item 5 -->
+        <div class="carousel-item" data-carousel-item>
+            <img src="#" class="block" width="100" height="100" alt="Item 5">
+        </div>
+    </div>
+</div>
+
+<!-- Any additional content or scripts needed -->
+<script>
+    const carouselItems = document.querySelectorAll('[data-carousel-item]');
+    let currentIndex = 0;
+
+    function moveCarousel() {
+        const itemWidth = carouselItems[currentIndex].getBoundingClientRect().width;
+        const distanceToMove = -itemWidth * currentIndex;
+        document.getElementById('custom-controls-gallery').style.transform = `translateX(${distanceToMove}px)`;
+
+        currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
+    }
+
+    // Auto-move the carousel every 3 seconds (adjust the timing as needed)
+    setInterval(moveCarousel, 3000);
+</script>
+
+<footer>
+    <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
+</footer>
+
+
+
+</body>
+</html>

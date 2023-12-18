@@ -4,134 +4,125 @@
     <meta charset="UTF-8">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <style>
-body,
-h1,
-h2,
-p {
-    margin: 0;
-    padding: 0;
-}
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* General styles for the body */
+        body {
+            background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+        }
+        
+        /* Styles for the header */
+        header {
+            padding: 20px 0;
+            /* Your header styles here */
+        }
+        
+        /* Styles for the navbar */
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            padding: 20px 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: background-color 0.3s ease;
+            background-color: #154c79;
+            color: #fff;
+        }
+        
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .navbar .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        
+        .navbar .menu li {
+            margin-right: 15px;
+        }
+        
+        .navbar .menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .navbar .menu li a:hover {
+            color: crimson;
+        }
+        
+        /* Styles for the content container */
+        .content {
+            padding: 20px; /* Adjust padding as needed */
+        }
+        
+        /* Image styles */
+        .content img {
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            max-width: 100%; /* Ensure the image doesn't overflow */
+            /* Your image styles here */
+        }
+        
+        /* Styles for the footer */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            /* Your footer styles here */
+        }
+        
+        /* Styles for menu buttons */
+        .menu-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 2px solid #333;
+            border-radius: 5px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+        
+        .menu-btn:hover {
+            background-color: #333;
+            color: #fff;
+        }    .trusted-text {
+        font-size: 16px;
+        color: #333;
+        /* Other styles */
+    }
 
-/* General styles for the body */
-body {
-    background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0;
-}
-
-/* Styles for the header */
-header {
-    padding: 20px 0;
-    /* Your header styles here */
-}
-
-/* Styles for the navbar */
-.navbar {
-    width: 100%;
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    padding: 20px 0;
-    font-family: 'Ubuntu', sans-serif;
-    transition: background-color 0.3s ease;
-    background-color: #154c79;
-    color: #fff;
-}
-
-.navbar .max-width {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.navbar .menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.navbar .menu li {
-    margin-right: 15px;
-}
-
-.navbar .menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover {
-    color: crimson;
-}
-
-/* Styles for the content container */
-.content {
-    padding: 20px; /* Adjust padding as needed */
-}
-
-/* Image styles */
-.content img {
-    display: block;
-    margin: 0 auto; /* Center the image horizontally */
-    max-width: 100%; /* Ensure the image doesn't overflow */
-    /* Your image styles here */
-}
-
-/* Styles for the carousel container */
-.carousel-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Your carousel container styles here */
-}
-
-/* Styles for the footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    /* Your footer styles here */
-}
-
-/* Styles for menu buttons */
-.menu-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: 2px solid #333;
-    border-radius: 5px;
-    margin: 5px;
-    transition: all 0.3s ease;
-    color: #333;
-}
-
-.menu-btn:hover {
-    background-color: #333;
-    color: #fff;
-}
-    </style>
+        </style>
 </head>
 
 <body>
@@ -157,55 +148,20 @@ footer {
     <header>
         <h1>Welcome to Swift Peak Hosting Documentation</h1>
     </header>
-
+    <div>
+        <p>Check out other servers or communities that have trusted us in the past or currently:</p>
+        <a href="trustedservers.html">
+            <button>Explore Trusted Servers</button>
+        </a>
+    </div>
     <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
     <meta name="viewport" content="width=device-width, initial-scale=0.8"> <!-- Adjust initial-scale as needed -->
 
-    <div class="carousel-container">
-        <div id="custom-controls-gallery" class="carousel-wrapper relative" data-carousel="slide">
-            <!-- Carousel wrapper and items here... -->
-            <!-- Item 1 -->
-            <div class="carousel-item" data-carousel-item>
-                <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="block" width="100" height="100" alt="Item 1">
-            </div>
-         <!-- Item 2 -->
-<div class="carousel-item" data-carousel-item="active">
-    <img src="https://cdn.discordapp.com/attachments/442981760708378625/1182432405374644317/SwiftPeakBanner-removebg-preview.png?ex=658de77d&is=657b727d&hm=1fc8e9b778a6f20f6bc085207a49d94f87bbe86a0a92a7724f052392a8b45974" class="block" width="100" height="100" alt="Item 2">
-</div>
-            <!-- Item 3 -->
-            <div class="carousel-item" data-carousel-item>
-                <img src="" class="block" width="100" height="100" alt="Item 3">
-            </div>
-            <!-- Item 4 -->
-            <div class="carousel-item" data-carousel-item>
-                <img src="#" class="block" width="100" height="100" alt="Item 4">
-            </div>
-            <!-- Item 5 -->
-            <div class="carousel-item" data-carousel-item>
-                <img src="#" class="block" width="100" height="100" alt="Item 5">
-            </div>
-        </div>
-    </div>
-
+   
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 
-    <script>
-        const carouselItems = document.querySelectorAll('[data-carousel-item]');
-        let currentIndex = 0;
-
-        function moveCarousel() {
-            const itemWidth = carouselItems[currentIndex].getBoundingClientRect().width;
-            const distanceToMove = -itemWidth * currentIndex;
-            document.getElementById('custom-controls-gallery').style.transform = `translateX(${distanceToMove}px)`;
-
-            currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
-        }
-
-        // Auto-move the carousel every 3 seconds (adjust the timing as needed)
-        setInterval(moveCarousel, 3000);
-    </script>
 
 </body>
 
