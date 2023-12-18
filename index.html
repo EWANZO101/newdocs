@@ -167,7 +167,8 @@
 <body>
     <nav class="navbar">
         <div class="max-width">
-            <ul class="menu">
+            <body onload="setButtonAvailability()">
+                <ul class="menu">
                 <!-- Your menu items here -->
                 <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
                 <li><a href="about.html" class="menu-btn">About</a></li>
@@ -179,6 +180,7 @@
                 <!-- Login and Signup links -->
                 <li><a href="login.html" class="menu-btn">Login</a></li>
                 <li><a href="signup.html" class="menu-btn">Signup</a></li>
+                
             </ul>
         </div>
     </nav>
@@ -200,49 +202,24 @@
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
     <script>
-        const buttonStates = {
-          customerdocs: false,
-          about: false,
-          services: false,
-          staffdocs: false,
-          teams: false,
-          tnc: false,
-          links: true,
-          login: true,
-          signup: true,
-          '1': false,
-          '2': false,
-          '3': false
-        };
-      
-        // Function to handle button states
-        function handleButtonState(buttonId) {
-          const button = document.getElementById(buttonId + '-btn');
-          if (!buttonStates[buttonId]) {
-            button.disabled = true;
-            button.style.opacity = '0.5';
-            button.addEventListener('click', (event) => {
-              event.preventDefault();
-              alert(`This button is closed until January 15, 2024.`);
-            });
-          } else {
-            button.disabled = false;
-            button.style.opacity = '1';
-            button.removeEventListener('click', null);
-          }
+        // Function to check if the current date is after January 15, 2024
+        function isAfterJan152024() {
+            var currentDate = new Date();
+            var targetDate = new Date('2024-01-15');
+
+            return currentDate > targetDate;
         }
-      
-        // Set individual button states
-        handleButtonState('customerdocs');
-        handleButtonState('about');
-        handleButtonState('services');
-        handleButtonState('staffdocs');
-        handleButtonState('teams');
-        handleButtonState('tnc');
-        handleButtonState('links');
-        handleButtonState('login');
-        handleButtonState('signup');
-        handleButtonState('1');
-        handleButtonState('2');
-        handleButtonState('3');
-      </script>
+
+        // Function to enable or disable buttons based on the date and dev flag
+        function setButtonAvailability() {
+            var currentDate = new Date();
+            var isDev = false; // Change this to true for development
+
+            var buttons = document.getElementsByClassName('menu-btn');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = !isDev && !isAfterJan152024();
+            }
+        }
+    </script>
+    </body>
+    </html>
