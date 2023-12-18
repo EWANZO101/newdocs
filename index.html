@@ -200,21 +200,68 @@
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
     <script>
-        let buttonsEnabled = false; // Change this to true to enable the buttons
+        const buttonStates = {
+            customerdocs: false,
+            about: false,
+            services: false,
+            staffdocs: false,
+            teams: false,
+            tnc: false,
+            links: true,
+            login: true,
+            signup: true
+        };
     
-        if (!buttonsEnabled) {
-            const buttons = document.querySelectorAll('.menu-btn');
-            buttons.forEach(button => {
+        // Function to handle button states
+        function handleButtonState(buttonId) {
+            if (!buttonStates[buttonId]) {
+                const button = document.getElementById(buttonId + '-btn');
                 button.addEventListener('click', (event) => {
                     event.preventDefault();
                     // You can also add a visual cue to show the button is disabled, for example:
                     button.style.pointerEvents = 'none';
                     button.style.opacity = '0.5';
-                    alert('These buttons will be available after January 15, 2024.');
+                    alert(`The ${buttonId} button is currently disabled.`);
                 });
-            });
+            }
         }
+    
+        // Set individual button states
+        function setButtonStates() {
+            handleButtonState('customerdocs');
+            handleButtonState('about');
+            handleButtonState('services');
+            handleButtonState('staffdocs');
+            handleButtonState('teams');
+            handleButtonState('tnc');
+            handleButtonState('links');
+            handleButtonState('login');
+            handleButtonState('signup');
+        }
+    
+        // Toggle function for all buttons
+        function toggleAllButtons() {
+            const toggleBtn = document.querySelector('button');
+            const allDisabled = Object.values(buttonStates).every(state => state === false);
+    
+            if (allDisabled) {
+                for (const btn in buttonStates) {
+                    buttonStates[btn] = true;
+                }
+                toggleBtn.textContent = 'Disable All';
+            } else {
+                for (const btn in buttonStates) {
+                    buttonStates[btn] = false;
+                }
+                toggleBtn.textContent = 'Enable All';
+            }
+            setButtonStates();
+        }
+    
+        // Set initial button states
+        setButtonStates();
     </script>
+    
     
 </body>
 </html>
