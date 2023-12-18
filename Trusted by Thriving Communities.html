@@ -205,14 +205,29 @@
     <div class="community">
       <img src="#" alt="">
       <h2>Horizon City Roleplay</h2>Welcome to a So
-      <a href="readmorehcrp.html" class="explore-button">Read More</a>
+      <div class="explore-container">
+        <a href="readmorehcrp.html" class="explore-button" id="readMoreButton">Read More</a>
+    </div>
       <a href="https://discord.gg/PWfXavKPXk" target="_blank">Join Discord</a>
       <h2></h2>
     </div>
   
   </div>
   <a href="https://status.swiftpeakhosting.co.uk/" class="explore-button">Our Status Page</a>
+  <script>
+    // Function to handle the redirection
+    function redirectToPage() {
+        window.location.href = 'readmorehcrp.html'; // Redirects to readmorehcrp.html
+    }
 
+    // Add event listener to the button for redirection
+    document.getElementById('readMoreButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevents the default behavior of the link
+
+        // Call the redirection function
+        redirectToPage();
+    });
+</script>
   <footer>
     <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
   </footer>
