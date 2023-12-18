@@ -1,74 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Developer Login</title>
+    <title>Login</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #282c34;
+            background-color: #222;
             color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
         }
-
-        h1 {
-            text-align: center;
+        h2 {
+            color: #fff;
         }
-
         form {
-            text-align: center;
-            margin-top: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 0 auto;
         }
-
-        label, input, button {
+        label {
             display: block;
-            margin: 10px auto;
-            font-size: 18px;
+            margin-bottom: 10px;
+            color: #fff;
         }
-
-        input {
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 12px);
+            padding: 6px;
+            margin-bottom: 15px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        input[type="submit"] {
+            width: 100%;
             padding: 8px;
-            width: 200px;
-        }
-
-        button {
-            padding: 8px 16px;
+            border-radius: 3px;
+            border: none;
             background-color: #4CAF50;
             color: white;
-            border: none;
             cursor: pointer;
         }
-
-        button:hover {
+        input[type="submit"]:hover {
             background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <h1>Developer Login</h1>
-    <form onsubmit="authenticateDeveloper(event)">
-        <label for="password">Enter password:</label>
-        <input type="password" id="password" required>
-        <button type="submit">Login</button>
+    <h2>Developer Login</h2>
+    <p>Dear Visitors,</p>
+    <p>Please note that our services are currently unavailable due to the holiday season. We will resume operations on the 15th of January. During this time, new client setups may experience delays of more than 24 hours.</p>
+    <p>Additionally, we'll be undergoing a move at the beginning of January, resulting in potential service outages. These outages could last a few hours or up to 3 days. Your patience and understanding during this transition period are greatly appreciated.</p>
+    <p>Thank you for your understanding, and we apologize for any inconvenience caused.</p>
+    <p>Warm regards,<br>Swift Peak Hosting </p>
+    <!-- Your login form -->
+    <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Login">
     </form>
 
-    <script>
-        function authenticateDeveloper(event) {
-            event.preventDefault();
-            var enteredPassword = document.getElementById('password').value;
-            var correctPassword = 'your_dev_password_here'; // Replace with your developer password
-
-            if (enteredPassword === correctPassword) {
-                window.location.href = 'your_main_page.html?devlogin=true';
-            } else {
-                alert('Incorrect password. Access denied.');
-            }
-        }
-    </script>
 </body>
 </html>
