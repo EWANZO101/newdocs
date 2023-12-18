@@ -197,58 +197,6 @@
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
-    <script>
-        // Function to check if the current date is after January 15, 2024
-        function isAfterJan152024() {
-            var currentDate = new Date();
-            var targetDate = new Date('2024-01-15');
-            return currentDate > targetDate;
-        }
-
-        // Function to authenticate password and enable access to dev version
-        function authenticateAndSetButton() {
-            var passwordField = document.createElement('input');
-            passwordField.setAttribute('type', 'password');
-            passwordField.setAttribute('placeholder', 'Enter password');
-            passwordField.style.marginRight = '10px';
-
-            var submitButton = document.createElement('button');
-            submitButton.textContent = 'Submit';
-            submitButton.onclick = function() {
-                var enteredPassword = passwordField.value;
-                var correctPassword = 'swift dev 6532';
-
-                if (enteredPassword === correctPassword) {
-                    setButtonAvailability(true);
-                } else {
-                    alert(`Incorrect password. Access denied. Password attempted: ${enteredPassword}`);
-                }
-            };
-
-            document.body.appendChild(passwordField);
-            document.body.appendChild(submitButton);
-        }
-
-        // Function to disable buttons until Jan 15, 2024 or enable for developers
-        function setButtonAvailability(isDeveloper) {
-            var currentDate = new Date();
-
-            var buttons = document.getElementsByClassName('menu-btn');
-            for (var i = 0; i < buttons.length; i++) {
-                if (!isDeveloper && !isAfterJan152024()) {
-                    buttons[i].setAttribute('disabled', 'true');
-                    buttons[i].addEventListener('click', function(event) {
-                        event.preventDefault();
-                        alert('This page is under development. Please visit after January 15, 2024.');
-                    });
-                }
-            }
-        }
-
-        // Load authentication on body load
-        window.onload = function() {
-            authenticateAndSetButton();
-        };
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
