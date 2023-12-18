@@ -3,19 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Trusted Servers</title>
-    <!-- Add any necessary stylesheets or scripts -->
     <style>
         /* Add your CSS styles here */
         .carousel-container {
-            /* Define carousel styles */
+            overflow: hidden;
+            width: 600px; /* Set width */
+            height: 100px; /* Set height */
+            margin: 20px auto;
+            border-radius: 8px;
+            background-color: #5850EC; /* Background color */
         }
 
         .carousel-wrapper {
-            /* Define wrapper styles */
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
 
         .carousel-item {
-            /* Define individual item styles */
+            flex: 0 0 100px; /* Item width */
+            height: 100px; /* Item height */
+            margin: 0 5px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -26,28 +39,27 @@
         <!-- Carousel wrapper and items here... -->
         <!-- Item 1 -->
         <div class="carousel-item" data-carousel-item>
-            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="block" width="100" height="100" alt="Item 1">
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="block" alt="Item 1">
         </div>
         <!-- Item 2 -->
         <div class="carousel-item" data-carousel-item="active">
-            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1182432405374644317/SwiftPeakBanner-removebg-preview.png?ex=658de77d&is=657b727d&hm=1fc8e9b778a6f20f6bc085207a49d94f87bbe86a0a92a7724f052392a8b45974" class="block" width="100" height="100" alt="Item 2">
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1182432405374644317/SwiftPeakBanner-removebg-preview.png?ex=658de77d&is=657b727d&hm=1fc8e9b778a6f20f6bc085207a49d94f87bbe86a0a92a7724f052392a8b45974" class="block" alt="Item 2">
         </div>
         <!-- Item 3 -->
         <div class="carousel-item" data-carousel-item>
-            <img src="" class="block" width="100" height="100" alt="Item 3">
+            <img src="" class="block" alt="Item 3">
         </div>
         <!-- Item 4 -->
         <div class="carousel-item" data-carousel-item>
-            <img src="#" class="block" width="100" height="100" alt="Item 4">
+            <img src="#" class="block" alt="Item 4">
         </div>
         <!-- Item 5 -->
         <div class="carousel-item" data-carousel-item>
-            <img src="#" class="block" width="100" height="100" alt="Item 5">
+            <img src="#" class="block" alt="Item 5">
         </div>
     </div>
 </div>
 
-<!-- Any additional content or scripts needed -->
 <script>
     const carouselItems = document.querySelectorAll('[data-carousel-item]');
     let currentIndex = 0;
@@ -60,15 +72,12 @@
         currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
     }
 
-    // Auto-move the carousel every 3 seconds (adjust the timing as needed)
     setInterval(moveCarousel, 3000);
 </script>
 
 <footer>
     <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
 </footer>
-
-
 
 </body>
 </html>
