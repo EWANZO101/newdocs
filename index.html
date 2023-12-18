@@ -149,6 +149,7 @@
 }
     </style>
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -200,30 +201,27 @@
             </div>
         </div>
     </div>
-    
-    
-   
 
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
+
+    <script>
+        const carouselItems = document.querySelectorAll('[data-carousel-item]');
+        let currentIndex = 0;
+
+        function moveCarousel() {
+            const itemWidth = carouselItems[currentIndex].getBoundingClientRect().width;
+            const distanceToMove = -itemWidth * currentIndex;
+            document.getElementById('custom-controls-gallery').style.transform = `translateX(${distanceToMove}px)`;
+
+            currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
+        }
+
+        // Auto-move the carousel every 3 seconds (adjust the timing as needed)
+        setInterval(moveCarousel, 3000);
+    </script>
+
 </body>
 
 </html>
-
-    
-<script>
-    const carouselItems = document.querySelectorAll('[data-carousel-item]');
-    let currentIndex = 0;
-
-    function moveCarousel() {
-        const itemWidth = carouselItems[currentIndex].getBoundingClientRect().width;
-        const distanceToMove = -itemWidth * currentIndex;
-        document.getElementById('custom-controls-gallery').style.transform = `translateX(${distanceToMove}px)`;
-
-        currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
-    }
-
-    // Auto-move the carousel every 3 seconds (adjust the timing as needed)
-    setInterval(moveCarousel, 3000);
-</script>
