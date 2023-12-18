@@ -174,7 +174,7 @@
                 <li><a href="services.html" class="menu-btn">Services</a></li>
                 <li><a href="coming_soon.html" class="menu-btn">Staffdocs</a></li>
                 <li><a href="#teams" class="menu-btn">#Teams</a></li>
-                <li><a href="TOS.html" class="menu-btn">T&C</a></li>
+                <li><a href="tnc.html" class="menu-btn">T&C</a></li>
                 <li><a href="urls.html" class="menu-btn">links</a></li>
                 <!-- Login and Signup links -->
                 <li><a href="login.html" class="menu-btn">Login</a></li>
@@ -201,34 +201,37 @@
     </footer>
     <script>
         const buttonStates = {
-            customerdocs: false,
-            about: false,
-            services: false,
-            staffdocs: false,
-            teams: false,
-            tnc: false,
-            links: true,
-            login: true,
-            signup: true,
-            '1': false,
-            '2': false,
-            '3': false
+          customerdocs: false,
+          about: false,
+          services: false,
+          staffdocs: false,
+          teams: false,
+          tnc: false,
+          links: true,
+          login: true,
+          signup: true,
+          '1': false,
+          '2': false,
+          '3': false
         };
-    
+      
         // Function to handle button states
         function handleButtonState(buttonId) {
-            if (!buttonStates[buttonId]) {
-                const button = document.getElementById(buttonId + '-btn');
-                button.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    // You can also add a visual cue to show the button is disabled, for example:
-                    button.style.pointerEvents = 'none';
-                    button.style.opacity = '0.5';
-                    alert(`This button is closed until January 15, 2024.`);
-                });
-            }
+          const button = document.getElementById(buttonId + '-btn');
+          if (!buttonStates[buttonId]) {
+            button.disabled = true;
+            button.style.opacity = '0.5';
+            button.addEventListener('click', (event) => {
+              event.preventDefault();
+              alert(`This button is closed until January 15, 2024.`);
+            });
+          } else {
+            button.disabled = false;
+            button.style.opacity = '1';
+            button.removeEventListener('click', null);
+          }
         }
-    
+      
         // Set individual button states
         handleButtonState('customerdocs');
         handleButtonState('about');
@@ -242,8 +245,4 @@
         handleButtonState('1');
         handleButtonState('2');
         handleButtonState('3');
-    </script>
-    
-    
-</body>
-</html>
+      </script>
