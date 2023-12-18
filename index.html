@@ -108,6 +108,15 @@
             background-color: #333;
             color: #fff;
         }
+        .carousel-item {
+    position: absolute;
+    transition: transform 0.5s ease-in-out; /* Transition for smooth movement */
+}
+
+/* Hide overflow to prevent other items from showing */
+.carousel-wrapper {
+    overflow: hidden;
+}
     </style>
 </head>
 <body>
@@ -139,26 +148,28 @@
     <div id="custom-controls-gallery" class="carousel-wrapper relative w-full" data-carousel="slide">
         <!-- Carousel wrapper and items here... -->
         <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="absolute block" width="200" height="200" style="transform: translate(-50%, -50%); top: 50%; left: 50%;" alt="">
+        <div class="carousel-item" data-carousel-item>
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="absolute block" width="200" height="200" style="transform: translate(-50%, -50%); top: 50%; left: 50%;" alt="">
         </div>
         <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <div class="carousel-item" data-carousel-item="active">
             <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="carousel-item" data-carousel-item>
             <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="carousel-item" data-carousel-item>
             <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
         <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <div class="carousel-item" data-carousel-item>
             <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
         </div>
     </div>
+    
+   
 
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
@@ -166,3 +177,20 @@
 </body>
 
 </html>
+
+    
+<script>
+    const carouselItems = document.querySelectorAll('[data-carousel-item]');
+    let currentIndex = 0;
+
+    function moveCarousel() {
+        const itemWidth = carouselItems[currentIndex].getBoundingClientRect().width;
+        const distanceToMove = -itemWidth * currentIndex;
+        document.getElementById('custom-controls-gallery').style.transform = `translateX(${distanceToMove}px)`;
+
+        currentIndex = (currentIndex + 1) % carouselItems.length; // Move to the next item
+    }
+
+    // Auto-move the carousel every 3 seconds (adjust the timing as needed)
+    setInterval(moveCarousel, 3000);
+</script>
