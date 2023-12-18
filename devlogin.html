@@ -44,12 +44,32 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+        /* New styles for the message */
+        .holiday-message {
+            text-align: center;
+            font-size: 35px;
+            margin-top: 50px;
+        }
+        /* Footer styles */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #ccc;
+        }
     </style>
 </head>
 <body>
+    <!-- Message at the top -->
+    <div class="holiday-message">
+        <p>Dear Visitors,</p>
+        <p>Please note that our services are currently unavailable due to the holiday season. We will resume operations on the 15th of January. During this time, new client setups may experience delays of more than 24 hours.</p>
+        <p>Additionally, we'll be undergoing a move at the beginning of January, resulting in potential service outages. These outages could last a few hours or up to 3 days. Your patience and understanding during this transition period are greatly appreciated.</p>
+        <p>Thank you for your understanding, and we apologize for any inconvenience caused.</p>
+        <p>Warm regards,<br>Swift Peak Hosting</p>
+    </div>
+
     <h2>Developer Login</h2>
     
-   
     <!-- Your login form -->
     <form action="login.php" method="post">
         <h3 style="text-align: center;">THIS PAGE IS ONLY ACCESSIBLE BY DEVELOPERS</h3>
@@ -60,11 +80,9 @@
         <input type="submit" value="Login">
     </form>
 
-    <!-- Other content -->
-    <p>Dear Visitors,</p>
-    <p>Please note that our services are currently unavailable due to the holiday season. We will resume operations on the 15th of January. During this time, new client setups may experience delays of more than 24 hours.</p>
-    <p>Additionally, we'll be undergoing a move at the beginning of January, resulting in potential service outages. These outages could last a few hours or up to 3 days. Your patience and understanding during this transition period are greatly appreciated.</p>
-    <p>Thank you for your understanding, and we apologize for any inconvenience caused.</p>
-    <p>Warm regards,<br>Swift Peak Hosting </p>
+    <!-- Footer -->
+    <footer>
+        &copy; Swift Peak Hosting
+    </footer>
 </body>
 </html>
