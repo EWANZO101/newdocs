@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>trusted Communities</title>
+  <title>Trusted Communities</title>
   <style>
     /* Reset default margin and padding */
     * {
@@ -19,9 +19,8 @@
 
     .container {
       display: flex;
-      justify-content: space-around;
+      flex-direction: column; /* Updated to display communities in a column */
       align-items: center;
-      flex-wrap: wrap;
       max-width: 1200px;
       margin: 20px auto;
     }
@@ -66,6 +65,15 @@
     .community a:hover {
       background-color: #2980b9;
     }
+
+    /* Footer styling */
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -80,4 +88,14 @@
       <img src="community2-logo.png" alt="Community 2 Logo">
       <h2>Community 2</h2>
       <p>Description of Community 2.</p>
-      <a href="https://discord.gg/community2" target="_blank">Join Discord
+      <a href="https://discord.gg/community2" target="_blank">Join Discord</a>
+    </div>
+    <!-- Add more communities as needed -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2023 Swift Peak Hosting. All rights reserved.
+  </footer>
+</body>
+</html>
