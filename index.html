@@ -206,20 +206,19 @@
             return currentDate > targetDate;
         }
 
-        // Function to disable buttons and show a message until Jan 15, 2024
+        // Function to disable buttons until Jan 15, 2024, and show a message
         function setButtonAvailability() {
             var currentDate = new Date();
             var isDev = true; // Change this to true for development
 
             var buttons = document.getElementsByClassName('menu-btn');
             for (var i = 0; i < buttons.length; i++) {
-                if (!isDev && !isAfterJan152024()) {
-                    buttons[i].disabled = true;
-                    buttons[i].addEventListener('click', function(event) {
+                buttons[i].addEventListener('click', function(event) {
+                    if (!isDev && !isAfterJan152024()) {
                         event.preventDefault();
                         alert('This page is under development. Please visit after January 15, 2024.');
-                    });
-                }
+                    }
+                });
             }
         }
     </script>
