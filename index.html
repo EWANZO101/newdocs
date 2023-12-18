@@ -199,5 +199,22 @@
     <footer>
         <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
     </footer>
+    <script>
+        let buttonsEnabled = true; // Change this to true to enable the buttons
+    
+        if (!buttonsEnabled) {
+            const buttons = document.querySelectorAll('.menu-btn');
+            buttons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    // You can also add a visual cue to show the button is disabled, for example:
+                    button.style.pointerEvents = 'none';
+                    button.style.opacity = '0.5';
+                    alert('These buttons are currently disabled.');
+                });
+            });
+        }
+    </script>
+    
 </body>
 </html>
