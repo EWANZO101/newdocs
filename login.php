@@ -10,7 +10,7 @@
         // For demonstration, a simple check is used (replace this with your authentication logic)
         if ($username === 'swiftadmin' && $password === 'swiftdev6532') {
             $_SESSION['developer_logged_in'] = true; // Set session variable upon successful login
-            header('Location: protected_page.php'); // Redirect to the protected page
+            header('customerdocs.html'); // Redirect to the protected page
             exit();
         } else {
             // Handle invalid credentials (redirect back to login page or display an error)
