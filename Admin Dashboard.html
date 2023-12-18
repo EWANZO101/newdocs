@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <style>
+    /* Basic styling */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      height: 100%;
+      padding-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      display: block;
+    }
+
+    .sidebar ul li a:hover {
+      background-color: #555;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <!-- Sidebar content -->
+    <ul>
+      <li><a href="#" onclick="loadContent('home')">Home</a></li>
+      <li><a href="#" onclick="loadContent('dashboard')">Dashboard</a></li>
+      <li><a href="#" onclick="loadContent('settings')">Settings</a></li>
+      <!-- Add more links as needed -->
+    </ul>
+  </div>
+  <div class="content" id="mainContent">
+    <!-- Main content area -->
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>Select an option from the sidebar to load content here.</p>
+  </div>
+
+  <script>
+    function loadContent(page) {
+      const contentDiv = document.getElementById('mainContent');
+      let content = '';
+
+      if (page === 'home') {
+        content = '<h2>Home Page</h2><p>Welcome to the Home Page.</p>';
+      } else if (page === 'dashboard') {
+        content = '<h2>Dashboard</h2><p>Dashboard content goes here.</p>';
+      } else if (page === 'settings') {
+        content = '<h2>Settings</h2><p>Manage settings here.</p>';
+      }
+      // Replace the content in the div
+      contentDiv.innerHTML = content;
+    }
+  </script>
+</body>
+</html>
