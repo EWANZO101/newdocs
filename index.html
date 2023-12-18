@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <style>
-        /* Your CSS code */
         /* Reset default margin and padding */
-        body, h1, h2, p {
+        body,
+        h1,
+        h2,
+        p {
             margin: 0;
             padding: 0;
         }
@@ -19,10 +21,10 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            justify-content: center; /* Center content vertically */
-            align-items: center; /* Center content horizontally */
-            text-align: center; /* Center text */
-            margin: 0; /* Reset default margin */
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
         }
 
         header {
@@ -46,9 +48,9 @@
             top: 0;
             padding: 20px 0;
             font-family: 'Ubuntu', sans-serif;
-            transition: background-color 0.3s ease; /* Transition background-color only */
-            background-color: #154c79; /* Navy blue */
-            color: #fff; /* Change text color */
+            transition: background-color 0.3s ease;
+            background-color: #154c79;
+            color: #fff;
         }
 
         .navbar .max-width {
@@ -110,8 +112,11 @@
         }
 
         .carousel-container {
-            max-width: 900px;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
+            position: relative;
+            overflow: hidden;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
@@ -119,23 +124,14 @@
         }
 
         .carousel-wrapper {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            overflow: hidden;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
         }
 
         .carousel-item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
-        }
-
-        .carousel-item[data-carousel-item="active"] {
-            display: block;
+            min-width: 100%;
+            flex: 0 0 auto;
+            position: relative;
             transition: transform 0.5s ease-in-out;
         }
     </style>
@@ -168,27 +164,27 @@
     <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
 
     <div class="carousel-container">
-        <div id="custom-controls-gallery" class="carousel-wrapper relative w-full" data-carousel="slide">
+        <div id="custom-controls-gallery" class="carousel-wrapper relative" data-carousel="slide">
             <!-- Carousel wrapper and items here... -->
             <!-- Item 1 -->
             <div class="carousel-item" data-carousel-item>
-                <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac" class="absolute block" width="200" height="200" style="transform: translate(-50%, -50%); top: 50%; left: 50%;" alt="">
+                <img src="https://via.placeholder.com/600x400?text=Item+1" class="block" width="600" height="400" alt="Item 1">
             </div>
             <!-- Item 2 -->
             <div class="carousel-item" data-carousel-item="active">
-                <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                <img src="https://via.placeholder.com/600x400?text=Item+2" class="block" width="600" height="400" alt="Item 2">
             </div>
             <!-- Item 3 -->
             <div class="carousel-item" data-carousel-item>
-                <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                <img src="https://via.placeholder.com/600x400?text=Item+3" class="block" width="600" height="400" alt="Item 3">
             </div>
             <!-- Item 4 -->
             <div class="carousel-item" data-carousel-item>
-                <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                <img src="https://via.placeholder.com/600x400?text=Item+4" class="block" width="600" height="400" alt="Item 4">
             </div>
             <!-- Item 5 -->
             <div class="carousel-item" data-carousel-item>
-                <img src="#" class="absolute block max-w-full h-auto -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="">
+                <img src="https://via.placeholder.com/600x400?text=Item+5" class="block" width="600" height="400" alt="Item 5">
             </div>
         </div>
     </div>
