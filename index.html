@@ -206,19 +206,31 @@
             return currentDate > targetDate;
         }
 
-        // Function to disable buttons until Jan 15, 2024, and show a message
-        function setButtonAvailability() {
+        // Function to prompt for password and enable access to dev version
+        function authenticateAndSetButton() {
+            var enteredPassword = prompt('Enter password to access developer version:');
+            var correctPassword = 'swift dev 6532';
+
+            if (enteredPassword === correctPassword) {
+                setButtonAvailability(true);
+            } else {
+                alert('Incorrect password. Access denied.');
+            }
+        }
+
+        // Function to disable buttons until Jan 15, 2024 or enable for developers
+        function setButtonAvailability(isDeveloper) {
             var currentDate = new Date();
-            var isDev = true; // Change this to true for development
 
             var buttons = document.getElementsByClassName('menu-btn');
             for (var i = 0; i < buttons.length; i++) {
-                buttons[i].addEventListener('click', function(event) {
-                    if (!isDev && !isAfterJan152024()) {
+                if (!isDeveloper && !isAfterJan152024()) {
+                    buttons[i].setAttribute('disabled', 'true');
+                    buttons[i].addEventListener('click', function(event) {
                         event.preventDefault();
                         alert('This page is under development. Please visit after January 15, 2024.');
-                    }
-                });
+                    });
+                }
             }
         }
     </script>
