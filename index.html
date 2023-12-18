@@ -4,142 +4,133 @@
     <meta charset="UTF-8">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <style>
-        /* Reset default margin and padding */
-        body,
-        h1,
-        h2,
-        p {
-            margin: 0;
-            padding: 0;
-        }
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+}
 
-        /* Redesigned background and text styles */
-        body {
-            background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin: 0;
-        }
+/* General styles for the body */
+body {
+    background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
 
-        header {
-            padding: 20px 0;
-        }
+/* Styles for the header */
+header {
+    padding: 20px 0;
+    /* Your header styles here */
+}
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
+/* Styles for the navbar */
+.navbar {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    padding: 20px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: background-color 0.3s ease;
+    background-color: #154c79;
+    color: #fff;
+}
 
-        main {
-            padding: 20px;
-        }
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        /* Navbar styling */
-        .navbar {
-            width: 100%;
-            z-index: 999;
-            position: fixed;
-            top: 0;
-            padding: 20px 0;
-            font-family: 'Ubuntu', sans-serif;
-            transition: background-color 0.3s ease;
-            background-color: #154c79;
-            color: #fff;
-        }
+.navbar .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
 
-        .navbar .max-width {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.navbar .menu li {
+    margin-right: 15px;
+}
 
-        .navbar .menu {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
+.navbar .menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
 
-        .navbar .menu li {
-            margin-right: 15px;
-        }
+.navbar .menu li a:hover {
+    color: crimson;
+}
 
-        .navbar .menu li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+/* Styles for the content container */
+.content {
+    padding: 20px; /* Adjust padding as needed */
+}
 
-        .navbar .menu li a:hover {
-            color: crimson;
-        }
+/* Image styles */
+.content img {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    /* Your image styles here */
+}
 
-        /* Footer styling */
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
+/* Styles for the carousel container */
+.carousel-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Your carousel container styles here */
+}
 
-        .menu-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            border: 2px solid #333;
-            border-radius: 5px;
-            margin: 5px;
-            transition: all 0.3s ease;
-            color: #333;
-        }
+/* Styles for the footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /* Your footer styles here */
+}
 
-        .menu-btn:hover {
-            background-color: #333;
-            color: #fff;
-        }
+/* Styles for menu buttons */
+.menu-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    color: #333;
+}
 
-        .carousel-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .carousel-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-item {
-            min-width: 100%;
-            flex: 0 0 auto;
-            position: relative;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .carousel-container:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
+.menu-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
     </style>
 </head>
 
