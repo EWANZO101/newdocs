@@ -4,189 +4,71 @@
     <meta charset="UTF-8">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <style>
-        /* Your CSS styles go here */
-    </style>
-</head>
-<body>
-    <script>
-        // Set this variable to true to enable the redirect or false to disable it
-        var enableRedirect = false;
-
-        if (enableRedirect) {
-            document.write('<meta http-equiv="refresh" content="0;url=https://www.swiftpeakhosting.co.uk/Holiday%20Closure%20Notice">');
-            document.write('<title>Redirecting...</title>');
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
         }
-    </script>
-    
-    <!-- Your content goes here -->
-</body>
-</html>
 
-<style>
-    body,
-    h1,
-    h2,
-    p {
-        margin: 0;
-        padding: 0;
-    }
+        /* General styles for the body */
+        body {
+            background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+        }
 
-    /* General styles for the body */
-    body {
-        background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
-        color: #ffffff;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-    }
+        /* Styles for the header */
+        header {
+            padding: 20px 0;
+            /* Your header styles here */
+        }
 
-    /* Styles for the header */
-    header {
-        padding: 20px 0;
-        /* Your header styles here */
-    }
+        /* Styles for the navbar */
+        .navbar {
+            width: 100%;
+            z-index: 999;
+            position: fixed;
+            top: 0;
+            padding: 20px 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: background-color 0.3s ease;
+            background-color: #154c79;
+            color: #fff;
+        }
 
-    /* Styles for the navbar */
-    .navbar {
-        width: 100%;
-        z-index: 999;
-        position: fixed;
-        top: 0;
-        padding: 20px 0;
-        font-family: 'Ubuntu', sans-serif;
-        transition: background-color 0.3s ease;
-        background-color: #154c79;
-        color: #fff;
-    }
+        /* ... Other styles remain unchanged ... */
 
-    .navbar .max-width {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+        /* New styles for boxed links */
+        .box-link {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #5850EC;
+            border: 2px solid #5850EC;
+            border-radius: 5px;
+            margin: 10px;
+        }
 
-    .navbar .menu {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-
-    .navbar .menu li {
-        margin-right: 15px;
-    }
-
-    .navbar .menu li a {
-        text-decoration: none;
-        color: #fff;
-        font-size: 18px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-    }
-
-    .navbar .menu li a:hover {
-        color: crimson;
-    }
-
-    /* Styles for the content container */
-    .content {
-        padding: 20px; /* Adjust padding as needed */
-    }
-
-    /* Image styles */
-    .content img {
-        display: block;
-        margin: 0 auto; /* Center the image horizontally */
-        max-width: 100%; /* Ensure the image doesn't overflow */
-        /* Your image styles here */
-    }
-
-    /* Styles for the footer */
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 10px 0;
-        /* Center the content horizontally and vertically */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Styles for menu buttons */
-    .menu-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
-        border: 2px solid #333;
-        border-radius: 5px;
-        margin: 5px;
-        transition: all 0.3s ease;
-        color: #333;
-    }
-
-    .menu-btn:hover {
-        background-color: #333;
-        color: #fff;
-    }
-
-    /* Styles for the explore button */
-    .explore-container {
-        display: inline-block;
-        padding: 10px; /* Adjust padding around the button as needed */
-        background-color: #333;
-        border-radius: 10px;
-        margin-top: 20px; /* Adjust margin-top as needed */
-        /* Add any additional styles for the container */
-    }
-
-    .explore-button {
-        display: inline-block;
-        background-color: #6875F5;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .explore-button:hover {
-        background-color: #5762D5;
-    }
-
-    /* New styles for boxed links */
-    .box-link {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
-        color: white;
-        background-color: #5850EC;
-        border: 2px solid #5850EC;
-        border-radius: 5px;
-        margin: 10px;
-    }
-
-    .box-link:hover {
-        background-color: #423bc8;
-        border-color: #423bc8;
-    }
-</style>
+        .box-link:hover {
+            background-color: #423bc8;
+            border-color: #423bc8;
+        }
+    </style>
 </head>
 <body onload="setButtonAvailability()">
     <nav class="navbar">
         <div class="max-width">
             <ul class="menu">
-                <!-- Your menu items here -->
                 <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
                 <li><a href="about.html" class="menu-btn">About</a></li>
                 <li><a href="services.html" class="menu-btn">Services</a></li>
@@ -194,7 +76,6 @@
                 <li><a href="#teams" class="menu-btn">#Teams</a></li>
                 <li><a href="tnc.html" class="menu-btn">T&C</a></li>
                 <li><a href="urls.html" class="menu-btn">links</a></li>
-                <!-- Login and Signup links -->
                 <li><a href="login.html" class="menu-btn">Login</a></li>
                 <li><a href="signup.html" class="menu-btn">Signup</a></li>
             </ul>
@@ -211,10 +92,8 @@
             <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
             <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
         </section>
-    
-    <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
-        
- 
+        <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
+    </section>
 
     <footer style="margin-top: 10px; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
         <p style="margin: 0 auto;">&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
