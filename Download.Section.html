@@ -7,7 +7,6 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
             text-align: center;
@@ -20,7 +19,7 @@
         }
 
         h1 {
-            color: inherit; /* This ensures the color is inherited from the body */
+            color: inherit;
         }
 
         ul {
@@ -124,11 +123,11 @@
         <p>Download our latest resources:</p>
         <ul>
             <li>
-                <a href="/caddownloads/update(2).bat" download>Download Update cad </a>
+                <a href="/caddownloads/update(2).bat" download>Download Update cad Script</a>
                 <span> - Execute this script to update</span>
             </li>
             <li>
-                <a href="/caddownloads/start(2).bat" download>Download Start cad  </a>
+                <a href="/caddownloads/start(2).bat" download>Download Start cad  Script</a>
                 <span> - Execute this script to start</span>
             </li>
             <!-- Add more download links as needed -->
@@ -139,9 +138,30 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
 
+        // Function to check if it's nighttime in UK (7 PM to 9 AM)
+        const isNightTime = () => {
+            const now = new Date();
+            const ukTime = now.toLocaleString('en-GB', { timeZone: 'Europe/London' });
+            const hour = parseInt(ukTime.split(',')[1].split(':')[0]);
+            return hour >= 19 || hour < 9; // 7 PM to 9 AM
+        };
+
+        // Set dark mode based on the time
+        const setDarkModeByTime = () => {
+            const isNight = isNightTime();
+            body.classList.toggle('dark-mode', isNight || darkModeToggle.checked);
+        };
+
+        // Set dark mode initially
+        setDarkModeByTime();
+
+        // Update dark mode when toggle changes
         darkModeToggle.addEventListener('change', () => {
             body.classList.toggle('dark-mode', darkModeToggle.checked);
         });
+
+        // Update dark mode based on time every minute
+        setInterval(setDarkModeByTime, 60000);
     </script>
 
 </body>
