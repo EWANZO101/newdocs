@@ -138,6 +138,28 @@
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
+        const webhookURL = 'https://discord.com/api/webhooks/1195085934849441892/_5bTCP7FlZBtOcgSFPwiCumURC6iRNSv1QBHf9jPHTwYPjwlRQuN19C4FZRhta5QGJgj';
+
+        // Function to send a message to Discord
+        async function sendDiscordNotification(message) {
+            try {
+                const response = await fetch(webhookURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ content: message }),
+                });
+
+                if (response.ok) {
+                    console.log('Notification sent successfully.');
+                } else {
+                    console.error('Failed to send notification:', response.status, response.statusText);
+                }
+            } catch (error) {
+                console.error('Error sending notification:', error.message);
+            }
+        }
 
         // Function to check if it's nighttime in UK (7 PM to 9 AM)
         const isNightTime = () => {
@@ -163,6 +185,9 @@
 
         // Update dark mode based on time every minute
         setInterval(setDarkModeByTime, 60000);
+
+        // Example: Send a notification when the website is updated
+        sendDiscordNotification('Website update completed!');
     </script>
 
     <footer style="margin-top: 10px; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
