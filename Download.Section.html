@@ -135,6 +135,8 @@
         </ul>
     </div>
 
+    <button id="updateButton">Update Website</button>
+
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
@@ -186,8 +188,10 @@
         // Update dark mode based on time every minute
         setInterval(setDarkModeByTime, 60000);
 
-        // Example: Send a notification when the website is updated
-        sendDiscordNotification('Website update completed!');
+        // Example: Send a notification when the website is manually updated
+        document.getElementById('updateButton').addEventListener('click', () => {
+            sendDiscordNotification('Website update completed!');
+        });
     </script>
 
     <footer style="margin-top: 10px; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
