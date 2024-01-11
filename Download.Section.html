@@ -105,6 +105,38 @@
         input:checked + .toggle-slider:before {
             transform: translateX(26px);
         }
+
+        /* Style for the "Update Website" button */
+        #updateButton {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #updateButton:hover {
+            background-color: #2980b9;
+        }
+
+        #updateButton:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Footer styling */
+        footer {
+            margin-top: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -135,7 +167,8 @@
         </ul>
     </div>
 
-    <#utton id="updateButton">Update Website</button>
+    <!-- Updated "Update Website" button with the id "updateButton" -->
+    <button id="updateButton" disabled>Update Website</button>
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -188,14 +221,22 @@
         // Update dark mode based on time every minute
         setInterval(setDarkModeByTime, 60000);
 
+        // Enable and disable the "Update Website" button based on a condition
+        const updateButton = document.getElementById('updateButton');
+
+        // For example, enabling the button after 10 seconds
+        setTimeout(() => {
+            updateButton.disabled = false;
+        }, 10000);
+
         // Example: Send a notification when the website is manually updated
         document.getElementById('updateButton').addEventListener('click', () => {
             sendDiscordNotification('Website has been updated');
         });
     </script>
 
-    <footer style="margin-top: 10px; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
-        <p style="margin: 0 auto;">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 </body>
 </html>
