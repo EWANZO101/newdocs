@@ -88,9 +88,36 @@
             background-color: #423bc8;
             border-color: #423bc8;
         }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .coming-soon {
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+            color: red;
+            animation: flash 1s infinite alternate;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
     </style>
 </head>
-snaily-cad-qb/esx script coming soon 
+<div class="coming-soon">
+    <p>snaily-cad-qb/esx script coming soon </p>
+</div>
 <body onload="setButtonAvailability()">
     <nav class="navbar">
         <div class="max-width">
