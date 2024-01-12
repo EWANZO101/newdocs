@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect Links</title>
   <style>
     body {
@@ -13,53 +16,53 @@
       height: 100vh; /* Full viewport height */
       margin: 0;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    a {
-      text-decoration: none;
-      color: #fff;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+
     h2 {
       text-align: center;
     }
+
     .links-container {
       text-align: center; /* Center content horizontally */
     }
+
+    .link-button {
+      display: inline-block;
+      background-color: #4CAF50;
+      border: 1px solid #45a049;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .link-button:hover {
+      background-color: #45a049;
+    }
   </style>
 </head>
+
 <body>
 
-    <div class="links-container"> <!-- Wrapping links in a div for centering -->
-      <h2>check out links below </h2> <!-- Heading above the links -->
-      <ul>
-        <li><a href="https://phpmyadmin.swiftpeakhosting.co.uk" target="_blank">PHPMyAdmin</a></li>
-        <li><a href="https://proxmox.swiftpeakhosting.co.uk" target="_blank">Proxmox Panel</a></li>
-        <li><a href="https://store.swiftpeakhosting.co.uk/" target="_blank">Store</a></li>
-      </ul>
+  <div class="links-container"> <!-- Wrapping links in a div for centering -->
+    <h2>Check out links below </h2> <!-- Heading above the links -->
+    <div>
+      <button class="link-button" onclick="redirectTo('https://phpmyadmin.swiftpeakhosting.co.uk')">PHPMyAdmin</button>
+      <button class="link-button" onclick="redirectTo('https://proxmox.swiftpeakhosting.co.uk')">Proxmox Panel</button>
+      <button class="link-button" onclick="redirectTo('https://store.swiftpeakhosting.co.uk/')">Store</button>
     </div>
+  </div>
 
   <script>
     // Redirect function
     function redirectTo(url) {
       window.location.href = url;
     }
-
-    // Adding click event listeners to the links
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        redirectTo(this.getAttribute('href')); // Redirect to the clicked URL
-      });
-    });
   </script>
 
 </body>
+
 </html>
