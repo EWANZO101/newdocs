@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Document</title>
+
+  <!-- CSS for Dark Mode -->
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* Default Light Mode Styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Placeholder Styles */
+    .step-box,
+    .placeholder {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Dark Mode Toggle Slider Styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    /* Box for the link */
+    .link-box {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Your Document Content -->
+
+  <!-- Dark Mode Toggle Slider -->
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    Dark Mode
+  </label>
+
+  <div class="step-box">
+    <p>Snaily cad start .bat </p>
+  </div>
+
+  <div class="step-box">
+    <p>Here you can see what is in the start.bat script, and here is a link to where you can download it </p>
+    <div class="link-box">
+      <ul>
+        <li><a href="Download.Section.html">snaily cad scripts</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Code Example Placeholder -->
+  <div class="placeholder">[@echo off
+    :start
+    pnpm run start
+    goto start]</div>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    // Check current time and set dark mode accordingly
+    function checkTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var isDarkMode = hours >= 19 || hours < 9; // Dark mode from 7 pm to 9 am
+
+      document.body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    // Dark Mode Toggle Slider
+    function toggleDarkMode() {
+      var darkModeToggle = document.getElementById('darkModeToggle');
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    }
+
+    // Check time on page load
+    window.onload = function () {
+      checkTime();
+    };
+
+    // Update time every minute
+    setInterval(checkTime, 60000);
+  </script>
+</body>
+
+</html>
