@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,11 +66,11 @@
             transition: 0.4s;
         }
 
-        input:checked + .toggle-slider {
+        input:checked+.toggle-slider {
             background-color: #2196F3;
         }
 
-        input:checked + .toggle-slider:before {
+        input:checked+.toggle-slider:before {
             transform: translateX(20px);
         }
 
@@ -96,6 +97,7 @@
         }
     </style>
 </head>
+
 <body class="light-mode" id="body">
 
     <div class="toggle-container">
@@ -117,23 +119,25 @@
         <p class="placeholder">Why host your database separately? Well, it means that your VPS doesn't have to handle the heavy workload of running both your application and database. This can make VPS hosting more cost-effective, and it allows you to access your database online without having to connect to a MySQL terminal </p>
     </div>
 
-        <div class="guide-section">
-            <h2>Step 1: how do i start </h2>
-            <p class="placeholder">Well, you will have to talk to one of our support team members on our Discord. Since this is a new concept, we do not have an automatic system. This means we would have to set up a username and password for you. All you have to do is open a ticket and request a database username and password. Just let us know what the database is for so we can check if it's supported with our database </p>
-            <div class="placeholder">[And then you would be able to upload your database, and the payment would be added to your current plan with us. If you do not have a plan with us, we would set up a dummy plan just so you are able to get an invoice and have proof of your purchase ]</div>
-        </div>
+    <div class="guide-section">
+        <h2>Step 1: how do i start </h2>
+        <p class="placeholder">Well, you will have to talk to one of our support team members on our Discord. Since this is a new concept, we do not have an automatic system. This means we would have to set up a username and password for you. All you have to do is open a ticket and request a database username and password. Just let us know what the database is for so we can check if it's supported with our database </p>
+        <div class="placeholder">And then you would be able to upload your database, and the payment would be added to your current plan with us. If you do not have a plan with us, we would set up a dummy plan just so you are able to get an invoice and have proof of your purchase </div>
+    </div>
 
-        <div class="guide-section">
-            <h2>Step 2: Connecting to the Database</h2>
-            <p class="placeholder">once u recive your login u can go here :<div style="margin-top: 20px;">
-                <a href="https://phpmyadmin.swiftpeakhosting.co.uk/" target="_blank">
-                    <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to phpMyAdmin</button>
-                </a>
-            </div>Then you can log in with your username and password. You can follow the steps from your TX admin, or you can find a link to our guild below </p>
-            <div class="placeholder">[Code Example]</div>
+    <div class="guide-section">
+        <h2>Step 2: Connecting to the Database</h2>
+        <p class="placeholder">once u recive your login u can go here :</p>
+        <div style="margin-top: 20px;">
+            <a href="https://phpmyadmin.swiftpeakhosting.co.uk/" target="_blank">
+                <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to phpMyAdmin</button>
+            </a>
         </div>
+        <p class="placeholder">Then you can log in with your username and password. You can follow the steps from your TX admin, or you can find a link to our guild below </p>
+        <div class="placeholder">[Code Example]</div>
+    </div>
 
-        <!-- Add more sections as needed -->
+    <!-- Add more sections as needed -->
 
     </div>
 
@@ -163,8 +167,9 @@
         }
 
         // Call setAutoDarkMode on page load
-        setAutoDarkMode();
+        document.addEventListener('DOMContentLoaded', setAutoDarkMode);
     </script>
 
 </body>
+
 </html>
