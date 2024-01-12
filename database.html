@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Database Setup Guide</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+
+        /* Light Mode Styles */
+        .light-mode {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Dark Mode Toggle Styles */
+        .toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .toggle-label {
+            margin-right: 10px;
+        }
+
+        .toggle-input {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Content Styling */
+        .guide-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .guide-section {
+            margin-bottom: 20px;
+        }
+
+        .placeholder {
+            background-color: #eee;
+            color: #666;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="light-mode" id="body">
+
+    <div class="toggle-container">
+        <label class="toggle-label">Dark Mode:</label>
+        <div class="toggle-input">
+            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+            <span class="toggle-slider"></span>
+        </div>
+    </div>
+
+    <div class="guide-container">
+        <h1>Your Database Setup Guide</h1>
+
+        <div class="guide-section">
+            <h2>Introduction</h2>
+            <p class="placeholder">hello and welcome to swift peak database hosting </p>
+        </div>
+
+        <p class="placeholder">Why host your database separately? Well, it means that your VPS doesn't have to handle the heavy workload of running both your application and database. This can make VPS hosting more cost-effective, and it allows you to access your database online without having to connect to a MySQL terminal </p>
+    </div>
+
+        <div class="guide-section">
+            <h2>Step 1: how do i start </h2>
+            <p class="placeholder">Well, you will have to talk to one of our support team members on our Discord. Since this is a new concept, we do not have an automatic system. This means we would have to set up a username and password for you. All you have to do is open a ticket and request a database username and password. Just let us know what the database is for so we can check if it's supported with our database </p>
+            <div class="placeholder">[And then you would be able to upload your database, and the payment would be added to your current plan with us. If you do not have a plan with us, we would set up a dummy plan just so you are able to get an invoice and have proof of your purchase ]</div>
+        </div>
+
+        <div class="guide-section">
+            <h2>Step 2: Connecting to the Database</h2>
+            <p class="placeholder">once u recive your login u can go here :<div style="margin-top: 20px;">
+                <a href="https://phpmyadmin.swiftpeakhosting.co.uk/" target="_blank">
+                    <button style="padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Go to phpMyAdmin</button>
+                </a>
+            </div>Then you can log in with your username and password. You can follow the steps from your TX admin, or you can find a link to our guild below </p>
+            <div class="placeholder">[Code Example]</div>
+        </div>
+
+        <!-- Add more sections as needed -->
+
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.getElementById('body');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+
+            if (darkModeToggle.checked) {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+            }
+        }
+
+        // Auto-switch to dark mode between 7 pm and 9 am UK time
+        function setAutoDarkMode() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getUTCHours();
+
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            darkModeToggle.checked = currentHour >= 19 || currentHour < 9;
+
+            toggleDarkMode();
+        }
+
+        // Call setAutoDarkMode on page load
+        setAutoDarkMode();
+    </script>
+
+</body>
+</html>
