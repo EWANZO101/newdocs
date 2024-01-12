@@ -1,4 +1,486 @@
-<?php include("access_control.php"); ?>
+
+
+User
+dose this code look ok .. <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Document</title>
+
+  <!-- CSS for Dark Mode -->
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* Default Light Mode Styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Placeholder Styles */
+    .step-box, .placeholder {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Dark Mode Toggle Slider Styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+  </style>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    // Check current time and set dark mode accordingly
+    function checkTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var isDarkMode = hours >= 19 || hours < 9; // Dark mode from 7 pm to 9 am
+
+      document.body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    // Dark Mode Toggle Slider
+    function toggleDarkMode() {
+      var darkModeToggle = document.getElementById('darkModeToggle');
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    }
+
+    // Check time on page load
+    window.onload = function() {
+      checkTime();
+    };
+
+    // Update time every minute
+    setInterval(checkTime, 60000);
+  </script>
+</head>
+<body>
+
+  <!-- Dark Mode Toggle Slider -->
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    Dark Mode
+  </label>
+
+  <!-- Your Document Content -->
+  <div class="step-box">
+    <p>Snaily cad start .bat </p>
+  </div>
+
+  <div class="step-box">
+    <p>Here you can see what is in the start.bat script, and here is a link to where you can download it :<li><a href="Download.Section.html">snaily cad scripts  </a></li></p>
+  </div>
+
+  <!-- Code Example Placeholder -->
+  <div class="placeholder">[@echo off
+    :start
+    pnpm run start
+    goto start]</div>
+
+</body>
+</html>
+ChatGPT
+The HTML and CSS code looks well-structured and functional. It includes a dark mode feature with a toggle switch and a time-based mechanism to automatically switch between light and dark modes during specific hours. The JavaScript functions seem appropriate for achieving the desired functionality.
+
+However, I noticed a couple of points you might want to consider:
+
+HTML List Item Placement:
+In the second div with the class step-box, you have a list item (<li>) directly inside a paragraph (<p>) without being within an ordered or unordered list (<ul> or <ol>). It might be more semantically correct to use a list structure:
+
+html
+Copy code
+<div class="step-box">
+  <p>Here you can see what is in the start.bat script, and here is a link to where you can download it :</p>
+  <ul>
+    <li><a href="Download.Section.html">snaily cad scripts</a></li>
+  </ul>
+</div>
+JavaScript Execution Order:
+Although your JavaScript code is generally well-organized, it might be beneficial to ensure that the script is placed at the end of the HTML document, just before the closing </body> tag. This helps to ensure that the DOM elements are fully loaded before the script is executed, reducing the risk of issues related to element availability.
+
+html
+Copy code
+<!-- Your Document Content -->
+
+<!-- Dark Mode Toggle Slider -->
+<label class="dark-mode-toggle">
+  <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+  Dark Mode
+</label>
+
+</body>
+
+<!-- JavaScript for Dark Mode -->
+<script>
+  // JavaScript code here...
+</script>
+</html>
+Apart from these points, your code appears to be in good shape.
+
+User
+full code fix 
+ChatGPT
+Certainly! Here's the modified code with the suggested changes:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Document</title>
+
+  <!-- CSS for Dark Mode -->
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* Default Light Mode Styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Placeholder Styles */
+    .step-box,
+    .placeholder {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Dark Mode Toggle Slider Styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Your Document Content -->
+
+  <!-- Dark Mode Toggle Slider -->
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    Dark Mode
+  </label>
+
+  <div class="step-box">
+    <p>Snaily cad start .bat </p>
+  </div>
+
+  <div class="step-box">
+    <p>Here you can see what is in the start.bat script, and here is a link to where you can download it :</p>
+    <ul>
+      <li><a href="Download.Section.html">snaily cad scripts</a></li>
+    </ul>
+  </div>
+
+  <!-- Code Example Placeholder -->
+  <div class="placeholder">[@echo off
+    :start
+    pnpm run start
+    goto start]</div>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    // Check current time and set dark mode accordingly
+    function checkTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var isDarkMode = hours >= 19 || hours < 9; // Dark mode from 7 pm to 9 am
+
+      document.body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    // Dark Mode Toggle Slider
+    function toggleDarkMode() {
+      var darkModeToggle = document.getElementById('darkModeToggle');
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    }
+
+    // Check time on page load
+    window.onload = function () {
+      checkTime();
+    };
+
+    // Update time every minute
+    setInterval(checkTime, 60000);
+  </script>
+</body>
+
+</html>
+This code incorporates the suggested changes regarding the list item placement and JavaScript execution order. It should work well for your intended purposes.
+
+User
+can u make the link be in its own box 
+ChatGPT
+Certainly! If you want to place the link in its own box, you can wrap the link in a separate div with appropriate styling. Here's the modified code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Document</title>
+
+  <!-- CSS for Dark Mode -->
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* Default Light Mode Styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Placeholder Styles */
+    .step-box,
+    .placeholder {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Dark Mode Toggle Slider Styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    /* Box for the link */
+    .link-box {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Your Document Content -->
+
+  <!-- Dark Mode Toggle Slider -->
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    Dark Mode
+  </label>
+
+  <div class="step-box">
+    <p>Snaily cad start .bat </p>
+  </div>
+
+  <div class="step-box">
+    <p>Here you can see what is in the start.bat script, and here is a link to where you can download it :</p>
+    <div class="link-box">
+      <ul>
+        <li><a href="Download.Section.html">snaily cad scripts</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Code Example Placeholder -->
+  <div class="placeholder">[@echo off
+    :start
+    pnpm run start
+    goto start]</div>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    // Check current time and set dark mode accordingly
+    function checkTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var isDarkMode = hours >= 19 || hours < 9; // Dark mode from 7 pm to 9 am
+
+      document.body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    // Dark Mode Toggle Slider
+    function toggleDarkMode() {
+      var darkModeToggle = document.getElementById('darkModeToggle');
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    }
+
+    // Check time on page load
+    window.onload = function () {
+      checkTime();
+    };
+
+    // Update time every minute
+    setInterval(checkTime, 60000);
+  </script>
+</body>
+
+</html>
+In this modification, I added a new style block for the .link-box class, which creates a box around the link. Feel free to adjust the styling according to your preferences.
+
+User
+full code
+ChatGPT
+Certainly! Here's the full code with the link in its own box:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Document</title>
+
+  <!-- CSS for Dark Mode -->
+  <style>
+    body {
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    /* Default Light Mode Styles */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    /* Placeholder Styles */
+    .step-box,
+    .placeholder {
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+
+    /* Dark Mode Toggle Slider Styles */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    /* Box for the link */
+    .link-box {
+      background-color: #e0e0e0;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Your Document Content -->
+
+  <!-- Dark Mode Toggle Slider -->
+  <label class="dark-mode-toggle">
+    <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+    Dark Mode
+  </label>
+
+  <div class="step-box">
+    <p>Snaily cad start .bat </p>
+  </div>
+
+  <div class="step-box">
+    <p>Here you can see what is in the start.bat script, and here is a link to where you can download it :</p>
+    <div class="link-box">
+      <ul>
+        <li><a href="Download.Section.html">snaily cad scripts</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Code Example Placeholder -->
+  <div class="placeholder">[@echo off
+    :start
+    pnpm run start
+    goto start]</div>
+
+  <!-- JavaScript for Dark Mode -->
+  <script>
+    // Check current time and set dark mode accordingly
+    function checkTime() {
+      var now = new Date();
+      var hours = now.getHours();
+      var isDarkMode = hours >= 19 || hours < 9; // Dark mode from 7 pm to 9 am
+
+      document.body.classList.toggle('dark-mode', isDarkMode);
+    }
+
+    // Dark Mode Toggle Slider
+    function toggleDarkMode() {
+      var darkModeToggle = document.getElementById('darkModeToggle');
+      document.body.classList.toggle('dark-mode', darkModeToggle.checked);
+    }
+
+    // Check time on page load
+    window.onload = function () {
+      checkTime();
+    };
+
+    // Update time every minute
+    setInterval(checkTime, 60000);
+  </script>
+</body>
+
+</html>
+Now, the link is wrapped in a div with the class link-box, creating a distinct box around it. Adjust the styling as needed to fit your design preferences.
+
+User
+can u ungray the ourscripts .. <?php include("access_control.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -205,6 +687,12 @@
         </div>
     </section>
 
+    <div class="database-button">
+        <a href="ourscripts.html"> our scripts Docs </a>
+    </div>
+</section>
+    
+
     <footer>
         <p>Footer content here.</p>
     </footer>
@@ -261,5 +749,260 @@
     </script>
 
 
+</body>
+</html>
+ChatGPT
+It seems like you have duplicated the <footer> and <script> sections in your code. I've corrected the duplication, and I've also addressed the issue of graying out the "our scripts Docs" button by removing the extra-button class. Here's the corrected code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SwiftPeakHosting Client Docs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            transition: background-color 0.4s, color 0.4s;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #121212;
+            color: #f2f2f2;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .toggle-label {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-checkbox {
+            display: none;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: #fff;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .toggle-slider {
+            background-color: #2196F3;
+        }
+
+        input:checked + .toggle-slider:before {
+            transform: translateX(20px);
+        }
+
+        .welcome-message {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .documentation {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Styles for Chat Support Button */
+        .chat-button {
+            margin-top: 20px;
+        }
+
+        .chat-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1em;
+            margin: 10px;
+        }
+
+        .chat-button a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Blue text style */
+        .blue-text {
+            color: #3498db; /* Blue color */
+        }
+
+        /* New style for Database Docs button */
+        .database-button {
+            margin-top: 20px;
+        }
+
+        .database-button a {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3498db; /* Blue color */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+            font-size: 1.1em;
+            margin: 10px;
+        }
+
+        .database-button a:hover {
+            background-color: #2980b9; /* Darker blue color on hover */
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="light-mode">
+    <header>
+        <h1>Welcome to SwiftPeakHosting Client Docs</h1>
+        <div class="toggle-container">
+            <label class="toggle-label">
+                <input type="checkbox" class="toggle-checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+                <span class="toggle-slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="documentation">
+        <div class="welcome-message">
+            <p>
+                <p class="blue-text">Welcome to the SwiftPeakHosting client documentation hub, your go-to resource for essential information and valuable resources. Stay tuned for the latest updates, coming soon. Last updated on 12/12/2023.</p>
+            </p>
+        </div>
+
+        <!-- Minecraft Docs Button -->
+        <div class="chat-button">
+            <a href="minectaftdocs.html">Minecraft Docs</a>
+        </div>
+
+        <!-- SwiftPeakHosting Proxmox panel Button -->
+        <div class="chat-button extra-button">
+            <a href="SwiftPeakHosting Proxmox panel.html">SwiftPeakHosting Proxmox panel</a>
+        </div>
+
+        <!-- Snaily Cad Button -->
+        <div class="chat-button extra-button">
+            <a href="#">Snaily Cad </a>
+        </div>
+
+        <!-- Rust Button -->
+        <div class="chat-button extra-button">
+            <a href="#">Rust</a>
+        </div>
+
+        <!-- Web Hosting Button -->
+        <div class="chat-button extra-button">
+            <a href="#">web hosting</a>
+        </div>
+
+        <!-- Fivem Button -->
+        <div class="chat-button extra-button">
+            <a href="#"> Fivem </a>
+        </div>
+
+        <!-- Database Docs Button -->
+        <div class="database-button">
+            <a href="database.html"> Database Docs </a>
+        </div>
+
+        <!-- Our Scripts Docs Button -->
+        <div class="database-button">
+            <a href="ourscripts.html"> Our Scripts Docs </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function checkTime() {
+            const currentTime = new Date();
+            const currentHour = currentTime.getHours();
+
+            // Set the start and end hour for dark mode
+            const startHour = 17; // 8 PM (24-hour format)
+            const endHour = 10; // 6 AM (24-hour format)
+
+            const body = document.body;
+
+            // Check if the current hour is within the specified range for dark mode
+            if (currentHour >= startHour || currentHour < endHour) {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+        }
+
+        // Call the function initially and then every minute (for real-time updates)
+        checkTime();
+        setInterval(checkTime, 60000); // Check every minute
+
+        const darkModeToggle = document.querySelector('.toggle-checkbox');
+        const body = document.querySelector('body');
+
+        darkModeToggle.addEventListener('change', function() {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+    <script>
+        // Wait for 1000 milliseconds (1 second) before redirecting
+        setTimeout(function() {
+            window.location.href = 'https://www.swiftpeakhosting.co.uk/devlogin';
+        }, 1000);
+    </script>
 </body>
 </html>
