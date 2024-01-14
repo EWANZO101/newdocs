@@ -220,6 +220,78 @@
     </script>
 
     <!-- Add other scripts for your plans -->
+    <script>
+      document.getElementById("view Website-Hosting").addEventListener("click", function () {
+          var currentDate = new Date();
+          var targetDate = new Date('2024-01-15'); // January 15, 2024
+          var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
+          var isAvailable = rustCard ? true : false;
+
+          if (currentDate >= targetDate && isAvailable) {
+              window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Website-Hosting';
+          } else if (currentDate < targetDate) {
+              alert('This page will be available after January 15, 2024.');
+          } else if (!isAvailable) {
+              alert('Rust plans are currently inactive.');
+          }
+      });
+  </script>
+    <script>
+      document.getElementById("view VPS-Hostingplans").addEventListener("click", function () {
+          var currentDate = new Date();
+          var targetDate = new Date('2024-01-15'); // January 15, 2024
+          var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
+          var isAvailable = rustCard ? true : false;
+
+          if (currentDate >= targetDate && isAvailable) {
+              window.location.href = 'https://store.swiftpeakhosting.co.uk/store/VPS-Hosting';
+          } else if (currentDate < targetDate) {
+              alert('This page will be available after January 15, 2024.');
+          } else if (!isAvailable) {
+              alert('Rust plans are currently inactive.');
+          }
+      });
+  </script>
+
+<script>
+  document.getElementById("viewGarry’s-ModPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+      var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
+      var isAvailable = rustCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Garry’s-Mod';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Rust plans are currently inactive.');
+      }
+  });
+</script>
+
+
+<script>
+  document.getElementById("viewcomingsoonPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+      var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
+      var isAvailable = rustCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/comingsoon';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Rust plans are currently inactive.');
+      }
+  });
+</script>
+
+
+<footer>
+  <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+</footer>
 
 </body>
 
