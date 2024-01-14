@@ -156,44 +156,40 @@
       <div class="pricing-card">
         <h3>SnailyCAD</h3>
         <p>£/month</p>
-        <button class="btn" id="#snailyPlans"></button>
+        <button class="btn" id="viewSnailyCAD">View SnailyCAD Plans</button>
+      </div>
+
+      <!-- New VPS Plan -->
+      <div class="pricing-card">
+        <h2>VPS Hosting</h2>
+        <p>£/month</p>
+        <button class="btn" id="viewVPSPlans">View VPS Plans</button>
       </div>
     </div>
   </section>
 
+  <!-- Add script for Web Hosting Plans -->
   <script>
     document.getElementById("viewWebHostingPlans").addEventListener("click", function() {
       var currentDate = new Date();
       var targetDate = new Date('2024-01-15'); // January 15, 2024
 
       if (currentDate >= targetDate) {
-        window.location.href = 'WebHostingplans.html';
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Website-Hosting'; // Update the URL for Web Hosting plans
       } else {
         alert('This page will be available after January 15, 2024.');
       }
     });
   </script>
 
+  <!-- Add other scripts for existing plans -->
   <script>
     document.getElementById("viewRustPlans").addEventListener("click", function() {
       var currentDate = new Date();
       var targetDate = new Date('2024-01-15'); // January 15, 2024
 
       if (currentDate >= targetDate) {
-        window.location.href = 'rustplans.html';
-      } else {
-        alert('This page will be available after January 15, 2024.');
-      }
-    });
-  </script>
-
-  <script>
-    document.getElementById("viewMinecraftPlans").addEventListener("click", function() {
-      var currentDate = new Date();
-      var targetDate = new Date('2024-01-15'); // January 15, 2024
-
-      if (currentDate >= targetDate) {
-        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Minecraft-Hosting'; // Update the URL
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Rust-Hosting'; // Update the URL for Rust plans
       } else {
         alert('This page will be available after January 15, 2024.');
       }
@@ -206,7 +202,46 @@
       var targetDate = new Date('2024-01-15'); // January 15, 2024
 
       if (currentDate >= targetDate) {
-        window.location.href = 'fivemplans.html';
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/FiveM-Hosting'; // Update the URL for FiveM plans
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewMinecraftPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Minecraft-Hosting'; // Update the URL for Minecraft plans
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewSnailyCAD").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/SnailyCAD'; // Update the URL for SnailyCAD plans
+      } else {
+        alert('This page will be available after January 15, 2024.');
+      }
+    });
+  </script>
+
+  <script>
+    document.getElementById("viewVPSPlans").addEventListener("click", function() {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15'); // January 15, 2024
+
+      if (currentDate >= targetDate) {
+        window.location.href = 'https://store.swiftpeakhosting.co.uk/store/VPS-Hosting'; // Update the URL for VPS plans
       } else {
         alert('This page will be available after January 15, 2024.');
       }
