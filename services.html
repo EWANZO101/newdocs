@@ -41,10 +41,12 @@
 
         .pricing-card.active {
             border: 2px solid #4CAF50;
+            color: #4CAF50;
         }
 
         .pricing-card.inactive {
             border: 2px solid #FF0000;
+            color: #FF0000;
         }
 
         .pricing-card:hover {
@@ -150,149 +152,163 @@
     <section>
         <h1>Swift Peak Hosting Prices</h1>
         <div class="pricing-section">
+            <!-- Web Hosting Plan -->
             <div class="pricing-card active" data-available="true" data-status="active">
-                <img src="https://cdn.tsrmedia.co.uk/ba7a7cb1-0a0d-49be-bb95-186f3346fea5/f40a27b1-c2a5-4cca-891e-f363badd620f.png" alt="Swift Peak Hosting Image">
-                <h2>FiveM Hosting</h2>
-                <p>£/month</p>
-                <button class="btn" id="viewFivemPlans">View FiveM Plans</button>
+                <!-- ... -->
+                <button class="btn" id="viewWebHostingPlans">View Web Hosting Plans</button>
             </div>
 
+            <!-- Your Plan -->
             <div class="pricing-card active" data-available="true" data-status="active">
-                <img src="https://thumbs.dreamstime.com/b/minecraft-vector-logo-minecraft-game-d-vector-logo-illustration-isolated-black-transparent-banner-background-can-be-used-164068992.jpg" alt="Minecraft Logo">
-                <h2>Minecraft Plans</h2>
-                <p>£/month</p>
-                <button class="btn" id="viewMinecraftPlans">View Minecraft Plans</button>
+                <!-- ... -->
+                <button class="btn" id="viewYourPlan">Rust-Hosting</button>
             </div>
 
-            <div class="pricing-card inactive" data-available="true" data-status="inactive">
-                <img src="https://media.forgecdn.net/avatars/630/580/638030049231838259.png" alt="Rust Hosting Logo">
-                <h2>Rust Hosting</h2>
-                <p>£/month</p>
-                <button class="btn" id="viewRustPlans">View Rust Plans</button>
+            <!-- Another Plan -->
+            <div class="pricing-card inactive" data-available="false" data-status="inactive">
+                <!-- ... -->
+                <button class="btn" id="viewAnotherPlan">VPS-Hosting</button>
             </div>
 
-            <!-- Add your other plans here -->
+            <!-- Add other pricing cards -->
+            <div class="pricing-card inactive" data-available="false" data-status="inactive">
+              <!-- ... -->
+              <button class="btn" id="viewAnotherPlan">Garry’s-Mod</button>
+          </div>
 
-            <div class="pricing-card active" data-available="true" data-status="active">
-                <img src="path_to_your_image.jpg" alt="Plan Image">
-                <h2>Your Plan Name</h2>
-                <p>£/month</p>
-                <button class="btn" id="viewYourPlan">View Your Plan</button>
-            </div>
+          <div class="pricing-card inactive" data-available="false" data-status="inactive">
+            <!-- ... -->
+            <button class="btn" id="viewAnotherPlan">Minecraft-Hosting</button>
+        </div>
+
+        <div class="pricing-card inactive" data-available="false" data-status="inactive">
+          <!-- ... -->
+          <button class="btn" id="viewAnotherPlan">Rust-Hosting</button>
+      </div>
+
+      <div class="pricing-card inactive" data-available="false" data-status="inactive">
+        <!-- ... -->
+        <button class="btn" id="viewAnotherPlan">ComingSoon/button>
+    </div>
+
+</div>
+
 
         </div>
     </section>
 
-    <!-- Add script for Web Hosting Plans -->
-    <script>
-        document.getElementById("viewWebHostingPlans").addEventListener("click", function () {
-            var currentDate = new Date();
-            var targetDate = new Date('2024-01-15'); // January 15, 2024
-            var webHostingCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
-            var isAvailable = webHostingCard ? true : false;
-
-            if (currentDate >= targetDate && isAvailable) {
-                window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Website-Hosting';
-            } else if (currentDate < targetDate) {
-                alert('This page will be available after January 15, 2024.');
-            } else if (!isAvailable) {
-                alert('Web Hosting plans are currently inactive.');
-            }
-        });
-    </script>
-
-    <!-- Add other scripts for existing plans -->
-    <script>
-        document.getElementById("viewRustPlans").addEventListener("click", function () {
-            var currentDate = new Date();
-            var targetDate = new Date('2024-01-15'); // January 15, 2024
-            var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
-            var isAvailable = rustCard ? true : false;
-
-            if (currentDate >= targetDate && isAvailable) {
-                window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Rust-Hosting';
-            } else if (currentDate < targetDate) {
-                alert('This page will be available after January 15, 2024.');
-            } else if (!isAvailable) {
-                alert('Rust plans are currently inactive.');
-            }
-        });
-    </script>
-
-    <!-- Add other scripts for your plans -->
-    <script>
-      document.getElementById("view Website-Hosting").addEventListener("click", function () {
-          var currentDate = new Date();
-          var targetDate = new Date('2024-01-15'); // January 15, 2024
-          var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
-          var isAvailable = rustCard ? true : false;
-
-          if (currentDate >= targetDate && isAvailable) {
-              window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Website-Hosting';
-          } else if (currentDate < targetDate) {
-              alert('This page will be available after January 15, 2024.');
-          } else if (!isAvailable) {
-              alert('Rust plans are currently inactive.');
-          }
-      });
-  </script>
-    <script>
-      document.getElementById("view VPS-Hostingplans").addEventListener("click", function () {
-          var currentDate = new Date();
-          var targetDate = new Date('2024-01-15'); // January 15, 2024
-          var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
-          var isAvailable = rustCard ? true : false;
-
-          if (currentDate >= targetDate && isAvailable) {
-              window.location.href = 'https://store.swiftpeakhosting.co.uk/store/VPS-Hosting';
-          } else if (currentDate < targetDate) {
-              alert('This page will be available after January 15, 2024.');
-          } else if (!isAvailable) {
-              alert('Rust plans are currently inactive.');
-          }
-      });
-  </script>
-
+    <!-- Scripts for plans -->
+   <!-- Add script for Web Hosting Plans -->
 <script>
-  document.getElementById("viewGarry’s-ModPlans").addEventListener("click", function () {
+  document.getElementById("viewWebHostingPlans").addEventListener("click", function () {
       var currentDate = new Date();
-      var targetDate = new Date('2024-01-15'); // January 15, 2024
-      var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
+      var targetDate = new Date('2024-01-15');
+      var webHostingCard = document.querySelector(".pricing-card[data-plan='WebHosting'][data-available='true'][data-status='active']");
+      var isAvailable = webHostingCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Website-Hosting';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Web Hosting plans are currently inactive.');
+      }
+  });
+</script>
+
+<!-- Add script for Rust Plans -->
+<script>
+  document.getElementById("viewRustPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15');
+      var rustCard = document.querySelector(".pricing-card[data-plan='Rust'][data-available='true'][data-status='active']");
       var isAvailable = rustCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Rust-Hosting';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Rust plans are currently inactive.');
+      }
+  });
+</script>
+
+<!-- Add script for Website Hosting Plans -->
+<script>
+  document.getElementById("viewWebsiteHostingPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15');
+      var webHostingCard = document.querySelector(".pricing-card[data-plan='WebsiteHosting'][data-available='true'][data-status='active']");
+      var isAvailable = webHostingCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Minecraft-Hosting';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Website Hosting plans are currently inactive.');
+      }
+  });
+</script>
+
+<!-- Add script for VPS Hosting Plans -->
+<script>
+  document.getElementById("viewVPSHostingPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15');
+      var vpsCard = document.querySelector(".pricing-card[data-plan='VPSHosting'][data-available='true'][data-status='active']");
+      var isAvailable = vpsCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/VPS-Hosting';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('VPS Hosting plans are currently inactive.');
+      }
+  });
+</script>
+
+<!-- Add script for Garry's Mod Plans -->
+<script>
+  document.getElementById("viewGarrysModPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15');
+      var garrysModCard = document.querySelector(".pricing-card[data-plan='GarrysMod'][data-available='true'][data-status='active']");
+      var isAvailable = garrysModCard ? true : false;
 
       if (currentDate >= targetDate && isAvailable) {
           window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Garry’s-Mod';
       } else if (currentDate < targetDate) {
           alert('This page will be available after January 15, 2024.');
       } else if (!isAvailable) {
-          alert('Rust plans are currently inactive.');
+          alert('Garry\'s Mod plans are currently inactive.');
       }
   });
 </script>
 
-
+<!-- Add script for Coming Soon Plans -->
 <script>
-  document.getElementById("viewcomingsoonPlans").addEventListener("click", function () {
+  document.getElementById("viewComingSoonPlans").addEventListener("click", function () {
       var currentDate = new Date();
-      var targetDate = new Date('2024-01-15'); // January 15, 2024
-      var rustCard = document.querySelector(".pricing-card[data-available='true'][data-status='active']");
-      var isAvailable = rustCard ? true : false;
+      var targetDate = new Date('2024-01-15');
+      var comingSoonCard = document.querySelector(".pricing-card[data-plan='ComingSoon'][data-available='true'][data-status='active']");
+      var isAvailable = comingSoonCard ? true : false;
 
       if (currentDate >= targetDate && isAvailable) {
-          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/comingsoon';
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Rust-Hosting';
       } else if (currentDate < targetDate) {
           alert('This page will be available after January 15, 2024.');
       } else if (!isAvailable) {
-          alert('Rust plans are currently inactive.');
+          alert('Coming Soon plans are currently inactive.');
       }
   });
 </script>
 
-
-<footer>
-  <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>
