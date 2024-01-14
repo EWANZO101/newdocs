@@ -198,7 +198,7 @@
     <!-- Scripts for plans -->
    <!-- Add script for Web Hosting Plans -->
 <script>
-  document.getElementById("viewWebHostingPlans").addEventListener("click", function () {
+  document.getElementById("View Web Hosting Plans").addEventListener("click", function () {
       var currentDate = new Date();
       var targetDate = new Date('2024-01-15');
       var webHostingCard = document.querySelector(".pricing-card[data-plan='WebHosting'][data-available='true'][data-status='active']");
@@ -252,7 +252,7 @@
 
 <!-- Add script for VPS Hosting Plans -->
 <script>
-  document.getElementById("viewVPSHostingPlans").addEventListener("click", function () {
+  document.getElementById("viewVPSPlans").addEventListener("click", function () {
       var currentDate = new Date();
       var targetDate = new Date('2024-01-15');
       var vpsCard = document.querySelector(".pricing-card[data-plan='VPSHosting'][data-available='true'][data-status='active']");
@@ -288,7 +288,7 @@
 
 <!-- Add script for Coming Soon Plans -->
 <script>
-  document.getElementById("viewComingSoonPlans").addEventListener("click", function () {
+  document.getElementById("View Rust Plans").addEventListener("click", function () {
       var currentDate = new Date();
       var targetDate = new Date('2024-01-15');
       var comingSoonCard = document.querySelector(".pricing-card[data-plan='ComingSoon'][data-available='true'][data-status='active']");
@@ -296,6 +296,23 @@
 
       if (currentDate >= targetDate && isAvailable) {
           window.location.href = 'https://store.swiftpeakhosting.co.uk/store/Rust-Hosting';
+      } else if (currentDate < targetDate) {
+          alert('This page will be available after January 15, 2024.');
+      } else if (!isAvailable) {
+          alert('Coming Soon plans are currently inactive.');
+      }
+  });
+</script>
+
+<script>
+  document.getElementById("viewFiveM-HostingPlans").addEventListener("click", function () {
+      var currentDate = new Date();
+      var targetDate = new Date('2024-01-15');
+      var comingSoonCard = document.querySelector(".pricing-card[data-plan='ComingSoon'][data-available='true'][data-status='active']");
+      var isAvailable = comingSoonCard ? true : false;
+
+      if (currentDate >= targetDate && isAvailable) {
+          window.location.href = 'https://store.swiftpeakhosting.co.uk/store/FiveM-Hosting';
       } else if (currentDate < targetDate) {
           alert('This page will be available after January 15, 2024.');
       } else if (!isAvailable) {
