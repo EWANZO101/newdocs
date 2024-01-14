@@ -5,141 +5,150 @@
     <meta charset="UTF-8">
     <title>Pricing</title>
     <style>
-        /* Dark Mode Styles */
-        body {
-            background-color: #222;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-image: url('path_to_background_image.jpg');
-            background-size: cover;
-            background-position: center;
+      /* Dark Mode Styles */
+      body {
+        background-color: #222;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url('path_to_background_image.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+    
+      .pricing-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 50px;
+      }
+    
+      /* Pricing Card Styles */
+      .pricing-card {
+        width: 250px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: all 0.3s ease;
+        background-size: cover;
+        background-position: center;
+      }
+    
+      .pricing-card.active {
+        border: 2px solid #4CAF50;
+        color: #4CAF50;
+      }
+    
+      .pricing-card.inactive {
+        border: 2px solid #FF0000;
+        color: #FF0000;
+      }
+    
+      .pricing-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+    
+      .pricing-card h2,
+      .pricing-card p {
+        color: #fff;
+      }
+    
+      .btn {
+        display: inline-block;
+        padding: 8px 16px;
+        margin-top: 15px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        /* Add this line to include a border */
+      }
+    
+      .plan {
+        padding: 15px;
+        border: 1px solid #fff;
+        margin-bottom: 20px;
+      }
+    
+      /* Web Hosting Image Styles */
+      .pricing-card img {
+        width: 100%;
+        height: auto;
+        max-height: 150px; /* Set a maximum height if needed */
+        border: 1px solid #fff;
+        margin: 20px auto;
+        display: block;
+      }
+    
+      /* Web Hosting Plans Section Styles */
+      .web-hosting-plans {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 50px;
+        text-align: center;
+        margin-top: 50px;
+      }
+    
+      .view-plans-btn {
+        padding: 10px 20px;
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    
+      h1 {
+        text-align: center;
+      }
+    
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    
+      /* Add flashing animation */
+      @keyframes flashing {
+        0% {
+          opacity: 1;
         }
-
-        .pricing-section {
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            padding: 50px;
+    
+        50% {
+          opacity: 0;
         }
-
-        /* Pricing Card Styles */
-        .pricing-card {
-            width: 250px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.7);
-            transition: all 0.3s ease;
-            background-size: cover;
-            background-position: center;
+    
+        100% {
+          opacity: 1;
         }
-
-        .pricing-card.active {
-            border: 2px solid #4CAF50;
-            color: #4CAF50;
-        }
-
-        .pricing-card.inactive {
-            border: 2px solid #FF0000;
-            color: #FF0000;
-        }
-
-        .pricing-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .pricing-card h2,
-        .pricing-card p {
-            color: #fff;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 8px 16px;
-            margin-top: 15px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 5px;
-            border: 2px solid #fff; /* Add this line to include a border */
-        }
-
-        .plan {
-            padding: 15px;
-            border: 1px solid #fff;
-            margin-bottom: 20px;
-        }
-
-        /* Web Hosting Image Styles */
-        .pricing-card img {
-            width: 100%;
-            height: auto;
-            max-height: 150px; /* Set a maximum height if needed */
-            border: 1px solid #fff;
-            margin: 20px auto;
-            display: block;
-        }
-
-        /* Web Hosting Plans Section Styles */
-        .web-hosting-plans {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 50px;
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        .view-plans-btn {
-            padding: 10px 20px;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Add flashing animation */
-        @keyframes flashing {
-            0% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        /* Apply flashing animation to the announcement */
-        .announcement {
-            font-size: 30px;
-            color: red;
-            animation: flashing 1.9s infinite;
-        }
-
-        .pricing-card h3 {
-            display: none;
-        }
-    </style>
+      }
+    
+      /* Apply flashing animation to the announcement */
+      .announcement {
+        font-size: 30px;
+        color: red;
+        animation: flashing 1.9s infinite;
+      }
+    
+      .pricing-card h3 {
+        display: none;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Set the height to 100% of the viewport height */
+    }
+</style>
+    
+    
 </head>
 
 <body>
@@ -321,9 +330,9 @@
   });
 </script>
 
-    <footer>
-        <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
-    </footer>
+<footer>
+  <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+</footer>
 </body>
 
 </html>
