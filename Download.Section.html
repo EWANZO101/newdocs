@@ -185,36 +185,25 @@
         <li id="integrationLink">
             <a href="docsnaily.html" id="integrationNavLink" class="disabled-link" onclick="toggleLinkState()">CAD/MDT QB & ESX Integration</a>
         </li>
+        
+        <script>
+            function toggleLinkState() {
+                var link = document.getElementById('integrationNavLink');
+                if (link.classList.contains('disabled-link')) {
+                    // Enable the link
+                    link.classList.remove('disabled-link');
+                    link.removeAttribute('disabled');
+                } else {
+                    // Disable the link
+                    link.classList.add('disabled-link');
+                    link.setAttribute('disabled', 'true');
+                }
+            }
+        </script>
+        </li>
     </ul>
 
-    <!-- JavaScript to disable the link -->
-    <script>
-        // Get the link element by its ID
-        var integrationNavLink = document.getElementById("integrationNavLink");
-
-        // Set a boolean variable to indicate the link's state
-        var isLinkEnabled = false;
-
-        // Function to toggle the link state
-        function toggleLinkState() {
-            isLinkEnabled = !isLinkEnabled; // Toggle the boolean value
-
-            if (isLinkEnabled) {
-                // Enable the link
-                integrationNavLink.style.pointerEvents = "auto";
-                integrationNavLink.style.cursor = "pointer";
-                integrationNavLink.style.opacity = 1;
-            } else {
-                // Disable the link
-                integrationNavLink.style.pointerEvents = "none";
-                integrationNavLink.style.cursor = "not-allowed";
-                integrationNavLink.style.opacity = 0.5;
-            }
-        }
-
-        // Initial setup to disable the link
-        toggleLinkState();
-    </script>
+ 
 
 
             </li>
