@@ -182,24 +182,10 @@
 
     <!-- JavaScript to disable the link -->
     <ul>
-        <li id="integrationLink">
-            <a href="docsnaily.html" id="integrationNavLink" class="disabled-link" onclick="toggleLinkState()">CAD/MDT QB & ESX Integration</a>
-        </li>
         
-        <script>
-            function toggleLinkState() {
-                var link = document.getElementById('integrationNavLink');
-                if (link.classList.contains('disabled-link')) {
-                    // Enable the link
-                    link.classList.remove('disabled-link');
-                    link.removeAttribute('disabled');
-                } else {
-                    // Disable the link
-                    link.classList.add('disabled-link');
-                    link.setAttribute('disabled', 'true');
-                }
-            }
-        </script>
+        <a href="docsnaily.html" id="integrationNavLink" class="disabled-link" onclick="if (!event.target.classList.contains('disabled-link')) toggleLinkState(); return false;">CAD/MDT QB & ESX Integration</a>
+
+      
         </li>
     </ul>
 
