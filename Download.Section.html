@@ -182,6 +182,13 @@
     </ul>
 
     <!-- JavaScript to disable the link -->
+    <ul>
+        <li id="integrationLink">
+            <a href="docsnaily.html" id="integrationNavLink" class="disabled-link" onclick="toggleLinkState()">CAD/MDT QB & ESX Integration</a>
+        </li>
+    </ul>
+
+    <!-- JavaScript to disable the link -->
     <script>
         // Get the link element by its ID
         var integrationNavLink = document.getElementById("integrationNavLink");
@@ -206,9 +213,11 @@
             }
         }
 
-        // Initial setup, you can call toggleLinkState() here if you want to start with the link disabled
-        // toggleLinkState();
+        // Initial setup to disable the link
+        toggleLinkState();
     </script>
+
+
             </li>
         </ul>
     </div>
