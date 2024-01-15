@@ -1,34 +1,49 @@
 @echo off
 
-:: Change directory to Downloads
-cd /d "C:\Downloads"
+:: Download and install Git
+curl -o GitInstaller.exe https://github.com/git-for-windows/git/releases/download/v2.43.0.windows.1/Git-2.43.0-64-bit.exe
+start /wait GitInstaller.exe /VERYSILENT /NORESTART
+pause
 
-:: Download 7-Zip installer
-powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z2301-x64.exe', 'C:\Downloads\7zInstaller.exe')"
+:: Download and install Node.js
+curl -o NodeInstaller.msi https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi
+start /wait msiexec /i NodeInstaller.msi /quiet /qn /norestart
+pause
 
-:: Run 7-Zip installer silently
-start /wait C:\Downloads\7zInstaller.exe /S
+:: Install pnpm
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+pause
 
-:: Download Mozilla Firefox installer
-powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://www.mozilla.org/en-GB/firefox/download/thanks/', 'C:\Downloads\FirefoxInstaller.exe')"
+:: Download and install PostgreSQL
+curl -o PostgreSQLInstaller.exe https://sbp.enterprisedb.com/getfile.jsp?fileid=1258792
+start /wait PostgreSQLInstaller.exe --mode unattended
+pause
 
-:: Run Mozilla Firefox installer silently
-start /wait C:\Downloads\FirefoxInstaller.exe /S
+:: Change to the Documents directory
+cd %USERPROFILE%\Documents
+pause
 
-:: Download FiveM server files
-powershell -command "(New-Object System.Net.WebClient).DownloadFile('https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/', 'C:\Downloads\FiveM.zip')"
+:: Clone the SnailyCAD repository
+git clone https://github.com/SnailyCAD/snaily-cadv4.git
+cd snaily-cadv4
+pause
 
-:: Unzip FiveM files
-powershell Expand-Archive -Path 'C:\Downloads\FiveM.zip' -DestinationPath 'C:\Downloads\FiveM'
+:: Install project dependencies using pnpm
+pnpm install
+pause
 
-:: Set the txAdminPort variable
-set "txAdminPort=40120"
+:: Copy .env.example to .env
+copy .env.example .env
+pause
 
-:: Modify Fxserver.exe properties
-powershell -Command "(Get-Content 'C:\Downloads\FiveM\Fxserver.exe' -Raw) -replace '(?<=\+set txAdminPort )\d+', '%txAdminPort%' | Set-Content 'C:\Downloads\FiveM\Fxserver.exe'"
+:: Open .env file for editing with Visual Studio Code
+code -r .env
+pause
 
-:: Notify when installations and modifications are completed
-echo 7-Zip, Mozilla Firefox, and FiveM server files downloaded, installed, modified, and set to run on startup!
+:: Display message to the user
+echo Please edit the .env file, then save and close it.
+pause
 
-:: Close the window after installations and setup
-exit
+:: Run the build script
+pnpm run build --client --api
+pause
