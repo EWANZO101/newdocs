@@ -181,11 +181,8 @@
         </ul>
     </div>
 
-    <!-- Updated "Update Website" button with the id "updateButton" -->
-    <button id="updateButton" disabled>Update Website</button>
-
-    <button onclick="enableIntegrationLink()">Enable Integration Link</button>
-    <button onclick="disableIntegrationLink()">Disable Integration Link</button>
+    <!-- Updated "Toggle Integration Link" button -->
+    <button id="integrationButton" onclick="toggleIntegrationLink()">Toggle Integration Link</button>
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -251,13 +248,10 @@
             sendDiscordNotification('Website has been updated');
         });
 
-        // New JavaScript functions to enable and disable the integration link
-        function enableIntegrationLink() {
-            document.getElementById('integrationNavLink').classList.remove('disabled-link');
-        }
-
-        function disableIntegrationLink() {
-            document.getElementById('integrationNavLink').classList.add('disabled-link');
+        // New JavaScript function to toggle the integration link state
+        function toggleIntegrationLink() {
+            const integrationNavLink = document.getElementById('integrationNavLink');
+            integrationNavLink.classList.toggle('disabled-link');
         }
     </script>
 
