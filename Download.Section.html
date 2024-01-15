@@ -184,13 +184,13 @@
             <script>
                 // Get the link element by its ID
                 var integrationNavLink = document.getElementById("integrationNavLink");
-            
-                // Disable the link by setting pointer-events to none
-                integrationNavLink.style.pointerEvents = "none";
-            
-                // Optionally, you can also add a visual indication by changing its style
-                integrationNavLink.style.cursor = "not-allowed";
-                integrationNavLink.style.opacity = 0.5; // You can adjust the opacity as needed
+                
+                // Enable the link by setting pointer-events to auto
+                integrationNavLink.style.pointerEvents = "auto";
+                
+                // Optionally, you can reset the visual indication
+                integrationNavLink.style.cursor = "pointer";
+                integrationNavLink.style.opacity = 1; // Set it back to 1 for full opacity
             </script>
             </li>
         </ul>
