@@ -175,23 +175,40 @@
             </li>
 
             <!-- New link with enable/disable functionality -->
-            <!-- Your HTML code -->
-            <li id="integrationLink">
-                <a href="docsnaily.html" id="integrationNavLink" class="disabled-link">CAD/MDT QB & ESX Integration</a>
-            </li>
-            
-            <!-- JavaScript to disable the link -->
-            <script>
-                // Get the link element by its ID
-                var integrationNavLink = document.getElementById("integrationNavLink");
-                
-                // Enable the link by setting pointer-events to auto
+         <!-- Button to toggle link state -->
+         <li>
+            <button onclick="toggleLinkState()">Toggle Link State</button>
+        </li>
+    </ul>
+
+    <!-- JavaScript to disable the link -->
+    <script>
+        // Get the link element by its ID
+        var integrationNavLink = document.getElementById("integrationNavLink");
+
+        // Set a boolean variable to indicate the link's state
+        var isLinkEnabled = false;
+
+        // Function to toggle the link state
+        function toggleLinkState() {
+            isLinkEnabled = !isLinkEnabled; // Toggle the boolean value
+
+            if (isLinkEnabled) {
+                // Enable the link
                 integrationNavLink.style.pointerEvents = "auto";
-                
-                // Optionally, you can reset the visual indication
                 integrationNavLink.style.cursor = "pointer";
-                integrationNavLink.style.opacity = 1; // Set it back to 1 for full opacity
-            </script>
+                integrationNavLink.style.opacity = 1;
+            } else {
+                // Disable the link
+                integrationNavLink.style.pointerEvents = "none";
+                integrationNavLink.style.cursor = "not-allowed";
+                integrationNavLink.style.opacity = 0.5;
+            }
+        }
+
+        // Initial setup, you can call toggleLinkState() here if you want to start with the link disabled
+        // toggleLinkState();
+    </script>
             </li>
         </ul>
     </div>
