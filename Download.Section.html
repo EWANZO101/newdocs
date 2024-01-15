@@ -126,34 +126,23 @@
             cursor: not-allowed;
         }
 
-        /* Footer styling */
-        footer {
-            margin-top: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #333;
+        /* Add some basic styles for the button */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
             color: #fff;
-            text-align: center;
-            padding: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-     /* Add some basic styles for the button */
-     button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #3498db;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
 
-    /* Change button background on hover for better interactivity */
-    button:hover {
-      background-color: #2980b9;
-    }
-  </style>
+        /* Change button background on hover for better interactivity */
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
 
@@ -171,6 +160,7 @@
         <p>Download our latest resources:</p>
         <p>Last Updated on 15/01/2024</p>
         <ul>
+            <!-- Existing download links (unchanged) -->
             <li>
                 <a href="/caddownloads/install.bat" download>Download install for The cad</a>
                 <span> - Execute this script to to install  </span>
@@ -183,21 +173,19 @@
                 <a href="/caddownloads/update(2).bat" download>Download Update cad Script </a>
                 <span> - Execute this script to update The cad  </span>
             </li>
-        </head>
-        <body>
-        
-            <li><a href="docsnaily.html">CAD/MDT QB & ESX Integration </a></li>
 
-
-
-
-            
-            <!-- Add more download links as needed -->
+            <!-- New link with enable/disable functionality -->
+            <li id="integrationLink">
+                <a href="docsnaily.html" id="integrationNavLink" class="disabled-link">CAD/MDT QB & ESX Integration</a>
+            </li>
         </ul>
     </div>
 
     <!-- Updated "Update Website" button with the id "updateButton" -->
     <button id="updateButton" disabled>Update Website</button>
+
+    <button onclick="enableIntegrationLink()">Enable Integration Link</button>
+    <button onclick="disableIntegrationLink()">Disable Integration Link</button>
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
@@ -262,6 +250,15 @@
         document.getElementById('updateButton').addEventListener('click', () => {
             sendDiscordNotification('Website has been updated');
         });
+
+        // New JavaScript functions to enable and disable the integration link
+        function enableIntegrationLink() {
+            document.getElementById('integrationNavLink').classList.remove('disabled-link');
+        }
+
+        function disableIntegrationLink() {
+            document.getElementById('integrationNavLink').classList.add('disabled-link');
+        }
     </script>
 
     <footer>
