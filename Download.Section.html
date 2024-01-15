@@ -142,6 +142,19 @@
         button:hover {
             background-color: #2980b9;
         }
+       
+        .button-box {
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .true-false-button {
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -175,15 +188,14 @@
             </li>
 
             <!-- New link with enable/disable functionality -->
-         <!-- Button to toggle link state -->
-         <li>
-        </li>
-    </ul>
-
-    <!-- JavaScript to disable the link -->
+         <!-- Button Container -->
+  <div class="button-container">
+    <!-- Disabled Button with Link -->
+    <a href="docsnaily.html" class="disabled-button" disabled>Go To CAD/MDT Script QB & ESX</a>
+  </div>
     <ul>
         
-        <a href="docsnaily.html" id="integrationNavLink" class="disabled-link" onclick="if (!event.target.classList.contains('disabled-link')) toggleLinkState(); return true;">CAD/MDT QB & ESX Integration</a>
+      
 
       
         </li>
