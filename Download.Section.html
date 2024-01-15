@@ -175,8 +175,23 @@
             </li>
 
             <!-- New link with enable/disable functionality -->
-            <li id="integrationLink">
-                <a href="docsnaily.html" id="integrationNavLink" class="disabled-link">CAD/MDT QB & ESX Integration</a>
+            <!-- Your HTML code -->
+<li id="integrationLink">
+    <a href="docsnaily.html" id="integrationNavLink" class="disabled-link">CAD/MDT QB & ESX Integration</a>
+</li>
+
+<!-- JavaScript to disable the button -->
+<script>
+    // Get the button element by its ID
+    var integrationNavLink = document.getElementById("integrationNavLink");
+
+    // Disable the button
+    integrationNavLink.disabled = true;
+
+    // Optionally, you can also add a visual indication by changing its style
+    integrationNavLink.style.cursor = "not-allowed";
+    integrationNavLink.style.opacity = 0.5; // You can adjust the opacity as needed
+</script>
             </li>
         </ul>
     </div>
