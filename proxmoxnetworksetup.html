@@ -31,62 +31,93 @@
 
     <p>ChatGPT can help you out here, but you will need to adapt it for your network setup. Alternatively, you can wait until the next update when the Proxmox service, as well as all VM configuration options, will be available.</p>
 
-    <code>
-        auto vmbr0
-        iface vmbr0 inet static
-            address 90.247.138.111
-            netmask 255.255.255.0
-            gateway 90.247.138.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-
-        iface vmbr0 inet static
-            address 90.247.138.112
-            netmask 255.255.255.0
-
-            # Add more addresses as needed
-            # address 90.247.138.113
-            # netmask 255.255.255.0
-
-            # Continue with the rest of your configuration
-            gateway 90.247.138.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-    </code>
+    <p>Copy the configuration below:</p>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <pre id="config">
+    auto lo
+    iface lo inet loopback
+    
+    auto enp34s0
+    iface enp34s0 inet manual
+    
+    auto vmbr0
+    iface vmbr0 inet static
+        address 90.247.138.111
+        netmask 255.255.255.0
+        gateway 90.247.138.1
+        bridge-ports enp34s0
+        bridge-stp off
+        bridge-fd 0
+    
+    # Copy the configuration for a new vmbr1 with a different IP address
+    auto vmbr1
+    iface vmbr1 inet static
+        address 90.247.138.112
+        netmask 255.255.255.0
+        gateway 90.247.138.1
+        bridge-ports enp34s0
+        bridge-stp off
+        bridge-fd 0
+    
+    # Add more addresses as needed
+    # auto vmbr2
+    # iface vmbr2 inet static
+    #     address 90.247.138.113
+    #     netmask 255.255.255.0
+    #     gateway 90.247.138.1
+    #     bridge-ports enp34s0
+    #     bridge-stp off
+    #     bridge-fd 0
+    
+    # Continue with the rest of your configuration for other interfaces or settings
+    </pre>
 
     <h2>Proxmox Network defult configurations</h2>
 
     <code>
-        sudo nano /etc/network/interfaces
-        iface enp34s0 inet manual
-
-        auto vmbr0
-        iface vmbr0 inet static
-            address 192.168.0.14/24
-            gateway 192.168.0.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-
-        sudo systemctl restart networking
-
-        sudo nano /etc/network/interfaces
-        iface enp34s0 inet manual
-
-        auto vmbr0
-        iface vmbr0 inet static
-            address 192.168.0.14/24
-            gateway 192.168.0.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-
-        sudo systemctl restart networking
-    </code>
-
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        <pre id="config">
+            sudo nano /etc/network/interfaces
+            iface enp34s0 inet manual
+            
+            auto vmbr0
+            iface vmbr0 inet static
+                address 192.168.0.14/24
+                gateway 192.168.0.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
+            
+            sudo systemctl restart networking
+            
+            sudo nano /etc/network/interfaces
+            iface enp34s0 inet manual
+            
+            auto vmbr0
+            iface vmbr0 inet static
+                address 192.168.0.14/24
+                gateway 192.168.0.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
+            
+            sudo systemctl restart networking
+            </pre>
     <p>On your Proxmox host, SSH into the system to apply the configurations.</p>
+    
+
+<script>
+    function copyToClipboard() {
+        const configElement = document.getElementById('config');
+        const range = document.createRange();
+        range.selectNode(configElement);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        alert('Configuration copied to clipboard!');
+    }
+</script>
 
 </body>
 
