@@ -7,13 +7,13 @@
   <title>Redirect Links</title>
   <style>
     body {
-      background-color: #333; /* Dark background color */
-      color: #fff; /* Text color */
+      background-color: #333;
+      color: #fff;
       font-family: Arial, sans-serif;
       display: flex;
-      justify-content: center; /* Center items horizontally */
-      align-items: center; /* Center items vertically */
-      height: 100vh; /* Full viewport height */
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
     }
 
@@ -22,7 +22,7 @@
     }
 
     .links-container {
-      text-align: center; /* Center content horizontally */
+      text-align: center;
     }
 
     .link-button {
@@ -44,48 +44,51 @@
     }
 
     .coming-soon {
-      background-color: #666; /* Gray background color for coming soon buttons */
-      pointer-events: none; /* Disable clicking on the button */
+      background-color: #666;
+      pointer-events: none;
     }
-    .button-box {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-        }
 
-        .button-box a {
-            text-decoration: none;
-            color: #333;
-        }
-    </style>
+    .button-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+
+    .button-box a {
+      text-decoration: none;
+      color: #333;
+    }
+  </style>
 </head>
 
 <body>
 
-  <div class="links-container"> <!-- Wrapping links in a div for centering -->
-    <h2>Check out links below </h2> <!-- Heading above the links -->
+  <div class="links-container">
+    <h2>Check out links below </h2>
     <div>
       <button class="link-button" onclick="redirectTo('https://phpmyadmin.swiftpeakhosting.co.uk')">PHPMyAdmin</button>
       <button class="link-button" onclick="redirectTo('https://proxmox.swiftpeakhosting.co.uk')">Proxmox Panel</button>
       <button class="link-button" onclick="redirectTo('https://store.swiftpeakhosting.co.uk/')">Store</button>
       <button class="link-button" onclick="redirectTo('https://panel.swiftpeakhosting.co.uk/')">Mc.panel</button>
       <button class="link-button coming-soon" onclick="redirectTo('https://##snailycad-integration.swiftpeakhosting.co.uk')">Coming Soon</button>
-      
+
       <div class="button-box">
-        <li><a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a></li>
-    </div>
+        <ul>
+          <li><a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a></li>
+        </ul>
+      </div>
 
-    <div class="button-box">
-        <li><a href="mdt-URLS.html">Our clients CAD/MDT URLs</a></li>
-    </div>
-
+      <div class="button-box">
+        <ul>
+          <li><a href="mdt-URLS.html">Our clients CAD/MDT URLs</a></li>
+        </ul>
+      </div>
 
     </div>
   </div>
 
   <script>
-    // Redirect function
     function redirectTo(url) {
       window.location.href = url;
     }
