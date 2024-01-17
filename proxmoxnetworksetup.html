@@ -32,8 +32,8 @@
     <p>ChatGPT can help you out here, but you will need to adapt it for your network setup. Alternatively, you can wait until the next update when the Proxmox service, as well as all VM configuration options, will be available.</p>
 
     <p>Copy the configuration below:</p>
-    <button onclick="copyToClipboard()">Copy to Clipboard</button>
-    <pre id="config">
+    <button onclick="copyToClipboard('config1')">Copy to Clipboard</button>
+    <pre id="config1">
     auto lo
     iface lo inet loopback
     
@@ -72,52 +72,50 @@
     # Continue with the rest of your configuration for other interfaces or settings
     </pre>
 
-    <h2>Proxmox Network defult configurations</h2>
+    <h2>Proxmox Network default configurations</h2>
 
-    <code>
-        <button onclick="copyToClipboard()">Copy to Clipboard</button>
-        <pre id="config">
-            sudo nano /etc/network/interfaces
-            iface enp34s0 inet manual
+    <button onclick="copyToClipboard('config2')">Copy to Clipboard</button>
+    <pre id="config2">
+        sudo nano /etc/network/interfaces
+        iface enp34s0 inet manual
             
-            auto vmbr0
-            iface vmbr0 inet static
-                address 192.168.0.14/24
-                gateway 192.168.0.1
-                bridge-ports enp34s0
-                bridge-stp off
-                bridge-fd 0
-            
-            sudo systemctl restart networking
-            
-            sudo nano /etc/network/interfaces
-            iface enp34s0 inet manual
-            
-            auto vmbr0
-            iface vmbr0 inet static
-                address 192.168.0.14/24
-                gateway 192.168.0.1
-                bridge-ports enp34s0
-                bridge-stp off
-                bridge-fd 0
-            
-            sudo systemctl restart networking
-            </pre>
+        auto vmbr0
+        iface vmbr0 inet static
+            address 192.168.0.14/24
+            gateway 192.168.0.1
+            bridge-ports enp34s0
+            bridge-stp off
+            bridge-fd 0
+        
+        sudo systemctl restart networking
+        
+        sudo nano /etc/network/interfaces
+        iface enp34s0 inet manual
+        
+        auto vmbr0
+        iface vmbr0 inet static
+            address 192.168.0.14/24
+            gateway 192.168.0.1
+            bridge-ports enp34s0
+            bridge-stp off
+            bridge-fd 0
+        
+        sudo systemctl restart networking
+    </pre>
     <p>On your Proxmox host, SSH into the system to apply the configurations.</p>
-    
 
-<script>
-    function copyToClipboard() {
-        const configElement = document.getElementById('config');
-        const range = document.createRange();
-        range.selectNode(configElement);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-        alert('Configuration copied to clipboard!');
-    }
-</script>
+    <script>
+        function copyToClipboard(configId) {
+            const configElement = document.getElementById(configId);
+            const range = document.createRange();
+            range.selectNode(configElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Configuration copied to clipboard!');
+        }
+    </script>
 
 </body>
 
