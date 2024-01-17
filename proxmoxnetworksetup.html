@@ -14,13 +14,36 @@
             color: #00bcd4;
         }
 
-        code {
-            display: block;
+        .code-container {
             background-color: #333;
-            color: #fff;
-            padding: 1em;
-            margin: 0;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
             overflow-x: auto;
+        }
+
+        .code-text {
+            color: #fff;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+        .copy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .copy-button:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
@@ -29,79 +52,82 @@
 
     <h2>Proxmox Configuration Example</h2>
 
-    <p>ChatGPT can help you out here, but you will need to adapt it for your network setup. Alternatively, you can wait until the next update when the Proxmox service, as well as all VM configuration options, will be available.</p>
+    <div class="code-container">
+        <p>Copy the configuration below:</p>
+        <div id="config1" class="code-text">
+            auto lo
+            iface lo inet loopback
 
-    <p>Copy the configuration below:</p>
-    <button onclick="copyToClipboard('config1')">Copy to Clipboard</button>
-    <pre id="config1">
-    auto lo
-    iface lo inet loopback
-    
-    auto enp34s0
-    iface enp34s0 inet manual
-    
-    auto vmbr0
-    iface vmbr0 inet static
-        address 90.247.138.111
-        netmask 255.255.255.0
-        gateway 90.247.138.1
-        bridge-ports enp34s0
-        bridge-stp off
-        bridge-fd 0
-    
-    # Copy the configuration for a new vmbr1 with a different IP address
-    auto vmbr1
-    iface vmbr1 inet static
-        address 90.247.138.112
-        netmask 255.255.255.0
-        gateway 90.247.138.1
-        bridge-ports enp34s0
-        bridge-stp off
-        bridge-fd 0
-    
-    # Add more addresses as needed
-    # auto vmbr2
-    # iface vmbr2 inet static
-    #     address 90.247.138.113
-    #     netmask 255.255.255.0
-    #     gateway 90.247.138.1
-    #     bridge-ports enp34s0
-    #     bridge-stp off
-    #     bridge-fd 0
-    
-    # Continue with the rest of your configuration for other interfaces or settings
-    </pre>
+            auto enp34s0
+            iface enp34s0 inet manual
 
-    <h2>Proxmox Network default configurations</h2>
+            auto vmbr0
+            iface vmbr0 inet static
+                address 90.247.138.111
+                netmask 255.255.255.0
+                gateway 90.247.138.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
 
-    <button onclick="copyToClipboard('config2')">Copy to Clipboard</button>
-    <pre id="config2">
-        sudo nano /etc/network/interfaces
-        iface enp34s0 inet manual
-            
-        auto vmbr0
-        iface vmbr0 inet static
-            address 192.168.0.14/24
-            gateway 192.168.0.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-        
-        sudo systemctl restart networking
-        
-        sudo nano /etc/network/interfaces
-        iface enp34s0 inet manual
-        
-        auto vmbr0
-        iface vmbr0 inet static
-            address 192.168.0.14/24
-            gateway 192.168.0.1
-            bridge-ports enp34s0
-            bridge-stp off
-            bridge-fd 0
-        
-        sudo systemctl restart networking
-    </pre>
+            # Copy the configuration for a new vmbr1 with a different IP address
+            auto vmbr1
+            iface vmbr1 inet static
+                address 90.247.138.112
+                netmask 255.255.255.0
+                gateway 90.247.138.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
+
+            # Add more addresses as needed
+            # auto vmbr2
+            # iface vmbr2 inet static
+            #     address 90.247.138.113
+            #     netmask 255.255.255.0
+            #     gateway 90.247.138.1
+            #     bridge-ports enp34s0
+            #     bridge-stp off
+            #     bridge-fd 0
+
+            # Continue with the rest of your configuration for other interfaces or settings
+        </div>
+        <button class="copy-button" onclick="copyToClipboard('config1')">Copy to Clipboard</button>
+    </div>
+
+    <h2>Proxmox Network Default Configurations</h2>
+
+    <div class="code-container">
+        <div id="config2" class="code-text">
+            sudo nano /etc/network/interfaces
+            iface enp34s0 inet manual
+
+            auto vmbr0
+            iface vmbr0 inet static
+                address 192.168.0.14/24
+                gateway 192.168.0.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
+
+            sudo systemctl restart networking
+
+            sudo nano /etc/network/interfaces
+            iface enp34s0 inet manual
+
+            auto vmbr0
+            iface vmbr0 inet static
+                address 192.168.0.14/24
+                gateway 192.168.0.1
+                bridge-ports enp34s0
+                bridge-stp off
+                bridge-fd 0
+
+            sudo systemctl restart networking
+        </div>
+        <button class="copy-button" onclick="copyToClipboard('config2')">Copy to Clipboard</button>
+    </div>
+
     <p>On your Proxmox host, SSH into the system to apply the configurations.</p>
 
     <script>
