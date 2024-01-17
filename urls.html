@@ -56,8 +56,21 @@
     }
 
     .button-box a {
+      display: inline-block;
+      background-color: #4CAF50;
+      border: 1px solid #45a049;
+      color: white;
+      text-align: center;
       text-decoration: none;
-      color: #333;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+
+    .button-box a:hover {
+      background-color: #45a049;
     }
   </style>
 </head>
@@ -74,15 +87,11 @@
       <button class="link-button coming-soon" onclick="redirectTo('https://##snailycad-integration.swiftpeakhosting.co.uk')">Coming Soon</button>
 
       <div class="button-box">
-        <ul>
-          <li><a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a></li>
-        </ul>
+        <a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a>
       </div>
 
       <div class="button-box">
-        <ul>
-          <li><a href="mdt-URLS.html">Our clients CAD/MDT URLs</a></li>
-        </ul>
+        <a href="mdt-URLS.html">Our clients CAD/MDT URLs</a>
       </div>
 
     </div>
