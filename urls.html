@@ -47,7 +47,18 @@
       background-color: #666; /* Gray background color for coming soon buttons */
       pointer-events: none; /* Disable clicking on the button */
     }
-  </style>
+    .button-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        .button-box a {
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
@@ -61,8 +72,13 @@
       <button class="link-button" onclick="redirectTo('https://panel.swiftpeakhosting.co.uk/')">Mc.panel</button>
       <button class="link-button coming-soon" onclick="redirectTo('https://##snailycad-integration.swiftpeakhosting.co.uk')">Coming Soon</button>
       
-      <li><a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a></li>
-      <li><a href="mdt-URLS.html">Our clints cad/MDT URLS</a></li>
+      <div class="button-box">
+        <li><a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a></li>
+    </div>
+
+    <div class="button-box">
+        <li><a href="mdt-URLS.html">Our clients CAD/MDT URLs</a></li>
+    </div>
 
 
     </div>
