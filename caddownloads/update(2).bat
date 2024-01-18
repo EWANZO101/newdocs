@@ -7,5 +7,5 @@ git stash && git pull origin main
 pnpm install
 pnpm run build
 
-echo All processes are completed. Closing the command prompt.
+echo  All processes are completed. Please close the command prompt !!.
 exit
