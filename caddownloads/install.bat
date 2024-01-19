@@ -15,7 +15,7 @@ if "%choice%"=="2" goto skip
 if "%choice%"=="3" goto stop
 if "%choice%"=="4" goto open_env
 goto menu
-
+cd Documents
 :continue
 echo Cloning repository...
 git clone https://github.com/SnailyCAD/snaily-cadv4.git
