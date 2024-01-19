@@ -3,8 +3,11 @@
 echo Installing Git for Windows...
 choco install git -y
 
-echo Installing Node.js (latest version) for Windows...
-choco install nodejs -y
+echo Downloading and installing Node.js (latest version) for Windows...
+cd %TEMP%
+curl -o nodejs-installer.exe https://nodejs.org/dist/latest/win-x64/node.exe
+start /wait nodejs-installer.exe /verysilent /norestart
+del nodejs-installer.exe
 
 echo Installing pnpm...
 iwr https://get.pnpm.io/install.ps1 -useb | iex
@@ -24,6 +27,7 @@ echo.
 echo After editing the .env file, press Enter to continue...
 pause > nul
 
+echo Running additional commands...
 node scripts/copy-env.mjs --client --api
 pnpm run build
 
