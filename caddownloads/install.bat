@@ -15,13 +15,19 @@ if "%choice%"=="2" goto skip
 if "%choice%"=="3" goto stop
 if "%choice%"=="4" goto open_env
 goto menu
-cd Documents
+
 :continue
 echo Cloning repository...
 git clone https://github.com/SnailyCAD/snaily-cadv4.git
 
 echo Navigating to snaily-cadv4 directory...
 cd snaily-cadv4
+
+echo Checking for package.json...
+if not exist package.json (
+    echo No package.json found. Initializing a new Node.js project...
+    npm init -y
+)
 
 echo Installing dependencies...
 pnpm install
