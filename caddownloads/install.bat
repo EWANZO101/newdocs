@@ -5,9 +5,9 @@ choco install git -y
 
 echo Downloading and installing Node.js (latest version) for Windows...
 cd %TEMP%
-curl -o nodejs-installer.exe https://nodejs.org/dist/latest/win-x64/node.exe
-start /wait nodejs-installer.exe /verysilent /norestart
-del nodejs-installer.exe
+curl -o nodejs-installer.msi https://nodejs.org/dist/latest/win-x64/node.msi
+start /wait msiexec /i nodejs-installer.msi /qn /norestart
+del nodejs-installer.msi
 
 echo Installing pnpm...
 iwr https://get.pnpm.io/install.ps1 -useb | iex
