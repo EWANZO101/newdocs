@@ -1,22 +1,27 @@
 @echo off
 
-echo Installing Git for Windows...
-choco install git -y
+echo Opening Git for Windows download page...
+start https://git-scm.com/downloads
 
-echo Downloading and installing Node.js (latest version) for Windows...
-cd %TEMP%
-curl -o nodejs-installer.msi https://nodejs.org/dist/latest/win-x64/node.msi
-start /wait msiexec /i nodejs-installer.msi /qn /norestart
-del nodejs-installer.msi
+echo Opening Node.js (v20.11.0) download page...
+start https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi
 
-echo Installing pnpm...
-iwr https://get.pnpm.io/install.ps1 -useb | iex
+echo Opening pnpm installation page in PowerShell...
+start powershell -NoProfile -ExecutionPolicy Bypass -Command "iwr https://get.pnpm.io/install.ps1 -useb | iex"
+
+echo Opening PostgreSQL download page...
+start https://sbp.enterprisedb.com/getfile.jsp?fileid=1258792
+
+echo.
+echo After installing the required software, press Enter to continue...
+pause > nul
 
 cd Documents
 
 git clone https://github.com/SnailyCAD/snaily-cadv4.git
 cd snaily-cadv4
 
+echo Installing dependencies...
 pnpm install
 copy .env.example .env
 
