@@ -1,136 +1,135 @@
 @echo off
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
+:mainMenu
+echo Actions:
+echo   1 - Continue with the installation
+echo   2 - Skip a step
+echo   3 - End and exit
+echo   4 - Open Visual Studio Code and minimize command prompt
+echo   M - Shortcuts Menu (5-17)
+
+set /p ACTION=Choose an action:
+
+if /i "%ACTION%"=="3" (
+    echo Exiting...
     timeout /t 3 /nobreak >nul
     exit
 )
 
-echo Installing Git for Windows...
-choco install git -y
+if /i "%ACTION%"=="M" goto :ShortcutMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
+:: Continue with the installation
+if /i "%ACTION%"=="1" goto :ContinueInstallation
+
+:: Skip a step
+if /i "%ACTION%"=="2" goto :SkipStep
+
+:: Open Visual Studio Code and minimize command prompt
+if /i "%ACTION%"=="4" (
+    start code .
+    echo Opening Visual Studio Code...
+    echo Minimizing the command prompt...
+    start /min cmd /c exit
 )
 
-echo.
-echo Installing Node.js 20.11.0...
-choco install nodejs --version=20.11.0 -y
+echo Invalid choice. Please try again.
+timeout /t 2 /nobreak >nul
+goto :mainMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:ShortcutMenu
+echo Shortcuts Menu:
+echo   5 - Git Installation
+echo   6 - Node.js Installation
+echo   7 - pnpm Installation
+echo   8 - PostgreSQL Installation
+echo   9 - Configure PostgreSQL
+echo   10 - Restart Command Prompt
+echo   11 - Clone SnailyCAD Repository
+echo   12 - Install Project Dependencies
+echo   13 - Copy .env.example to .env
+echo   14 - Open .env file for editing with Visual Studio Code
+echo   15 - Run the build script
+echo   16 - Open Visual Studio Code and minimize command prompt
+echo   17 - Clear old files from CD
 
-echo.
-echo Installing pnpm...
-iwr https://get.pnpm.io/install.ps1 -useb | iex
+:shortcutMenuLoop
+set /p SHORTCUT_ACTION=Choose a shortcut:
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:: Handle shortcuts
+if /i "%SHORTCUT_ACTION%"=="5" goto :GitInstallation
+if /i "%SHORTCUT_ACTION%"=="6" goto :NodeJSInstallation
+if /i "%SHORTCUT_ACTION%"=="7" goto :PnpmInstallation
+if /i "%SHORTCUT_ACTION%"=="8" goto :PostgreSQLInstallation
+if /i "%SHORTCUT_ACTION%"=="9" goto :ConfigurePostgreSQL
+if /i "%SHORTCUT_ACTION%"=="10" goto :RestartCommandPrompt
+if /i "%SHORTCUT_ACTION%"=="11" goto :CloneRepository
+if /i "%SHORTCUT_ACTION%"=="12" goto :InstallDependencies
+if /i "%SHORTCUT_ACTION%"=="13" goto :CopyEnvFile
+if /i "%SHORTCUT_ACTION%"=="14" goto :OpenEnvFile
+if /i "%SHORTCUT_ACTION%"=="15" goto :RunBuildScript
+if /i "%SHORTCUT_ACTION%"=="16" goto :OpenVSCodeAndMinimize
+if /i "%SHORTCUT_ACTION%"=="17" goto :ClearOldFilesFromCD
 
-echo.
-echo Installing PostgreSQL 16...
-choco install postgresql -y
+echo Invalid choice. Please try again.
+timeout /t 2 /nobreak >nul
+goto :shortcutMenuLoop
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:ContinueInstallation
+echo Continue installation logic...
+goto :mainMenu
 
-echo.
-echo Configuring PostgreSQL...
-echo Please set a password for the 'postgres' user during the installation.
+:SkipStep
+echo Skip step logic...
+goto :mainMenu
 
-:: Add PostgreSQL bin directory to the system PATH
-setx /M PATH "%PATH%;C:\Program Files\PostgreSQL\*\bin"
+:GitInstallation
+echo Git installation logic...
+goto :mainMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:NodeJSInstallation
+echo Node.js installation logic...
+goto :mainMenu
 
-:: Restart the command prompt to apply changes
-echo.
-echo Restarting the command prompt...
-timeout /t 5 /nobreak >nul
+:PnpmInstallation
+echo pnpm installation logic...
+goto :mainMenu
 
-:: Change to the Documents directory
-cd /d %USERPROFILE%\Documents
+:PostgreSQLInstallation
+echo PostgreSQL installation logic...
+goto :mainMenu
 
-:: Clone the SnailyCAD repository
-git clone https://github.com/SnailyCAD/snaily-cadv4.git
-cd snaily-cadv4
+:ConfigurePostgreSQL
+echo Configure PostgreSQL logic...
+goto :mainMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:RestartCommandPrompt
+echo Restart command prompt logic...
+goto :mainMenu
 
-:: Pause and ask the user to press Enter to continue
-echo.
-echo Press Enter to continue...
-pause
+:CloneRepository
+echo Clone repository logic...
+goto :mainMenu
 
-:: Install project dependencies using pnpm
-pnpm install
+:InstallDependencies
+echo Install dependencies logic...
+goto :mainMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:CopyEnvFile
+echo Copy .env.example to .env logic...
+goto :mainMenu
 
-:: Pause and ask the user to press Enter to continue
-echo.
-echo Press Enter to continue...
-pause
+:OpenEnvFile
+echo Open .env file logic...
+goto :mainMenu
 
-:: Copy .env.example to .env
-copy .env.example .env
+:RunBuildScript
+echo Run build script logic...
+goto :mainMenu
 
-set /p CONTINUE_INSTALL=Do you want to continue with the installation? (Type 'exit' to cancel): 
-if /i "%CONTINUE_INSTALL%"=="exit" (
-    echo Installation cancelled. Exiting...
-    timeout /t 3 /nobreak >nul
-    exit
-)
+:OpenVSCodeAndMinimize
+echo Open VS Code and minimize command prompt logic...
+goto :mainMenu
 
-:: Pause and ask the user to press Enter to continue
-echo.
-echo Press Enter to continue...
-pause
-
-:: Open .env file for editing with Visual Studio Code
-code -r .env
-
-:: Display message to the user
-echo.
-echo Please edit the .env file, then save and close it.
-
-:: Run the build script
-pnpm run build --client --api
-
-:: Pause to keep the command prompt window open
-pause
-
-echo.
-echo Installation complete. You can now close the command prompt and open the start.bat file from https://www.swiftpeakhosting.co.uk.
-pause
+:ClearOldFilesFromCD
+echo Clear old files from CD logic...
+goto :mainMenu
