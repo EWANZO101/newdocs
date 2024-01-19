@@ -1,5 +1,14 @@
 @echo off
 
+echo Installing Git for Windows...
+choco install git -y
+
+echo Installing Node.js (latest version) for Windows...
+choco install nodejs -y
+
+echo Installing pnpm...
+iwr https://get.pnpm.io/install.ps1 -useb | iex
+
 cd Documents
 
 git clone https://github.com/SnailyCAD/snaily-cadv4.git
