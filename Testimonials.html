@@ -12,7 +12,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: center; /* Center everything */
+            flex-direction: column;
+            min-height: 100vh; /* Full height of the viewport */
+            justify-content: space-between; /* Align content at the top and bottom */
         }
 
         .text-gray-400 {
@@ -38,6 +40,7 @@
         .container {
             padding: 20px; /* Add some padding for space */
             max-width: 800px; /* Limit container width */
+            margin: auto; /* Center the container horizontally */
         }
 
         blockquote {
@@ -55,8 +58,14 @@
             justify-content: space-between;
             margin-top: 15px;
         }
+
+        footer {
+            background-color: #2d3748;
+            padding: 10px;
+            text-align: center;
+            color: #cbd5e0;
+        }
     </style>
-    <link rel="stylesheet" href="styles.css">
     <title>Testimonials Section</title>
 </head>
 
@@ -71,7 +80,7 @@
                             <p class="text-lg font-semibold text-gray-900 dark:text-white">"Honestly. So far what I have seen. These guys help. These guys know their stuff. The servers run good, and there is good storage. VPS I suggest highly"</p>
                         </blockquote>
                         <figcaption class="flex items-center mt-4 space-x-3">
-                            <img class="w-6 h-6 rounded-full" src="https://cdn.discordapp.com/attachments/1054865340435279932/1196614700021076158/Screenshot_2024-01-16_003830-removebg-preview.png?ex=65b84548&is=65a5d048&hm=d147fce3c5615021d8a398a9b4647a15672bd892d6ade70fd61f2f971867c5ec&" alt="profile picture">
+                            <img class="w-6 h-6 rounded-full" src="https://cdn.discordapp.com/attachments/1054865340435279932/1196614700021076158/Screenshot_2024-01-16_003830-removebg-preview.png" alt="profile picture">
                             <div class="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
                                 <cite class="pe-3 font-medium text-gray-900 dark:text-white">Icy</cite>
                                 <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">VPS Customer</cite>
@@ -85,7 +94,7 @@
                             <p class="text-lg font-semibold text-gray-900 dark:text-white">"Best hosting out! Ewan C efficiently assisted with pre-installation for Snaily CAD, which was a quick process. There have been no incidents of crashes or outages on the hosting platform. I highly recommend using Swift Peak Hosting"</p>
                         </blockquote>
                         <figcaption class="flex items-center mt-4 space-x-3">
-                            <img class="w-6 h-6 rounded-full" src="https://cdn.discordapp.com/attachments/1054865340435279932/1196614700285313235/Screenshot_2024-01-16_003846-removebg-preview.png?ex=65b84548&is=65a5d048&hm=ff27cada548b2784165477f4ad3ad57d1c4af227cbf1276f85e3c11efd6157e0&" alt="profile picture">
+                            <img class="w-6 h-6 rounded-full" src="https://cdn.discordapp.com/attachments/1054865340435279932/1196614700285313235/Screenshot_2024-01-16_003846-removebg-preview.png" alt="profile picture">
                             <div class="flex items-center divide-x-2 divide-gray-300 dark:divide-gray-700">
                                 <cite class="pe-3 font-medium text-gray-900 dark:text-white">Void</cite>
                                 <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">VPS Customer</cite>
@@ -100,7 +109,7 @@
     </section>
     <footer>
         <p>&copy; 2024 Swift Peak Hosting. All rights reserved.</p>
-      </footer>
+    </footer>
 </body>
 
 </html>
