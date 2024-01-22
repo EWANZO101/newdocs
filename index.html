@@ -20,11 +20,11 @@
             margin: 0;
             padding-top: 80px;
         }
-
+    
         header {
             padding: 20px 0;
         }
-
+    
         .navbar {
             width: 100%;
             z-index: 999;
@@ -35,26 +35,26 @@
             background-color: #154c79;
             color: #fff;
             display: flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
         }
-
+    
         .max-w-screen-xl {
             margin: 0 auto;
             padding: 0 20px; /* Add some padding to the container if needed */
         }
-
+    
         .menu {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
         }
-
+    
         .menu li {
             margin: 0 10px;
         }
-
+    
         .menu li a {
             text-decoration: none;
             color: white;
@@ -62,11 +62,11 @@
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
-
+    
         .menu li a:hover {
             background-color: #423bc8;
         }
-
+    
         .box-link {
             display: inline-block;
             padding: 10px 20px;
@@ -77,12 +77,12 @@
             border-radius: 5px;
             margin: 10px;
         }
-
+    
         .box-link:hover {
             background-color: #423bc8;
             border-color: #423bc8;
         }
-
+    
         .coming-soon {
             text-align: center;
             font-family: 'Arial', sans-serif;
@@ -90,17 +90,17 @@
             color: red;
             animation: flash 1s infinite alternate;
         }
-
+    
         @keyframes flash {
             from {
                 opacity: 3;
             }
-
+    
             to {
                 opacity: 0.9;
             }
         }
-
+    
         footer {
             display: flex;
             justify-content: center;
@@ -110,28 +110,28 @@
             padding: 15px;
         }
     </style>
-</head>
-
-<body onload="setButtonAvailability()">
-    <nav class="navbar">
-        <div class="max-w-screen-xl mx-auto">
-            <ul class="menu">
-                
-                <li><a href="customerdocs.html">Guild Docs</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="coming_soon.html">Staff Docs</a></li>
-                <li><a href="#">Our Teams</a></li>
-                <li><a href="tnc.html">Terms&Conditions</a></li>
-                <li><a href="urls.html">Links</a></li>
+    </head>
+    
+    <body onload="setButtonAvailability()">
+        <nav class="navbar">
+            <div class="max-w-screen-xl mx-auto">
+                <ul class="menu">
+                    <li><a href="customerdocs.html">Guild Docs</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="coming_soon.html">Staff Docs</a></li>
+                    <li><a href="#">Our Teams</a></li>
+                    <li><a href="tnc.html">Terms&Conditions</a></li>
+                    <li><a href="urls.html">Links</a></li>
+                </ul>
+            </div>
+            <div class="menu">
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
                 <li><a href="#">comingsoon</a></li>
                 <li><a href="Downloads.html">Download</a></li>
-            </ul>
-        </div>
-    </nav>
-
+            </div>
+        </nav>
     <header class="text-center">
         <div class="p-4 mb-4 text-sm text-white rounded-lg bg-red-500 dark:bg-gray-800 dark:text-red-400" role="alert">
             <span class="font-medium">SERVICE ANNOUNCEMENT::</span> 
