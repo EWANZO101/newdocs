@@ -47,7 +47,7 @@
     .community a {
       display: inline-block;
       text-decoration: none;
-      background-color: #0056b3; /* Change background color to blue */
+      background-color: #154c79; /* Change background color to a darker blue */
       color: #fff; /* Change text color to white */
       padding: 10px 20px;
       border-radius: 5px;
@@ -55,7 +55,7 @@
     }
 
     .community a:hover {
-      background-color: #004080; /* Change hover color to a darker blue */
+      background-color: #0056b3; /* Change hover color to blue */
     }
 
     /* Footer styling */
@@ -122,17 +122,20 @@
       margin-right: 15px;
     }
 
-    /* Remove the comment about button color */
+    /* Updated navbar button styles */
     .navbar .menu li a {
       text-decoration: none;
       color: #fff;  /* Change text color to white */
       font-size: 18px;
       font-weight: 500;
-      transition: color 0.3s ease;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .navbar .menu li a:hover {
-      color: #0056b3; /* Change hover color to blue */
+      background-color: #0056b3; /* Change hover color to blue */
+      color: #fff; /* Change hover text color to white */
     }
 
     /* Testimonials section styling */
@@ -158,16 +161,16 @@
     <div class="max-width">
       <ul class="menu">
         <!-- Your menu items here -->
-        <li><a href="customerdocs.html" class="menu-btn">Customerdocs</a></li>
-        <li><a href="about.html" class="menu-btn">About</a></li>
-        <li><a href="services.html" class="menu-btn">Services</a></li>
-        <li><a href="coming_soon.html" class="menu-btn">Staffdocs</a></li>
-        <li><a href="#teams" class="menu-btn">#Teams</a></li>
-        <li><a href="tnc.html" class="menu-btn">T&C</a></li>
-        <li><a href="urls.html" class="menu-btn">links</a></li>
+        <li><a href="customerdocs.html">Customerdocs</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="coming_soon.html">Staffdocs</a></li>
+        <li><a href="#teams">#Teams</a></li>
+        <li><a href="tnc.html">T&C</a></li>
+        <li><a href="urls.html">links</a></li>
         <!-- Login and Signup links -->
-        <li><a href="login.html" class="menu-btn">Login</a></li>
-        <li><a href="signup.html" class="menu-btn">Signup</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Signup</a></li>
       </ul>
     </div>
   </nav>
@@ -175,19 +178,19 @@
   <div class="container">
     <!-- Add five buttons linking to different HTML pages -->
     <div class="community">
-      <a href="readmorehcrp.html" class="menu-btn">City Life | ZA | RP</a>
+      <a href="readmorehcrp.html">City Life | ZA | RP</a>
     </div>
     <div class="community">
-      <a href="San Andreas State Roleplay.html" class="menu-btn">San Andreas State Roleplay</a>
+      <a href="San Andreas State Roleplay.html">San Andreas State Roleplay</a>
     </div>
     <div class="community">
-      <a href="readmorehcrp.html" class="menu-btn">United Network Roleplay</a>
+      <a href="readmorehcrp.html">United Network Roleplay</a>
     </div>
     <div class="community">
-      <a href="reviwes.html" class="menu-btn">See What Clients Say About Our Services</a>
+      <a href="reviwes.html">See What Clients Say About Our Services</a>
     </div>
     <div class="community">
-      <a href="#" class="menu-btn">Coming Soon</a>
+      <a href="#">Coming Soon</a>
     </div>
   </div>
 
@@ -196,7 +199,7 @@
   </footer>
   <script>
     // Add event listeners to the buttons for redirection
-    document.querySelectorAll('.menu-btn').forEach(function(button) {
+    document.querySelectorAll('.menu a').forEach(function(button) {
       button.addEventListener('click', function(event) {
         event.preventDefault();
         redirectToPage(button.getAttribute('href'));
