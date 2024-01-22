@@ -127,7 +127,28 @@ footer {
 #passwordInput {
     display: none;
 }
-    </style>
+       /* Your existing styles... */
+
+       h3 {
+        color: #3498db; /* Blue color */
+    }
+
+    .modern-button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #3498db; /* Blue color */
+    }
+
+    /* Your existing styles... */
+</style>
 </head>
 
 <body>
@@ -170,10 +191,10 @@ footer {
             <li>For non-TX Admin Setup: <a class="button" href="https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/" target="_blank" rel="noopener noreferrer">Download FiveM Server</a></li>
         </ol>
     
-        <h3>TX Admin Database Setup</h3>
-        <button class="modern-button" onclick="window.location.href='database_setup.html'">Go to Database Setup</button>
-    </section>
-    
+        <section>
+            <h3>TX Admin Database Setup</h3>
+            <button class="modern-button" onclick="window.location.href='database_setup.html'">Go to Database Setup</button>
+        </section>
     <section>
         <h3>For non-TX Admin Setup, go here:</h3>
         <ul>
