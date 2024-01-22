@@ -129,7 +129,18 @@
         margin-bottom: 5px;
         border-radius: 5px;
     }
-</style>
+    .command {
+            background-color: #f0f0f0; /* Light grayish-green color */
+            color: #003366; /* Dark blue color for text */
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        #passwordInput {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -193,9 +204,23 @@
         </p>
         <p>Please make sure the name is the same as the new A Record you made.</p>
         <!-- Include a list of server rules -->
+        <script>
+            // Replace 'YOUR_PASSWORD_HERE' with your actual password
+            const correctPassword = 'DEV9458466545455';
+        
+            function checkPassword() {
+                const passwordInput = prompt('Enter the password:');
+                if (passwordInput === correctPassword) {
+                    document.getElementById('dropdownContent').style.display = 'block';
+                } else {
+                    alert('Incorrect password. Access denied.');
+                }
+            }
+        </script>
+        
         <section>
-            <details open>
-                <summary>Coming Soon</summary>
+            <button onclick="checkPassword()">Open Dropdown</button>
+            <div id="dropdownContent" style="display: none;">
                 <h2>Basic fivem Commands</h2>
                 <p></p>
                 <div class="command">
@@ -210,10 +235,7 @@
                                                     <div class="command">
                                                         <!-- Include more commands as needed -->
                                                     </div>
-                </details>
-            </section>
-        
-            <section>
+                </div>
                 <h2>Plugins</h2>
                 <p>Here are some Popular Plugins Big servers use.</p>
                 <div class="command"> <a href="#"></a> </div>
@@ -222,7 +244,8 @@
                 <div class="command"> <a href="#"></a> </div>
                 <div class="command"> <a href="#"></a> </div>
                 <!-- List and describe server plugins -->
-            </section>
+            </div>
+        </section>
 
         <footer>
             <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
