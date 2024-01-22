@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Swift Peak Hosting Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        body,
-        h1,
-        h2,
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* General styles for the body */
         body {
             background: linear-gradient(to bottom, #9c27b0, #f8bbd0);
             color: #ffffff;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -27,13 +21,10 @@
             padding-top: 80px; /* Adjust this value based on your navbar height */
         }
 
-        /* Styles for the header */
         header {
             padding: 20px 0;
-            /* Your header styles here */
         }
 
-        /* Styles for the navbar */
         .navbar {
             width: 100%;
             z-index: 999;
@@ -72,7 +63,6 @@
             background-color: #423bc8;
         }
 
-        /* New styles for boxed links */
         .box-link {
             display: inline-block;
             padding: 10px 20px;
@@ -88,6 +78,7 @@
             background-color: #423bc8;
             border-color: #423bc8;
         }
+
         body {
             display: flex;
             align-items: center;
@@ -109,19 +100,17 @@
             from {
                 opacity: 3;
             }
+
             to {
                 opacity: 0.9;
             }
         }
     </style>
 </head>
-<div class="coming-soon">
-    <p> Bryan-Snailycad-Integration-coming soon. Find out more <a href="https://snailycad-integration.swiftpeakhosting.co.uk/" class="box-link">Bryan-Snailycad-Integration</a> </p>
 
-</div>
 <body onload="setButtonAvailability()">
     <nav class="navbar">
-        <div class="max-width">
+        <div class="max-w-screen-xl mx-auto">
             <ul class="menu">
                 <li><a href="customerdocs.html">Customerdocs</a></li>
                 <li><a href="about.html">About</a></li>
@@ -134,32 +123,29 @@
                 <li><a href="signup.html">Signup</a></li>
                 <li><a href="#Snaily.html"></a></li>
                 <li><a href="Downloads.html">cad/mdt scripts for snaily cad </a></li>
-                
-
-
-                
             </ul>
         </div>
     </nav>
-    <header>
-        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert" style="color: red; font-size: 25px; margin-left: 10%;">
+
+    <header class="text-center">
+        <div class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
             <span class="font-medium">Service announcement</span> We are currently not taking any more clients due to our closure for the holidays, and we are in the process of relocating
         </div>
-        </div>
-        <h1>Welcome to Swift Peak Hosting Documentation</h1>
+        <h1 class="text-4xl font-semibold">Welcome to Swift Peak Hosting Documentation</h1>
     </header>
-    
-    <section>
-        <header><h2>Check out other servers or communities that have trusted us in the past or currently</h2></header>
-        <section>
+
+    <section class="mb-12">
+        <header class="text-2xl mb-4">Check out other servers or communities that have trusted us in the past or currently</header>
+        <section class="mb-4">
             <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
             <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
         </section>
         <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
     </section>
 
-    <footer style="margin-top: 10px; position: fixed; bottom: 0; width: 100%; background-color: #333; color: #fff; text-align: center; padding: 10px 0;">
-        <p style="margin: 0 auto;">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+    <footer class="text-center py-4 bg-gray-800 text-white">
+        <p class="m-0">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
