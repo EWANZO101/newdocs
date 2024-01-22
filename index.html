@@ -95,7 +95,15 @@
                 opacity: 0.9;
             }
         }
-    </style>
+        footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333; /* Use your desired background color */
+        color: white; /* Use your desired text color */
+        padding: 15px;
+    }
+</style>
 </head>
 
 <body onload="setButtonAvailability()">
@@ -133,9 +141,10 @@
         <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
     </section>
 
-    <footer class="text-center py-4 bg-gray-800 text-white">
+    <footer class="d-flex justify-content-center align-items-center py-4 bg-gray-800 text-white">
         <p class="m-0">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
+    
 </body>
 
 </html>
