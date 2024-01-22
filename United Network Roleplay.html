@@ -11,6 +11,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
+            overflow: hidden; /* Hide the overflow during zoom-out effect */
         }
 
         h1 {
@@ -55,6 +56,7 @@
 
         #loading-overlay {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: fixed;
@@ -66,6 +68,21 @@
             color: #ffffff;
             font-size: 24px;
             z-index: 9999;
+        }
+
+        #loading-bar-container {
+            width: 50%;
+            margin-top: 20px;
+            background: #333;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        #loading-bar {
+            height: 20px;
+            width: 0%;
+            background: #3498db;
+            transition: width 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -119,17 +136,35 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        var loadingBar = document.getElementById("loading-bar");
+        var pageContent = document.getElementById("page-content");
+
         // Simulate a delay of 10 seconds (10000 milliseconds) for loading
         setTimeout(function () {
-            document.getElementById("loading-overlay").style.display = "none";
-            document.getElementById("page-content").style.display = "block";
-        }, 10000);
-    });
+            document.getElementById("loading-overlay").style.opacity = 0;
 
-    // Zoom-out effect
-    document.addEventListener("DOMContentLoaded", function () {
-        document.body.style.transition = "transform 1s";
-        document.body.style.transform = "scale(0.8)";
+            // Zoom-out effect
+            document.body.style.transition = "transform 2s";
+            document.body.style.transform = "scale(0.8)";
+
+            // Zoom-in effect
+            setTimeout(function () {
+                document.body.style.transform = "scale(1)";
+                document.getElementById("loading-overlay").style.display = "none";
+                pageContent.style.display = "block";
+                document.body.style.overflow = "visible"; // Restore overflow after zoom-in
+            }, 2000);
+        }, 10000);
+
+        // Update loading bar
+        var progress = 0;
+        var interval = setInterval(function () {
+            progress += 10;
+            loadingBar.style.width = progress + "%";
+            if (progress >= 100) {
+                clearInterval(interval);
+            }
+        }, 1000);
     });
 </script>
 </body>
