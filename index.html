@@ -11,26 +11,16 @@
             background: linear-gradient(to right, #3498db, #9b59b6);
             color: #ffffff;
             font-family: 'Arial', sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
             margin: 0;
-            padding-top: 80px;
-        }
-    
-        header {
-            padding: 20px 0;
+            padding: 0;
+            box-sizing: border-box;
         }
     
         .navbar {
             width: 100%;
-            z-index: 999;
             position: fixed;
             top: 0;
-            padding: 20px 0;
+            padding: 10px 20px;
             transition: background-color 0.3s ease;
             background-color: #154c79;
             color: #fff;
@@ -40,16 +30,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
     
-        .max-w-screen-xl {
-            margin: 0 auto;
-            padding: 0 20px; /* Add some padding to the container if needed */
-        }
-    
         .menu {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
+            align-items: center;
         }
     
         .menu li {
@@ -68,41 +54,6 @@
             background-color: #423bc8;
         }
     
-        .box-link {
-            display: inline-block;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: white;
-            background-color: #5850EC;
-            border: 2px solid #5850EC;
-            border-radius: 5px;
-            margin: 10px;
-            transition: background-color 0.3s ease;
-        }
-    
-        .box-link:hover {
-            background-color: #423bc8;
-            border-color: #423bc8;
-        }
-    
-        .coming-soon {
-            text-align: center;
-            font-family: 'Arial', sans-serif;
-            font-size: 24px;
-            color: red;
-            animation: flash 1s infinite alternate;
-        }
-    
-        @keyframes flash {
-            from {
-                opacity: 3;
-            }
-    
-            to {
-                opacity: 0.9;
-            }
-        }
-    
         footer {
             display: flex;
             justify-content: center;
@@ -110,23 +61,24 @@
             background-color: #333; /* Use your desired background color */
             color: white; /* Use your desired text color */
             padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
     </head>
     
     <body onload="setButtonAvailability()">
         <nav class="navbar">
-            <div class="max-w-screen-xl mx-auto">
-                <ul class="menu">
-                    <li><a href="customerdocs.html">Guild Docs</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="coming_soon.html">Staff Docs</a></li>
-                    <li><a href="#">Our Teams</a></li>
-                    <li><a href="tnc.html">Terms&Conditions</a></li>
-                    <li><a href="urls.html">Links</a></li>
-                </ul>
-            </div>
+            <ul class="menu">
+                <li><a href="customerdocs.html">Guild Docs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="coming_soon.html">Staff Docs</a></li>
+                <li><a href="#">Our Teams</a></li>
+                <li><a href="tnc.html">Terms&Conditions</a></li>
+                <li><a href="urls.html">Links</a></li>
+            </ul>
             <div class="menu">
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
