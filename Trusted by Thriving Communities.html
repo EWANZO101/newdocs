@@ -25,11 +25,11 @@
     }
 
     .container {
-      display: flex;
-      flex-wrap: wrap; /* Allow items to wrap to the next line */
-      justify-content: space-around; /* Add spacing between boxes */
-      max-width: 1200px;
+      max-width: 400px;
       margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .community {
@@ -37,30 +37,13 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      margin: 10px;
-      width: 300px;
+      margin: 10px 0;
+      width: 100%;
       text-align: center;
     }
 
-    .community img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 50%;
-    }
-
-    .community h2 {
-      margin-top: 10px;
-      font-size: 1.5em;
-    }
-
-    .community p {
-      margin-top: 10px;
-      color: #fff;
-    }
-
     .community a {
-      display: block;
-      margin-top: 15px;
+      display: inline-block;
       text-decoration: none;
       background-color: #fff;
       color: #5145CD;
@@ -98,6 +81,7 @@
       border-radius: 5px;
       border: 1px solid #007bff;
       transition: background-color 0.3s ease;
+      margin-top: 20px;
     }
 
     .explore-button:hover {
