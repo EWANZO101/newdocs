@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trusted by Thriving Communities</title>
   <style>
     /* Reset default margin and padding */
@@ -18,14 +20,14 @@
       line-height: 1.6;
       display: flex;
       flex-direction: column;
-      min-height: 100vh; /* Ensure the body takes the full viewport height */
+      min-height: 100vh;
       position: relative;
     }
 
     .container {
       display: flex;
-      flex-direction: row; /* Change to row to align left to right */
-      justify-content: space-between; /* Add spacing between boxes */
+      flex-wrap: wrap; /* Allow items to wrap to the next line */
+      justify-content: space-around; /* Add spacing between boxes */
       max-width: 1200px;
       margin: 20px auto;
     }
@@ -94,12 +96,12 @@
       color: #ffffff;
       text-decoration: none;
       border-radius: 5px;
-      border: 1px solid #007bff; /* Add a border to make the button visible */
+      border: 1px solid #007bff;
       transition: background-color 0.3s ease;
     }
 
     .explore-button:hover {
-      background-color: #0056b3; /* Change the hover color if needed */
+      background-color: #0056b3;
     }
 
     /* Styles for the navbar */
@@ -166,70 +168,40 @@
     </div>
   </nav>
   <div class="container">
+    <!-- Add five buttons linking to different HTML pages -->
     <div class="community">
-      <img src="https://cdn.discordapp.com/attachments/442981760708378625/1180664221764161566/image-removebg-preview.png?ex=6590b33e&is=657e3e3e&hm=b70b3bfe614c6b2a6732f1553f0f227f1993057370e78e0014918c4b7c214eac&" alt="">
-      <h2>CITY LIFE ZA RP</h2>
-      <p>Welcome to a South African-based server boasting a vibrant community of members from the region. Our server offers a diverse range of modified cars, exceptional role-playing scenarios, and an extensive library of over 1000 scripts to truly enhance your RP experience.</p>
-      <p>Our longest-standing client has enjoyed an impressive 90+ days with us, a testament to the quality we provide. Join us and immerse yourself in an unparalleled role-playing adventure.</p>
-      <a href="https://discord.gg/nxBPFbvxdW" target="_blank">Join Discord</a>
-      <h2>This community has one of our VPS/Fivem packages</h2>
+      <a href="readmorehcrp.html" class="menu-btn">City Life | ZA | RP</a>
     </div>
-  
     <div class="community">
-      <img src="https://cdn.discordapp.com/attachments/1185775712129527860/1186285296988467250/San-Andreas-State-Roleplay-v2.png?ex=6592b146&is=65803c46&hm=89ea45b995009359e3d7b390833147515b5f1e4a8bdf83968f6600e808a9b613&" alt="">
-      <h1>Features</h1>
-      <ul style="list-style-type: none;">
-        <li>vMenu-based Serious RP</li>
-        <li>Custom Weapons, Clothing, and Cars</li>
-        <li>Gangs, Departments, Businesses</li>
-        <li>Custom Scripts for a dynamic experience</li>
-        <li>Real estate RP, Military RP, Taxi RP, and much more!</li>
-        <li>Over $2000 in resources!</li>
-      </ul>
-
-      <h2>Community Details</h2>
-      <ul style="list-style-type: none;">
-        <li>Great Staff</li>
-        <li>Active Developers</li>
-        <li>Join a thriving community</li>
-        <li>Endless opportunities for all players</li>
-        <li>Join the BCSO Department</li>
-        <li>Join the Ballas Gang</li>
-        <li>Join the Vagos Gang</li>
-      </ul>
-      <h2>This community has one of our snaily cad packages</h2>
-      <a href="https://discord.gg/9deXv62k" target="_blank">Join Discord</a>
+      <a href="San Andreas State Roleplay.html" class="menu-btn">San Andreas State Roleplay</a>
     </div>
-    <!-- Add more communities as needed -->
     <div class="community">
-      <img src="#" alt="">
-      <h2>Horizon City Roleplay</h2>
-      <p>Welcome To Horizon City Roleplay proudly releases the server based in the beautiful San Andreas, we utilize the full potential of this location, striving to make it one of the best. With our 2 servers—QBCore and vMenu—our aim is to elevate people’s RP experiences to the next level. QBCore provides opportunities to own businesses, create gangs, and engage in legal jobs, enhancing gameplay. Don't miss this chance to witness the future of Horizon City Roleplay and grow with us to become the best.<p>
-      <div class="explore-container">
-        <a href="readmorehcrp.html" class="explore-button" id="readMoreButton">Read More</a>
+      <a href="readmorehcrp.html" class="menu-btn">United Network Roleplay</a>
     </div>
-      <a href="https://discord.gg/PWfXavKPXk" target="_blank">Join Discord</a>
-      <h2></h2>
+    <div class="community">
+      <a href="#" class="menu-btn">coming soon</a>
     </div>
-  
+    <div class="community">
+      <a href="#" class="menu-btn">coming soon</a>
+    </div>
   </div>
   <a href="https://status.swiftpeakhosting.co.uk/" class="explore-button">Our Status Page</a>
-  <script>
-    // Function to handle the redirection
-    function redirectToPage() {
-        window.location.href = 'readmorehcrp.html'; // Redirects to readmorehcrp.html
-    }
-
-    // Add event listener to the button for redirection
-    document.getElementById('readMoreButton').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevents the default behavior of the link
-
-        // Call the redirection function
-        redirectToPage();
-    });
-</script>
   <footer>
-    <p>&copy; 2023 Swift Peak Hosting. All rights reserved.</p>
+    <p>&copy; 2024 Swift Peak Hosting. All rights reserved.</p>
   </footer>
+  <script>
+    // Add event listeners to the buttons for redirection
+    document.querySelectorAll('.menu-btn').forEach(function(button) {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        redirectToPage(button.getAttribute('href'));
+      });
+    });
+
+    // Function to handle the redirection
+    function redirectToPage(pageUrl) {
+        window.location.href = pageUrl; // Redirects to the specified page
+    }
+  </script>
 </body>
 </html>
