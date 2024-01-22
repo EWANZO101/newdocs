@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -92,6 +93,7 @@
             background-color: #3498db;
             color: #fff;
         }
+
         .button-box {
             text-align: center;
             margin: 20px;
@@ -106,25 +108,27 @@
             font-size: 16px;
             border-radius: 5px;
         }
+
         .modern-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #3498db; /* Blue color */
-  }
-</style>
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #3498db; /* Blue color */
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
-        <h1>Fivem  Server Documentation</h1>
+        <h1>Fivem Server Documentation</h1>
         <div class="dark-mode-slider">
             <span class="dark-mode-text">Dark Mode:</span>
             <label class="switch">
@@ -147,118 +151,125 @@
         <ol>
             <li>Launch Remote Desktop</li>
             <li>Enter your server credentials. (all information will be on the website.)</li>
-            <li>go to fivem  <div class="button-box">
-                <a class="button" href="https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/" target="_blank" rel="noopener noreferrer">Download FiveM Server</a>
-              
-            </div></li>
+            <li>go to fivem
+                <div class="button-box">
+                    <a class="button" href="https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/" target="_blank" rel="noopener noreferrer">Download FiveM Server</a>
+                </div>
+            </li>
             <li>MAKE SURE TO HAVE WINRAR OR 7 ZIP INSTALLED TO OPEN THE FILES THEN EXPORT THEM INTO A FOLDER CALLED FX SERVER OR WHATEVER U LIKE THEN FOLLOW STEPS BELLLOW </li>
 
             <li>normally we give u a notepad on desktop or documents with a list of ports u may use </li>
             <li>TX ADMIN SETUP GO TO FX start and make FXServer.exe - Shortcut </li>
             <li>then "D:\fx test\FXServer.exe" +set txAdminPort 40125</li>
             <li>change the port to your server port u was given </li>
-            <li>if done correctly should look like this  <img src="https://cdn.discordapp.com/attachments/442981760708378625/1196634422087270480/Screenshot_2024-01-16_014627.png?ex=65b857a6&is=65a5e2a6&hm=ec774cb9dfda4052ab055f64e390ceb93f409f5b79ca17bd7e03c06b42dfc1ed" alt="open properties"> </li>
+            <li>if done correctly should look like this
+                <img src="https://cdn.discordapp.com/attachments/442981760708378625/1196634422087270480/Screenshot_2024-01-16_014627.png?ex=65b857a6&is=65a5e2a6&hm=ec774cb9dfda4052ab055f64e390ceb93f409f5b79ca17bd7e03c06b42dfc1ed" alt="open properties">
+            </li>
 
+            <li>TX Admin Database Setup </li>
+            <button class="modern-button" onclick="window.location.href='database_setup.html'">Go to Database Setup</button>
 
+        </ol>
+
+        <li>FOR NONE TX ADMIN SETUP <a class="button" href="https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/" target="_blank" rel="noopener noreferrer">Download FiveM Server</a></li>
 
         </section>
 
         <li>TX Admin Database Setup </li>
         <button class="modern-button" onclick="window.location.href='database_setup.html'">Go to Database Setup</button>
 
-    
-    
-        
-         
     </section>
 
-            <li>FOR NONE TX ADMIN SETUP   <a class="button" href="https://runtime.fivem.net/artifacts/fivem/build_server_windows/master/" target="_blank" rel="noopener noreferrer">Download FiveM Server</a></li>
-            <li>FOR NONE TX ADMIN SETUP go here </li> <li>FOR NONE TX ADMIN SETUP   <a class="button" href="https://github.com/citizenfx/cfx-server-data" target="_blank" rel="noopener noreferrer">Download server data  </a></li>
-            <li>then follow this docs to setup the rest of your Vanilla Server Installation  </li><a class="button" href="https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/" target="_blank" rel="noopener noreferrer">then follow this docs   </a></li>
-            <div</div>
-        </ol>
+    <li>FOR NONE TX ADMIN SETUP go here </li>
+    <li>FOR NONE TX ADMIN SETUP <a class="button" href="https://github.com/citizenfx/cfx-server-data" target="_blank" rel="noopener noreferrer">Download server data </a></li>
+
+    <li>then follow this docs to setup the rest of your Vanilla Server Installation </li>
+    <a class="button" href="https://docs.fivem.net/docs/server-manual/setting-up-a-server-vanilla/" target="_blank" rel="noopener noreferrer">then follow this docs </a>
+    <div</div>
+    </ol>
     </section>
 
     <section>
         <h2>How Do I Join My Server?</h2>
         <p>You can do this in two ways that we suggest, either via your server key that gives you a link in CMD, or through the Cloudflare route where you set up a DNS A Record and then an SRV Record, as seen in this picture."
-
-            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1196640403185741844/Screenshot_2024-01-16_022110.png?ex=65b85d38&is=65a5e838&hm=75351d53abc7aeaf68a244aac32dec8211288c5515e482b77a1bf2fba085d6fa&" alt=""> </li></p>
-            <li>PLEASE MAKE SURE THE NAME IS THE SAME AS THE NEW A Record u MADE </li>
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1196640403185741844/Screenshot_2024-01-16_022110.png?ex=65b85d38&is=65a5e838&hm=75351d53abc7aeaf68a244aac32dec8211288c5515e482b77a1bf2fba085d6fa&" alt="">
+        </li>
+        <li>PLEASE MAKE SURE THE NAME IS THE SAME AS THE NEW A Record u MADE </li>
         <!-- Include a list of server rules -->
 
-    <style>
-        .command {
-            background-color: #f0f0f0; /* Light grayish-green color */
-            color: #003366; /* Dark blue color for text */
-            padding: 5px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-    </style>
-    
-    <section>
-        <h2>Basic fivem Commands</h2>
-        <p></p>
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <div class="command">
-        <!-- Include more commands as needed -->
-    </section>
-
-    <section>
-        <h2>Plugins</h2>
-        <p>Here are some Popular Plugins Big servers use.</p>
-        <div class="command"> <a href="#"></a> </div>
-        <div class="command"> <a href="#"></a> </div>
-        <div class="command"> <a href="#"></a> </div>
-        <div class="command"> <a href="#"></a> </div>
-        <div class="command"> <a href="#"></a> </div>
-        <!-- List and describe server plugins -->
-    </section>
-
-
-    <footer>
-        <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
-    </footer>
-    
-    <script>
-        function checkTime() {
-            const currentTime = new Date();
-            const currentHour = currentTime.getHours();
-
-            // Set the start and end hour for dark mode
-            const startHour = 17; // 8 PM (24-hour format)
-            const endHour = 10; // 6 AM (24-hour format)
-
-            const body = document.body;
-
-            // Check if the current hour is within the specified range for dark mode
-            if (currentHour >= startHour || currentHour < endHour) {
-                body.classList.add('dark-mode');
-            } else {
-                body.classList.remove('dark-mode');
+        <style>
+            .command {
+                background-color: #f0f0f0; /* Light grayish-green color */
+                color: #003366; /* Dark blue color for text */
+                padding: 5px;
+                margin-bottom: 5px;
+                border-radius: 5px;
             }
-        }
+        </style>
 
-        // Call the function initially and then every minute (for real-time updates)
-        checkTime();
-        setInterval(checkTime, 60000); // Check every minute
-    </script>
-    <script>
-        const darkModeToggle = document.querySelector('.dark-mode-toggle');
-        const body = document.querySelector('body');
+        <section>
+            <h2>Basic fivem Commands</h2>
+            <p></p>
+            <div class="command">
+                <div class="command">
+                    <div class="command">
+                        <div class="command">
+                            <div class="command">
+                                <div class="command">
+                                    <div class="command">
+                                        <div class="command">
+                                            <div class="command">
+                                                <div class="command">
+                                                    <!-- Include more commands as needed -->
+                                                </div>
+        </section>
 
-        darkModeToggle.addEventListener('change', function() {
-            body.classList.toggle('dark-mode');
-        });
-    </script>
-</body>
+        <section>
+            <h2>Plugins</h2>
+            <p>Here are some Popular Plugins Big servers use.</p>
+            <div class="command"> <a href="#"></a> </div>
+            <div class="command"> <a href="#"></a> </div>
+            <div class="command"> <a href="#"></a> </div>
+            <div class="command"> <a href="#"></a> </div>
+            <div class="command"> <a href="#"></a> </div>
+            <!-- List and describe server plugins -->
+        </section>
+
+        <footer>
+            <p>© 2023 SwiftPeakHosting. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function checkTime() {
+                const currentTime = new Date();
+                const currentHour = currentTime.getHours();
+
+                // Set the start and end hour for dark mode
+                const startHour = 17; // 8 PM (24-hour format)
+                const endHour = 10; // 6 AM (24-hour format)
+
+                const body = document.body;
+
+                // Check if the current hour is within the specified range for dark mode
+                if (currentHour >= startHour || currentHour < endHour) {
+                    body.classList.add('dark-mode');
+                } else {
+                    body.classList.remove('dark-mode');
+                }
+            }
+
+            // Call the function initially and then every minute (for real-time updates)
+            checkTime();
+            setInterval(checkTime, 60000); // Check every minute
+        </script>
+        <script>
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            const body = document.querySelector('body');
+
+            darkModeToggle.addEventListener('change', function() {
+                body.classList.toggle('dark-mode');
+            });
+        </script>
+    </body>
+
 </html>
