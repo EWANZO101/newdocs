@@ -24,12 +24,14 @@
       position: relative;
     }
 
+    /* Center-align container items */
     .container {
       max-width: 400px;
       margin: 20px auto;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center;  /* Center horizontally */
+      justify-content: center;  /* Center vertically */
     }
 
     .community {
@@ -45,7 +47,7 @@
     .community a {
       display: inline-block;
       text-decoration: none;
-      background-color: #fff;
+      background-color: #fff; /* Change background color to white */
       color: #5145CD;
       padding: 10px 20px;
       border-radius: 5px;
@@ -61,7 +63,7 @@
       text-align: center;
       padding: 10px 0;
       background-color: #333;
-      color: #fff;
+      color: #fff;  /* Change text color to white */
       position: absolute;
       bottom: 0;
       width: 100%;
@@ -120,16 +122,17 @@
       margin-right: 15px;
     }
 
+    /* Remove red color from navbar links */
     .navbar .menu li a {
       text-decoration: none;
-      color: #fff;
+      color: #fff;  /* Change text color to white */
       font-size: 18px;
       font-weight: 500;
       transition: color 0.3s ease;
     }
 
     .navbar .menu li a:hover {
-      color: crimson;
+      color: #007bff; /* Change hover color to blue */
     }
   </style>
 </head>
@@ -169,7 +172,7 @@
       <a href="#" class="menu-btn">coming soon</a>
     </div>
   </div>
-  <a href="https://status.swiftpeakhosting.co.uk/" class="explore-button">Our Status Page</a>
+  
   <footer>
     <p>&copy; 2024 Swift Peak Hosting. All rights reserved.</p>
   </footer>
