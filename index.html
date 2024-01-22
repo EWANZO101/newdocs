@@ -16,6 +16,11 @@
             box-sizing: border-box;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .navbar {
             width: 100%;
             position: fixed;
@@ -69,45 +74,51 @@
 </head>
 
 <body onload="setButtonAvailability()">
-    <nav class="navbar">
-        <ul class="menu">
-            <li><a href="customerdocs.html">Guild Docs</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="coming_soon.html">Staff Docs</a></li>
-            <li><a href="#">Our Teams</a></li>
-            <li><a href="tnc.html">Terms&Conditions</a></li>
-            <li><a href="urls.html">Links</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="#">comingsoon</a></li>
-            <li><a href="Downloads.html">Download</a></li>
-        </ul>
-    </nav>
-    <header class="text-center">
-        <div class="p-4 mb-4 text-sm text-white rounded-lg bg-red-500 dark:bg-gray-800 dark:text-red-400" role="alert">
-            <span class="font-medium">SERVICE ANNOUNCEMENT::</span>
+    <div class="container">
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="customerdocs.html">Guild Docs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="coming_soon.html">Staff Docs</a></li>
+                <li><a href="#">Our Teams</a></li>
+                <li><a href="tnc.html">Terms&Conditions</a></li>
+                <li><a href="urls.html">Links</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="#">comingsoon</a></li>
+                <li><a href="Downloads.html">Download</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container text-center">
+        <header>
+            <div class="p-4 mb-4 text-sm text-white rounded-lg bg-red-500 dark:bg-gray-800 dark:text-red-400"
+                role="alert">
+                <span class="font-medium">SERVICE ANNOUNCEMENT::</span> TEMPORARILY NOT TAKING NEW CLIENTS DUE TO
+                RELOCATION COMING SOON . THANK YOU FOR YOUR PATIENCE AND CONTINUED SUPPORT
+            </div>
 
-            TEMPORARILY NOT TAKING NEW CLIENTS DUE TO RELOCATION COMING SOON . THANK YOU FOR YOUR PATIENCE AND CONTINUED SUPPORT
-        </div>
+            <h1 class="text-4xl font-semibold text-white">Welcome to Swift Peak Hosting Documentation</h1>
+        </header>
 
-
-        <h1 class="text-4xl font-semibold text-white">Welcome to Swift Peak Hosting Documentation</h1>
-    </header>
-
-    <section class="mb-12">
-        <header class="text-2xl mb-4 text-white">Check out other servers or communities that have trusted us in the past or currently</header>
-        <section class="mb-4">
-            <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
-            <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
+        <section class="mb-12">
+            <header class="text-2xl mb-4 text-white">Check out other servers or communities that have trusted us in the
+                past or currently</header>
+            <section class="mb-4">
+                <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
+                <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
+            </section>
+            <img
+                src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1"
+                width="900" height="600" style="margin: 0 auto; display: block;">
         </section>
-        <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" width="900" height="600">
-    </section>
-
-    <footer class="d-flex justify-content-center align-items-center py-4 bg-gray-800 text-white">
-        <p class="m-0">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
-    </footer>
-
+    </div>
+    <div class="container">
+        <footer class="d-flex justify-content-center align-items-center py-4 bg-gray-800 text-white">
+            <p class="m-0">&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 
 </html>
