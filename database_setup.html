@@ -70,6 +70,18 @@
             padding: 8px;
             text-align: left;
         }
+          /* Add any additional styling here */
+          .container {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .code-box {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
@@ -84,8 +96,8 @@
                     <p>At Swift Peak, we skip the usual localhost setup. Connect directly to our database, no need for XAMPP. Save specs and access the database from anywhere.</p>
                     <a href="https://phpmyadmin.swiftpeakhosting.co.uk" class="button" target="_blank">phpMyAdmin</a>
                     <table>
-                           <!-- Scotland, UK Step 2 table rows... -->
-                           <tr>
+                        <!-- Scotland, UK Step 2 table rows... -->
+                        <tr>
                             <th>Exports</th>
                             <th>Top to Bottoms</th>
                         </tr>
@@ -115,25 +127,28 @@
                         </tr>
                     </table>
                 </details>
-               <!-- Step 3: Additional instructions or details for Scotland, UK Setup -->
-               <details>
-                <summary>Step 3: If you have XAMPP Configuration</summary>
-                <p>Go to your server.cfg:</p>
-            
-                <div class="code-box">
-                    <code>
-                        <p><strong></strong></p>
-                        <ul>
-                            <!-- Include any relevant information for Step 3 -->
-                            <li>
-                                <strong>MySQL Connection String:</strong>
-                                <code>set mysql://username:paaasword@NEW_DATABASE_IP/databasename=utf8mb4</code> 
-                                <p>Leave this =utf8mb4 as it is</p>
-                            </li>
-                        </ul>
-                    </code>
-                </div>
-            </details>
+                <!-- Step 3: Additional instructions or details for Scotland, UK Setup -->
+                <details>
+                    <summary>Step 3: If you have XAMPP Configuration</summary>
+                    <p>Go to your server.cfg:</p>
+    
+                    <div class="code-box">
+                        <code>
+                            <p><strong></strong></p>
+                            <ul>
+                                <!-- Include any relevant information for Step 3 -->
+                                <li>
+                                    <strong>MySQL Connection String:</strong>
+                                    <code>set mysql://username:paaasword@NEW_DATABASE_IP/databasename=utf8mb4</code> 
+                                    <p>Leave this =utf8mb4 as it is</p>
+                                </li>
+                            </ul>
+                        </code>
+                    </div>
+                </details>
+            </code>
+        </div>
+    </div>
     
     <div class="container">
         <div class="section-title">Database Setup for Wales, UK server Coming Soon</div>
@@ -148,7 +163,7 @@
                     <!-- Provide specific instructions or comments related to the code -->
                 </code>
             </details>
-
+    
             <details>
                 <summary>Step 2: Wales, UK Setup</summary>
                 <img src="path/to/your/image_wales.jpg" alt="Wales Server Image">
@@ -161,5 +176,6 @@
             </details>
         </div>
     </div>
-</body>
-</html>
+    
+    </body>
+    </html>
