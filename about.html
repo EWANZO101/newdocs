@@ -18,8 +18,12 @@
     }
 
     .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       max-width: 800px;
-      text-align: center;
+      margin: auto;
       padding: 20px;
       background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
       border-radius: 10px;
@@ -28,6 +32,8 @@
     }
 
     .box {
+      width: 100%; /* Set box width to 100% */
+      max-width: 600px; /* Set max-width for responsiveness */
       margin-bottom: 20px;
       padding: 20px;
       border: 1px solid #ccc; /* Light gray border */
