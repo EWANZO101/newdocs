@@ -65,80 +65,96 @@
             margin-bottom: 15px;
         }
 
-        th,
-        td {
+        th, td {
             border: 1px solid #555;
             padding: 8px;
             text-align: left;
         }
-
-        p {
-            font-size: 18px;
-            /* Adjust the size according to your preference */
-        }
     </style>
 </head>
-
 <body>
     <div class="container">
         <div class="section-title">Database Setup for Scotland, UK server</div>
         <div class="code-box">
-            <!-- Scotland, UK Setup details... -->
+            <code>
+                <!-- Scotland, UK Setup details... -->
+                <details>
+                    <summary>Step 1: Scotland, UK Setup</summary>
+                    <img src="TXADMIN.png" alt="Scotland Server Image" style="width: 100%;">
+                    <p>At Swift Peak, we skip the usual localhost setup. Connect directly to our database, no need for XAMPP. Save specs and access the database from anywhere.</p>
+                    <a href="https://phpmyadmin.swiftpeakhosting.co.uk" class="button" target="_blank">phpMyAdmin</a>
+                    <table>
+                           <!-- Scotland, UK Step 2 table rows... -->
+                           <tr>
+                            <th>Exports</th>
+                            <th>Top to Bottoms</th>
+                        </tr>
+                        <tr>
+                            <td>Layout Licence Key</td>
+                            <td>cfxABCDEFGHIJKLMNOPQRSTUVW</td>
+                        </tr>
+                        <tr>
+                            <td>Database Host</td>
+                            <td>192.168.0.72</td>
+                        </tr>
+                        <tr>
+                            <td>Database Port</td>
+                            <td>3306</td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td>As provided by our staff or through the registration page</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>As provided by our staff or through the registration page</td>
+                        </tr>
+                        <tr>
+                            <td>Database Name</td>
+                            <td>As provided by our staff or through the registration page</td>
+                        </tr>
+                    </table>
+                </details>
+                <!-- Step 3: Additional instructions or details for Scotland, UK Setup -->
+                <details>
+                    <summary>Step 3: If you have XAMPP Configuration</summary>
+                    <p>Go to your server.cfg and go to set mysql_connection_string "mysql://swift01:paaasword@NEW DATABASE IP /databasename=utf8mb4" </p>
+                    <div class="code-box">
+                        <p><strong>Security Recommendations:</strong></p>
+                        <ul>
+                            <!-- Include any relevant information for Step 3 -->
+                        </ul>
+                    </div>
+                </details>
+            </code>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="section-title">Database Setup for Wales, UK server</div>
+        <div class="code-box">
             <details>
-                <summary>Step 1: Scotland, UK Setup</summary>
-                <img src="TXADMIN.png" alt="Scotland Server Image" style="width: 100%;">
-                <p>At Swift Peak, we skip the usual localhost setup. Connect directly to our database, no need for XAMPP.
-                    Save specs and access the database from anywhere.</p>
-                <a href="https://phpmyadmin.swiftpeakhosting.co.uk" class="button" target="_blank">phpMyAdmin</a>
+                <summary>Step 1: Wales, UK Setup</summary>
                 <table>
-                    <!-- Scotland, UK Step 2 table rows... -->
-                    <tr>
-                        <th>Exports</th>
-                        <th>Top to Bottoms</th>
-                    </tr>
-                    <tr>
-                        <td>Layout Licence Key</td>
-                        <td>cfxABCDEFGHIJKLMNOPQRSTUVW</td>
-                    </tr>
-                    <tr>
-                        <td>Database Host</td>
-                        <td>192.168.0.72</td>
-                    </tr>
-                    <tr>
-                        <td>Database Port</td>
-                        <td>3306</td>
-                    </tr>
-                    <tr>
-                        <td>Username</td>
-                        <td>As provided by our staff or through the registration page</td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td>As provided by our staff or through the registration page</td>
-                    </tr>
-                    <tr>
-                        <td>Database Name</td>
-                        <td>As provided by our staff or through the registration page</td>
-                    </tr>
+                    <!-- Wales, UK Step 1 table rows... -->
                 </table>
-                <!-- Provide specific instructions or comments related to the code -->
+                <p>Additional information or instructions for Wales, UK setup.</p>
+                <code>
+                    <!-- Provide specific instructions or comments related to the code -->
+                </code>
             </details>
 
-            <!-- Step 3: Additional Configuration -->
-<details>
-    <summary>Step 3: If you have XAMPP Configuration</summary>
-    <div class="code-box">
-        <p><strong>MySQL Connection String:</strong></p>
-        <pre>
-            <code>
-                // Go to your server.cfg and set the following MySQL connection string
-                $mysql_connection_string = "mysql://username:password@NEW_DATABASE_IP/databasename=utf8mb4";
-            </code>
-        </pre>
+            <details>
+                <summary>Step 2: Wales, UK Setup</summary>
+                <img src="path/to/your/image_wales.jpg" alt="Wales Server Image">
+                <table>
+                    <!-- Wales, UK Step 2 table rows... -->
+                </table>
+                <code>
+                    <!-- Provide specific instructions or comments related to the code -->
+                </code>
+            </details>
+        </div>
     </div>
-    <!-- Add any specific instructions or comments related to Step 3 here -->
-</details>
-</div>
-</div>
 </body>
 </html>
