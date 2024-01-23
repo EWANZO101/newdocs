@@ -13,9 +13,8 @@
       padding: 20px;
       color: #333; /* Dark gray text color */
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .container {
@@ -25,6 +24,7 @@
       background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+      flex-grow: 1; /* Grow to fill remaining vertical space */
     }
 
     .box {
@@ -49,8 +49,9 @@
     }
 
     footer {
-      margin-top: 20px;
-      font-size: 14px;
+      padding: 10px;
+      background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for footer box */
+      border-top: 1px solid #ccc; /* Light gray border at the top of the footer box */
       color: #666; /* Darker gray text color for the footer */
     }
   </style>
