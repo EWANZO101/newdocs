@@ -16,7 +16,8 @@
 
     .pricing-block {
       display: flex;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 20px;
     }
 
@@ -25,11 +26,11 @@
       border: 2px solid #555;
       padding: 20px;
       border-radius: 8px;
-      width: 20%;
+      width: 40%;
       max-width: 300px;
       transition: transform 0.3s ease-in-out;
       background-color: #444;
-      margin-bottom: 20px;
+      margin: 10px;
     }
 
     .price-tier:hover {
@@ -86,6 +87,11 @@
         alertDiv.classList.remove('deactive');
       }
     }
+
+    // Initial state
+    document.addEventListener('DOMContentLoaded', function () {
+      toggleActivation(); // Uncomment this line if you want to start with "Pricing is Deactive"
+    });
   </script>
 </head>
 <body>
@@ -106,82 +112,7 @@
     <button>Select</button>
   </div>
 
-  <div class="price-tier">
-    <h2>Standard</h2>
-    <p class="price">$29.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Premium</h2>
-    <p class="price">$49.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Pro</h2>
-    <p class="price">$69.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Ultimate</h2>
-    <p class="price">$99.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Enterprise</h2>
-    <p class="price">$149.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Business</h2>
-    <p class="price">$199.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
-
-  <div class="price-tier">
-    <h2>Deluxe</h2>
-    <p class="price">$249.99/month</p>
-    <ul>
-      <li>Feature 1</li>
-      <li>Feature 2</li>
-      <li>Feature 3</li>
-    </ul>
-    <button>Select</button>
-  </div>
+  <!-- Repeat the structure for other price tiers -->
 
   <div class="price-tier">
     <h2>Elite</h2>
@@ -193,6 +124,125 @@
     </ul>
     <button onclick="toggleActivation()">Toggle Activation</button>
   </div>
+</div>
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
+</div>
+
+
+<div class="price-tier">
+  <h2>Elite</h2>
+  <p class="price">$299.99/month</p>
+  <ul>
+    <li>Feature 1</li>
+    <li>Feature 2</li>
+    <li>Feature 3</li>
+  </ul>
+  <button onclick="toggleActivation()">Toggle Activation</button>
+</div>
 </div>
 
 </body>
