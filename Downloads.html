@@ -105,7 +105,11 @@
             transform: translateX(26px);
         }
 
-        #updateButton {
+        .download-section {
+            margin-top: 40px;
+        }
+
+        #updateButton, button {
             padding: 10px 20px;
             background-color: #3498db;
             color: #fff;
@@ -115,28 +119,13 @@
             transition: background-color 0.3s;
         }
 
-        #updateButton:hover {
+        #updateButton:hover, button:hover {
             background-color: #2980b9;
         }
 
         #updateButton:disabled {
             background-color: #ccc;
             cursor: not-allowed;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #3498db;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #2980b9;
         }
 
         .button-box {
@@ -158,6 +147,15 @@
             text-decoration: none;
             cursor: not-allowed;
         }
+
+        footer {
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #999;
+        }
     </style>
 </head>
 <body>
@@ -172,53 +170,27 @@
 
     <h1>Welcome to Our Download Section</h1>
 
-    <div>
+    <div class="download-section">
         <p>Download our latest resources:</p>
         <p>Last Updated on 15/01/2024</p>
         <ul>
             <!-- Existing download links (unchanged) -->
             <li><a href="#" style="pointer-events: none; color: #999;">Download/install for the CAD currently Not Available At The Moment </a><span> - Execute this script to install</span></li>
-
-
             <li><a href="/caddownloads/start(2).bat" download>Download Start cad Script</a><span> - Execute this script to start The cad</span></li>
-
             <li><a href="/caddownloads/update(2).bat" download>Download Update cad Script</a><span> - Execute this script to update The cad</span></li>
-            
             <li><a href="/caddownloads/snailycadbot install .bat" download>Download and install snailycadbot</a><span> - Execute this script to install snailycadbot</span></li>
-            
             <li><a href="/caddownloads/Startsnailycadbot.bat" download>Download and start snaily cad bot</a><span> - Execute this script to start snaily cad bot</span></li>
-
             <li><a href="/caddownloads/fix.bat" download>FIX Snaily Check </a><span> - Execute in Documents\snaily-cadv4</span></li>
         </ul>
     </div>
 
-
-
-
-            <!-- New link with enable/disable functionality -->
-         <!-- Button Container -->
-  <!-- Disabled Button with Link -->
-  <h1>Coming Soon CAD/MDT SCRIPT <h1>
-  <a href="docsnaily.html" class="disabled-button"><s>Go To CAD/MDT Script QB & ESX</s></a>
-
-    <ul>
-        
-      
-
-      
-        </li>
-    </ul>
-
- 
-
-
-            </li>
-        </ul>
+    <!-- New link with enable/disable functionality -->
+    <div class="download-section">
+        <h1>Coming Soon CAD/MDT SCRIPT</h1>
+        <a href="docsnaily.html" class="disabled-button"><s>Go To CAD/MDT Script QB & ESX</s></a>
     </div>
 
-   
-
-    <script>
+ <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
         const webhookURL = 'https://discord.com/api/webhooks/1195085934849441892/_5bTCP7FlZBtOcgSFPwiCumURC6iRNSv1QBHf9jPHTwYPjwlRQuN19C4FZRhta5QGJgj';
