@@ -1,94 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Staff Documents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnailyCAD Setup Guide</title>
     <style>
-        /* Your existing CSS styles here */
-
-        /* Additional styles for customer assistance and quick links */
-        .customer-assistance {
-            margin-top: 20px;
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 20px;
         }
 
-        .customer-assistance h3 {
-            margin-bottom: 5px;
+        #note {
+            width: 80%;
+            height: 200px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            resize: none;
         }
 
-        .customer-assistance ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .customer-assistance ul li {
-            margin-bottom: 5px;
-        }
-
-        .quick-links {
-            margin-top: 20px;
-        }
-
-        .quick-links ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .quick-links ul li {
-            margin-bottom: 5px;
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
     </style>
 </head>
+
 <body>
+    <h1>SnailyCAD Setup Guide</h1>
 
-<div class="container">
-    <h1>Staff Documents</h1>
+    <h2>Step 1: Install Git</h2>
+    <p>Download and install 64-bit Git for Windows from <a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a>.</p>
 
-    <div class="staff-member">
-        <div class="avatar">
-            <img src="https://via.placeholder.com/80" alt="Staff Member 1">
-        </div>
-        <div class="details">
-            <h2>John Doe</h2>
-            <p>Position: CEO</p>
-            <p>Email: john.doe@example.com</p>
-            
-            <!-- Customer Assistance -->
-            <div class="customer-assistance">
-                <h3>Customer Assistance</h3>
-                <ul>
-                    <li><strong>Reset User Password:</strong> Provide these steps...</li>
-                    <li><strong>Refund/Credits:</strong> Instructions on handling refunds or issuing credits...</li>
-                    <!-- Add more assistance as needed -->
-                </ul>
-            </div>
-            
-            <!-- Quick Links -->
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#commands">Commands</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <!-- Add more quick links -->
-                </ul>
-            </div>
-            
-            <!-- Commands -->
-            <div id="commands">
-                <h3>Commands</h3>
-                <p>List of commands and their functionalities...</p>
-            </div>
-            
-            <!-- FAQ Link -->
-            <div id="faq">
-                <h3>FAQ</h3>
-                <p>Link to the FAQ URL: <a href="URL_HERE">FAQ</a></p>
-            </div>
-        </div>
-    </div>
+    <h2>Step 2: Install Node.js</h2>
+    <p>Download and install Node.js version 20.11.0 (64-bit) from <a href="https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi" target="_blank">https://nodejs.org/dist/v20.11.0/node-v20.11.0-x64.msi</a>. During installation, proceed with the default settings.</p>
 
-    <!-- Add more staff members using the same structure -->
+    <h2>Step 3: Run PowerShell Command</h2>
+    <p>Open Windows PowerShell and run the following command:</p>
+    <code>iwr https://get.pnpm.io/install.ps1 -useb | iex</code>
 
-</div>
+    <h2>Step 4: Clone SnailyCAD Repository</h2>
+    <pre><code>
+        cd Documents
+        git clone https://github.com/SnailyCAD/snaily-cadv4.git
+        cd snaily-cadv4
+        pnpm install
+        copy .env.example .env
+    </code></pre>
 
+    <h2>Step 5: Edit .env File in Visual Studio Code</h2>
+    <p>Open the .env file using Visual Studio Code, make necessary edits, and save the file.</p>
+
+    <h2>Step 6: Build SnailyCAD</h2>
+    <pre><code>
+        node scripts/copy-env.mjs --client --api
+        pnpm run build
+    </code></pre>
+
+    <h2>Step 7: Download and Run Start.bat</h2>
+    <p>Download the Start.bat file from <a href="https://www.swiftpeakhosting.co.uk/Downloads" target="_blank">https://www.swiftpeakhosting.co.uk/Downloads</a>. Run the Start.bat file and check if everything is correct.</p>
+
+    <h2>Step 8: Access the CAD</h2>
+    <p>Go to the CAD URL to ensure everything is set up correctly.</p>
+
+    <h2>Additional Notes:</h2>
+    <textarea id="note" placeholder="Write your additional notes here..."></textarea>
 </body>
+
 </html>
