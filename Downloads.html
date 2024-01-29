@@ -189,7 +189,14 @@
     <h1>CAD/MDT SCRIPT</h1>
   
     <!-- Modified link with enable/disable functionality -->
-    <button onclick="window.location.href='https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration'" class="disabled-button">Go To CAD/MDT Script QB & ESX</button>
+    <button id="cadMdtButton" class="disabled-button">Go To CAD/MDT Script QB & ESX</button>
+
+    <script>
+      document.getElementById('cadMdtButton').addEventListener('click', function() {
+        window.location.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
+      });
+    </script>
+    
 
 
     <ul>
