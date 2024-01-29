@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Toggle</title>
+    <title>downloads</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -179,7 +179,6 @@
             <!-- Existing download links (unchanged) -->
             <li><a href="#" style="pointer-events: none; color: #999;">Download/install for the CAD currently Not Available At The Moment </a><span> - Execute this script to install</span></li>
 
-
             <li><a href="/caddownloads/start(2).bat" download>Download Start cad Script</a><span> - Execute this script to start The cad</span></li>
 
             <li><a href="/caddownloads/update(2).bat" download>Download Update cad Script</a><span> - Execute this script to update The cad</span></li>
@@ -192,57 +191,18 @@
         </ul>
     </div>
 
+    <h1>Coming Soon CAD/MDT SCRIPT</h1>
 
-
-
-            <!-- New link with enable/disable functionality -->
-         <!-- Button Container -->
-  <!-- Disabled Button with Link -->
-  <h1>Coming Soon CAD/MDT SCRIPT <h1>
-  <a href="docsnaily.html" class="disabled-button"><s>Go To CAD/MDT Script QB & ESX</s></a>
+    <!-- Modified link with enable/disable functionality -->
+    <a id="cadMdtLink" href="https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration" class="disabled-button" target="_blank"><s>Go To CAD/MDT Script QB & ESX</s></a>
 
     <ul>
-        
-      
-
-      
-        </li>
+        <!-- ... (your existing ul content) ... -->
     </ul>
-
- 
-
-
-            </li>
-        </ul>
-    </div>
-
-   
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
-        const webhookURL = 'https://discord.com/api/webhooks/1195085934849441892/_5bTCP7FlZBtOcgSFPwiCumURC6iRNSv1QBHf9jPHTwYPjwlRQuN19C4FZRhta5QGJgj';
-
-        // Function to send a message to Discord
-        async function sendDiscordNotification(message) {
-            try {
-                const response = await fetch(webhookURL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ content: message }),
-                });
-
-                if (response.ok) {
-                    console.log('Notification sent successfully.');
-                } else {
-                    console.error('Failed to send notification:', response.status, response.statusText);
-                }
-            } catch (error) {
-                console.error('Error sending notification:', error.message);
-            }
-        }
 
         // Function to check if it's nighttime in UK (7 PM to 9 AM)
         const isNightTime = () => {
@@ -269,24 +229,18 @@
         // Update dark mode based on time every minute
         setInterval(setDarkModeByTime, 60000);
 
-        // Enable and disable the "Update Website" button based on a condition
-        const updateButton = document.getElementById('updateButton');
-
-        // For example, enabling the button after 10 seconds
-        setTimeout(() => {
-            updateButton.disabled = true;
-        }, 10000);
-
-        // Example: Send a notification when the website is manually updated
-        document.getElementById('updateButton').addEventListener('click', () => {
-            sendDiscordNotification('Website has been updated');
-        });
-
-        // New JavaScript function to toggle the integration link state
-        function toggleIntegrationLink() {
-            const integrationNavLink = document.getElementById('integrationNavLink');
-            integrationNavLink.classList.toggle('disabled-link');
+        // New JavaScript function to toggle the CAD/MDT link state
+        function toggleCadMdtLink() {
+            const cadMdtLink = document.getElementById('cadMdtLink');
+            // Add your condition here, for example, enable the link during nighttime
+            const isNight = isNightTime();
+            cadMdtLink.href = isNight ? 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration' : 'javascript:void(0)';
+            cadMdtLink.classList.toggle('disabled-button', !isNight);
         }
+
+        // Call toggleCadMdtLink at appropriate places in your code to dynamically update the link's state
+        // For example, you can call it in the setInterval function to update the link every minute
+        setInterval(toggleCadMdtLink, 60000);
     </script>
 
     <footer>

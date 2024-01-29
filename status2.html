@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Status</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #2c3e50; /* Dark Background Color */
+            color: #ecf0f1; /* Light Text Color */
+        }
+        .server-status {
+            border: 1px solid #34495e; /* Border Color */
+            padding: 20px;
+            margin: 10px;
+            max-width: 300px;
+            display: inline-block;
+            background-color: #34495e; /* Box Background Color */
+        }
+        h2 {
+            color: #ecf0f1; /* Heading Text Color */
+        }
+        p {
+            margin: 5px 0;
+            color: #ecf0f1; /* Paragraph Text Color */
+        }
+        #live-status {
+            margin-top: 20px;
+        }
+        #uptime-bar {
+            margin-top: 20px;
+            width: 90%;
+            background-color: #4CAF50; /* Green for Uptime Bar */
+            border: 1px solid #45a049; /* Green Border Color */
+            display: inline-block;
+            text-align: left;
+            position: relative;
+        }
+        #uptime-progress {
+            height: 20px;
+            width: 0;
+            background-color: #45a049; /* Green for Uptime Progress */
+        }
+        #notes {
+            margin-top: 20px;
+            text-align: left;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px;
+            background-color: #3498db; /* Blue for Button */
+            color: #ecf0f1; /* Text Color for Button */
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2980b9; /* Darker Blue on Hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Proxmox VM Status -->
+    <div class="server-status" id="proxmox-vm-status">
+        <h2>Proxmox VM</h2>
+        <p>Status: <span id="proxmox-status">Loading...</span></p>
+        <p>Uptime: <span id="uptime">Loading...</span></p>
+    </div>
+
+    <!-- Pterodactyl Server Status -->
+    <div class="server-status" id="pterodactyl-server-status">
+        <h2>Pterodactyl Server</h2>
+        <p>Status: <span id="pterodactyl-status">Loading...</span></p>
+        <p>Uptime: <span id="pterodactyl-uptime">Loading...</span></p>
+    </div>
+
+    <!-- Add this div for live status updates -->
+    <div id="live-status"></div>
+
+    <!-- Uptime Bar -->
+    <div id="uptime-bar">
+        <div id="uptime-progress"></div>
+    </div>
+
+    <!-- Daily Notes -->
+    <div id="notes">
+        <h2>Daily Notes</h2>
+        <textarea id="daily-notes" rows="4" placeholder="Enter notes here..."></textarea>
+        <button onclick="saveDailyNotes()">Save Notes</button>
+    </div>
+
+    <!-- JavaScript for live status updates -->
+    <script>
+        // Function to fetch Proxmox VM status
+        function fetchProxmoxVMStatus() {
+            // Replace this URL with the actual Proxmox VM status API endpoint
+            $.get("https://your-proxmox-api.com/vm/status", function (data) {
+                $("#proxmox-status").text(data.status);
+                $("#uptime").text(data.uptime);
+            });
+        }
+
+        // Function to fetch Pterodactyl server status
+        function fetchPterodactylServerStatus() {
+            // Replace this URL with the actual Pterodactyl server status API endpoint
+            $.get("https://your-pterodactyl-api.com/server/status", function (data) {
+                $("#pterodactyl-status").text(data.status);
+                $("#pterodactyl-uptime").text(data.uptime);
+            });
+        }
+
+        // Fetch initial status
+        fetchProxmoxVMStatus();
+        fetchPterodactylServerStatus();
+
+        // Fetch status every 30 seconds (adjust as needed)
+        setInterval(function () {
+            fetchProxmoxVMStatus();
+            fetchPterodactylServerStatus();
+            // Add more server checks if needed
+        }, 30000);
+
+        // Function to save daily notes
+        function saveDailyNotes() {
+            var notes = $("#daily-notes").val();
+            // You can implement logic here to save notes to a database or file
+            console.log("Notes saved:", notes);
+        }
+    </script>
+</body>
+</html>
