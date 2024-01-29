@@ -232,9 +232,17 @@
         // New JavaScript function to toggle the CAD/MDT link state
         function toggleCadMdtLink() {
             const cadMdtLink = document.getElementById('cadMdtLink');
-            // Add your condition here, for example, enable the link during nighttime
             const isNight = isNightTime();
-            cadMdtLink.href = isNight ? 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration' : 'javascript:void(0)';
+            
+            // Set the appropriate link based on the time of day
+            if (isNight) {
+                cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
+            } else {
+                // You can set another URL or use 'javascript:void(0)' to disable the link during the day
+                cadMdtLink.href = 'javascript:void(0)';
+            }
+
+            // Toggle the disabled-button class based on the time of day
             cadMdtLink.classList.toggle('disabled-button', !isNight);
         }
 
