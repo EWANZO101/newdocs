@@ -193,70 +193,69 @@
 
     <h1>CAD/MDT SCRIPT</h1>
 
-      <!-- Modified link with enable/disable functionality -->
-      <a id="cadMdtLink" href="https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration" class="disabled-button" target="_blank">Go To CAD/MDT Script QB & ESX</a>
+  
+    <!-- Modified link with enable/disable functionality -->
+    <a id="cadMdtLink" href="https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration" class="disabled-button" target="_blank">Go To CAD/MDT Script QB & ESX</a>
 
-      <ul>
-          <!-- ... (your existing ul content) ... -->
-      </ul>
-  
-      <!-- Dark mode toggle -->
-      <input type="checkbox" id="darkModeToggle">
-  
-      <script>
-          const darkModeToggle = document.getElementById('darkModeToggle');
-          const body = document.body;
-  
-          // Function to check if it's nighttime in UK (7 PM to 9 AM)
-          const isNightTime = () => {
-              const now = new Date();
-              const ukTime = now.toLocaleString('en-GB', { timeZone: 'Europe/London' });
-              const hour = parseInt(ukTime.split(',')[1].split(':')[0]);
-              return hour >= 19 || hour < 9; // 7 PM to 9 AM
-          };
-  
-          // Set dark mode based on the time
-          const setDarkModeByTime = () => {
-              const isNight = isNightTime();
-              body.classList.toggle('dark-mode', isNight || darkModeToggle.checked);
-          };
-  
-          // Set dark mode initially
-          setDarkModeByTime();
-  
-          // Update dark mode when toggle changes
-          darkModeToggle.addEventListener('change', () => {
-              setDarkModeByTime();
-          });
-  
-          // Update dark mode based on time every minute
-          setInterval(setDarkModeByTime, 60000);
-  
-          // New JavaScript function to toggle the CAD/MDT link state
-          function toggleCadMdtLink() {
-              const cadMdtLink = document.getElementById('cadMdtLink');
-              const isNight = isNightTime();
-  
-              // Set the appropriate link based on the time of day
-              if (isNight) {
-                  cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
-              } else {
-                  // You can set another URL or use 'javascript:void(0)' to disable the link during the day
-                  cadMdtLink.href = 'javascript:void(0)';
-              }
-  
-              // Toggle the disabled-button class based on the time of day
-              cadMdtLink.classList.toggle('enablebutton', !isNight);
-          }
-  
-          // Call toggleCadMdtLink at appropriate places in your code to dynamically update the link's state
-          // For example, you can call it in the setInterval function to update the link every minute
-          setInterval(toggleCadMdtLink, 60000);
-      </script>
-  
-      <footer>
-          <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
-      </footer>
-  </body>
-  
-  </html>
+    <ul>
+        <!-- ... (your existing ul content) ... -->
+    </ul>
+
+    <!-- Dark mode toggle -->
+    <input type="checkbox" id="darkModeToggle">
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Function to check if it's nighttime in UK (7 PM to 9 AM)
+        const isNightTime = () => {
+            const now = new Date();
+            const ukTime = now.toLocaleString('en-GB', { timeZone: 'Europe/London' });
+            const hour = parseInt(ukTime.split(',')[1].split(':')[0]);
+            return hour >= 19 || hour < 9; // 7 PM to 9 AM
+        };
+
+        // Set dark mode based on the time
+        const setDarkModeByTime = () => {
+            const isNight = isNightTime();
+            body.classList.toggle('dark-mode', isNight || darkModeToggle.checked);
+        };
+
+        // Set dark mode initially
+        setDarkModeByTime();
+
+        // Update dark mode when toggle changes
+        darkModeToggle.addEventListener('change', () => {
+            setDarkModeByTime();
+        });
+
+        // Update dark mode based on time every minute
+        setInterval(setDarkModeByTime, 60000);
+
+        // New JavaScript function to toggle the CAD/MDT link state
+        function toggleCadMdtLink() {
+            const cadMdtLink = document.getElementById('cadMdtLink');
+            const isNight = isNightTime();
+
+            // Set the appropriate link based on the time of day
+            if (isNight) {
+                cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
+            } else {
+                // Enable the link during the day
+                cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
+            }
+
+            // Toggle the disabled-button class based on the time of day
+            cadMdtLink.classList.toggle('enablebutton', !isNight);
+        }
+
+        // Call toggleCadMdtLink at appropriate places in your code to dynamically update the link's state
+        // For example, you can call it in the setInterval function to update the link every minute
+        setInterval(toggleCadMdtLink, 60000);
+    </script>
+
+    <footer>
+        <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+    </footer>
+</body>
