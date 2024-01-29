@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>downloads</title>
+    <title>Downloads</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -178,21 +178,15 @@
         <ul>
             <!-- Existing download links (unchanged) -->
             <li><a href="#" style="pointer-events: none; color: #999;">Download/install for the CAD currently Not Available At The Moment </a><span> - Execute this script to install</span></li>
-
             <li><a href="/caddownloads/start(2).bat" download>Download Start cad Script</a><span> - Execute this script to start The cad</span></li>
-
             <li><a href="/caddownloads/update(2).bat" download>Download Update cad Script</a><span> - Execute this script to update The cad</span></li>
-            
             <li><a href="/caddownloads/snailycadbot install .bat" download>Download and install snailycadbot</a><span> - Execute this script to install snailycadbot</span></li>
-            
             <li><a href="/caddownloads/Startsnailycadbot.bat" download>Download and start snaily cad bot</a><span> - Execute this script to start snaily cad bot</span></li>
-
-            <li><a href="/caddownloads/fix.bat" download>FIX Snaily Check </a><span> - Execute in Documents\snaily-cadv4</span></li>
+            <li><a href="#" download>FIX Snaily Check </a><span> - Execute in Documents\snaily-cadv4</span></li>
         </ul>
     </div>
 
     <h1>CAD/MDT SCRIPT</h1>
-
   
     <!-- Modified link with enable/disable functionality -->
     <a id="cadMdtLink" href="https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration" class="disabled-button" target="_blank">Go To CAD/MDT Script QB & ESX</a>
@@ -201,11 +195,18 @@
         <!-- ... (your existing ul content) ... -->
     </ul>
 
-    <!-- Dark mode toggle -->
-    <input type="checkbox" id="darkModeToggle">
+    <!-- Dynamic link toggle -->
+    <div class="toggle-container">
+        <span class="toggle-label">Dynamic Link:</span>
+        <label class="toggle-switch">
+            <input type="checkbox" id="linkToggle">
+            <span class="toggle-slider"></span>
+        </label>
+    </div>
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
+        const linkToggle = document.getElementById('linkToggle');
         const body = document.body;
 
         // Function to check if it's nighttime in UK (7 PM to 9 AM)
@@ -239,15 +240,15 @@
             const isNight = isNightTime();
 
             // Set the appropriate link based on the time of day
-            if (isNight) {
+            if (isNight || linkToggle.checked) {
                 cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
             } else {
                 // Enable the link during the day
-                cadMdtLink.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
+                cadMdtLink.href = 'https://example.com/day-link';
             }
 
             // Toggle the disabled-button class based on the time of day
-            cadMdtLink.classList.toggle('enablebutton', !isNight);
+            cadMdtLink.classList.toggle('disabled-button', isNight && !linkToggle.checked);
         }
 
         // Call toggleCadMdtLink at appropriate places in your code to dynamically update the link's state
@@ -259,3 +260,4 @@
         <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 </body>
+</html>
