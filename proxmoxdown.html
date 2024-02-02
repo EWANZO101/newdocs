@@ -32,12 +32,6 @@
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 16px;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
         ol {
             text-align: left;
             margin-left: 20px;
@@ -46,6 +40,22 @@
         ol li {
             font-size: 16px;
             margin-bottom: 5px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-container button {
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
         .contact-info {
@@ -62,19 +72,15 @@
 <body>
     <div class="container">
         <h1>Important Notice</h1>
-        <p>Our Proxmox panel is currently down due to our upcoming move.</p>
-        <p>If you need to restart your VPS, please follow these steps:</p>
-       
-        <ol>
-            <button onclick="window.location.href='https://90.247.138.228:8006/#v1:0:18:4'">Click here to use the backup link</button>
+        <p> We are experiencing problems with our Proxmox panel while we move. You can use the link below to access your VM:</p>
 
-            <li>Open a support ticket on your dashboard on the store or in Discord.</li>
-            <li>Provide your name and package name in the ticket.</li>
-            <li>Once we receive the ticket, our team will promptly reboot your VPS on our end.</li>
-        </ol>
-        <div class="contact-info">
-            <p>Thank you for your understanding.</p>
+        <div class="btn-container">
+            <button onclick="window.location.href='https://90.247.138.228:8006/#v1:0:18:4'">Use Backup Link</button>
         </div>
+
+        <ol>
+            <li>Thank you for your understanding.</li>
+        </ol>
     </div>
 </body>
 
