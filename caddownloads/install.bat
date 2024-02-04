@@ -3,12 +3,6 @@
 REM Change the drive and directory to Documents
 cd /d C:\Documents
 
-REM Check if the snaily-cadv4 directory already exists
-if exist snaily-cadv4 (
-    echo The snaily-cadv4 directory already exists. Aborting installation.
-    pause
-    exit /b
-)
 
 REM Clone the repository
 git clone https://github.com/SnailyCAD/snaily-cadv4.git
