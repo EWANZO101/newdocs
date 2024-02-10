@@ -4,6 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+<script>
+    // Function to redirect after a specified time
+    function redirect() {
+        window.location.replace("NEW_URL_HERE"); // Replace NEW_URL_HERE with the URL you want to redirect to
+    }
+
+    // Function to display the message and start the countdown
+    function displayMessage() {
+        var messageDiv = document.getElementById("message");
+        messageDiv.innerText = "Hello there! Our document has now been changed to a different location. Please wait while we redirect you to the right place...";
+        setTimeout(redirect, 30000); // 30 seconds delay
+    }
+
+    // Call the displayMessage function when the page loads
+    window.onload = displayMessage;
+</script>
+</head>
+<body>
+<div id="message" style="text-align:center; margin-top: 50px;"></div>
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
