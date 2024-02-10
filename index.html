@@ -16,9 +16,12 @@
     }
 </style>
 <script>
+    // Set this variable to true if you want to enable automatic redirection
+    var enableRedirect = false;
+
     // Function to redirect after a specified time
     function redirect() {
-        window.location.replace("https://swiftdevdocs.swiftpeakhosting.co.uk"); // Replace NEW_URL_HERE with the URL you want to redirect to
+        window.location.replace("NEW_URL_HERE"); // Replace NEW_URL_HERE with the URL you want to redirect to
     }
 
     // Function to display the message and start the countdown
@@ -30,7 +33,9 @@
             countdown--;
             if (countdown <= 0) {
                 clearInterval(countdownInterval);
-                redirect();
+                if (enableRedirect) {
+                    redirect();
+                }
             } else {
                 messageDiv.innerHTML = "Redirecting in " + countdown + " seconds...";
             }
@@ -44,4 +49,175 @@
 <body>
 <div id="message"></div>
 </body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Swift Peak Hosting Documentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #3498db, #9b59b6);
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            max-width: 100%; /* Adjusted to 100% */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .navbar {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            background-color: #154c79;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the navigation items */
+        }
+
+        .menu li {
+            margin: 0 5px;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu li a:hover {
+            background-color: #423bc8;
+        }
+
+        header {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        section {
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .box-link {
+            display: inline-block;
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .box-link:hover {
+            background-color: #2980b9;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        .redirect-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body onload="setButtonAvailability()">
+    <div class="container">
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="customerdocs.html">Guild Docs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="staffdoc.html">Staff Docs</a></li>
+                <li><a href="#">Our Teams</a></li>
+                <li><a href="tnc.html">Terms&Conditions</a></li>
+                <li><a href="urls.html">Links</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="#">comingsoon</a></li>
+                <li><a href="Downloads.html">Download</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="message">
+                <p>SOME SERVICES ARE UNAVAILABLE DUE TO US RELOCATION COMING SOON. THANK YOU FOR YOUR PATIENCE AND CONTINUED SUPPORT.</p>
+                <a href="services.html" class="redirect-button">See Active Services</a>
+            </div>
+            <h1 class="text-4xl font-semibold text-white">Welcome to Swift Peak Hosting Documentation</h1>
+        </header>
+
+        <section>
+            <h2 class="text-2xl mb-4 text-white">Check out other servers or communities that have trusted us in the
+                past or currently</h2>
+            <section class="mb-4">
+                <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
+                <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
+            </section>
+            <div class="mb-4">
+                <!-- Additional content goes here -->
+            </div>
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1"
+                width="900" height="600">
+        </section>
+    </div>
+
+    <div class="container">
+        <footer>
+            <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
 </html>
