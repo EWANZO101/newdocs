@@ -18,14 +18,23 @@
 <script>
     // Function to redirect after a specified time
     function redirect() {
-        window.location.replace("NEW_URL_HERE"); // Replace NEW_URL_HERE with the URL you want to redirect to
+        window.location.replace("https://swiftdevdocs.swiftpeakhosting.co.uk"); // Replace NEW_URL_HERE with the URL you want to redirect to
     }
 
     // Function to display the message and start the countdown
     function displayMessage() {
         var messageDiv = document.getElementById("message");
         messageDiv.innerText = "Hello there! Our document has now been changed to a different location. Please wait while we redirect you to the right place...";
-        setTimeout(redirect, 30000); // 30 seconds delay
+        var countdown = 30;
+        var countdownInterval = setInterval(function() {
+            countdown--;
+            if (countdown <= 0) {
+                clearInterval(countdownInterval);
+                redirect();
+            } else {
+                messageDiv.innerHTML = "Redirecting in " + countdown + " seconds...";
+            }
+        }, 1000); // Update every second
     }
 
     // Call the displayMessage function when the page loads
