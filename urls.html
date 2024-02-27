@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirect Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-2JsfEYPv0YYbSlldj1rGLXgG1UlUvLj1FwKMjqg5w7L0cAv7WJ9Zvd4Ww+sQfI+PgpfqQg9FV0HWel3OMaCjlg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
-      background-color: #333;
-      color: #fff;
       font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      min-height: 100vh;
     }
-
-    h2 {
+    .container {
       text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     }
-
-    .links-container {
-      text-align: center;
+    .container h2 {
+      margin-bottom: 20px;
+      color: #333;
     }
-
     .link-button {
-      display: inline-block;
       background-color: #4CAF50;
-      border: 1px solid #45a049;
+      border: none;
       color: white;
       text-align: center;
       text-decoration: none;
@@ -37,28 +37,22 @@
       padding: 10px 20px;
       margin: 10px;
       border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
-
     .link-button:hover {
       background-color: #45a049;
     }
-
     .coming-soon {
       background-color: #666;
       pointer-events: none;
     }
-
     .button-box {
-      border: 1px solid #ccc;
-      padding: 10px;
-      margin: 5px;
-      border-radius: 5px;
+      margin-top: 20px;
     }
-
     .button-box a {
       display: inline-block;
       background-color: #4CAF50;
-      border: 1px solid #45a049;
+      border: none;
       color: white;
       text-align: center;
       text-decoration: none;
@@ -67,43 +61,44 @@
       padding: 10px 20px;
       margin: 10px;
       border-radius: 5px;
+      transition: background-color 0.3s ease;
     }
-
     .button-box a:hover {
       background-color: #45a049;
     }
   </style>
 </head>
-
 <body>
 
-  <div class="links-container">
-    <h2>Check out links below </h2>
-    <div>
-      <button class="link-button" onclick="redirectTo('https://phpmyadmin.swiftpeakhosting.co.uk')">PHPMyAdmin</button>
-      <button class="link-button" onclick="redirectTo('https://proxmox.swiftpeakhosting.co.uk')">Proxmox Panel</button>
-      <button class="link-button" onclick="redirectTo('https://store.swiftpeakhosting.co.uk/')">Store</button>
-      <button class="link-button" onclick="redirectTo('https://panel.swiftpeakhosting.co.uk/')">Mc.panel</button>
-      <button class="link-button" onclick="redirectTo('https://hcp.swiftpeakhosting.co.uk/')">Web hosting panel </button>
-      <button class="link-button coming-soon" onclick="redirectTo('https://##snailycad-integration.swiftpeakhosting.co.uk')">Coming Soon</button>
+<div class="container">
+  <h2>Check out the links below</h2>
+  <div>
+    <button class="link-button" onclick="redirectTo('https://phpmyadmin.swiftpeakhosting.co.uk')">PHPMyAdmin</button>
+    <button class="link-button" onclick="redirectTo('https://proxmox.swiftpeakhosting.co.uk')">Proxmox Panel</button>
+    <button class="link-button" onclick="redirectTo('https://store.swiftpeakhosting.co.uk/')">Store</button>
+    <button class="link-button" onclick="redirectTo('https://panel.swiftpeakhosting.co.uk/')">Mc.panel</button>
+    <button class="link-button" onclick="redirectTo('https://hcp.swiftpeakhosting.co.uk/')">Web hosting panel</button>
+   
 
-      <div class="button-box">
-        <a href="proxmoxnetworksetup.html">Proxmox Network Setup NOT FOR CUSTOMER USE</a>
-      </div>
+    <div class="button-box">
+      <a href="proxmoxnetworksetup.html">Proxmox Network Setup <i class="fas fa-external-link-alt"></i></a>
+    </div>
 
-      <div class="button-box">
-        <a href="mdt-URLS.html">Our clients CAD/MDT URLs</a>
-      </div>
-
+    <div class="button-box">
+      <button class="link-button" onclick="redirectTo('https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration')"> Bryan-Snaily-CAD-Integration Public</button>
     </div>
   </div>
+</div>
 
-  <script>
-    function redirectTo(url) {
-      window.location.href = url;
-    }
-  </script>
+<div class="button-box">
+  <a href="mdt-URLS.html">Our clients CAD/MDT URLs <i class="fas fa-external-link-alt"></i></a>
+</div>
+
+<script>
+  function redirectTo(url) {
+    window.location.href = url;
+  }
+</script>
 
 </body>
-
 </html>
