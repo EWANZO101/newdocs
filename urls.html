@@ -21,6 +21,8 @@
       border-radius: 10px;
       background-color: #75adee;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+      display: flex; /* Added */
+      flex-direction: column; /* Added */
     }
     .container h2 {
       margin-bottom: 20px;
@@ -66,6 +68,12 @@
     .button-box a:hover {
       background-color: #45a049;
     }
+    .additional-links {
+      margin-top: 20px;
+      display: flex; /* Added */
+      flex-direction: column; /* Added */
+      align-items: flex-end; /* Added */
+    }
   </style>
 </head>
 <body>
@@ -78,20 +86,21 @@
     <button class="link-button" onclick="redirectTo('https://store.swiftpeakhosting.co.uk/')">Store</button>
     <button class="link-button" onclick="redirectTo('https://panel.swiftpeakhosting.co.uk/')">Mc.panel</button>
     <button class="link-button" onclick="redirectTo('https://hcp.swiftpeakhosting.co.uk/')">Web hosting panel</button>
-   
-
-    <div class="button-box">
-      <a href="proxmoxnetworksetup.html">Proxmox Network Setup <i class="fas fa-external-link-alt"></i></a>
-    </div>
-
-    <div class="button-box">
-      <button class="link-button" onclick="redirectTo('https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration')"> Bryan-Snaily-CAD-Integration Public</button>
-    </div>
   </div>
 </div>
 
-<div class="button-box">
-  <a href="mdt-URLS.html">Our clients CAD/MDT URLs <i class="fas fa-external-link-alt"></i></a>
+<div class="additional-links">
+  <div class="button-box">
+    <a href="proxmoxnetworksetup.html">Proxmox Network Setup <i class="fas fa-external-link-alt"></i></a>
+  </div>
+
+  <div class="button-box">
+    <button class="link-button" onclick="redirectTo('https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration')"> Bryan-Snaily-CAD-Integration Public</button>
+  </div>
+
+  <div class="button-box">
+    <a href="mdt-URLS.html">Our clients CAD/MDT URLs <i class="fas fa-external-link-alt"></i></a>
+  </div>
 </div>
 
 <script>
