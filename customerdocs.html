@@ -160,50 +160,47 @@
 
     <section class="documentation">
         <div class="welcome-message">
-            <p>
-                <p class="blue-text">Welcome to the SwiftPeakHosting client documentation hub, your go-to resource for essential information and valuable resources. Stay tuned for the latest updates, coming soon. Last updated on 12/12/2023.</p>
-            </p>
+            <p class="blue-text">Welcome to the SwiftPeakHosting client documentation hub, your go-to resource for essential information and valuable resources. Stay tuned for the latest updates, coming soon. Last updated on 12/12/2023.</p>
         </div>
 
-        <!-- Minecraft Docs Button -->
-        <div class="chat-button">
-            <a href="minectaftdocs.html">Minecraft Docs</a>
-        </div>
+        <!-- Navigation Buttons -->
+        <nav>
+            <div class="chat-button">
+                <a href="minecraftdocs.html">Minecraft Docs</a>
+            </div>
 
-        <!-- SwiftPeakHosting Proxmox panel Button -->
-        <div class="chat-button extra-button">
-            <a href="SwiftPeakHosting Proxmox panel.html">SwiftPeakHosting Proxmox panel</a>
-        </div>
+            <div class="chat-button">
+                <a href="swiftpeakhosting-proxmox-panel.html">SwiftPeakHosting Proxmox panel</a>
+            </div>
 
-        <!-- Snaily Cad Button -->
-        <div class="chat-button extra-button">
-            <a href="#">Snaily Cad </a>
-        </div>
+            <div class="chat-button">
+                <a href="swiftpeakhosting-extra-plans-prices.html">SwiftPeakHosting extra plans prices</a>
+            </div>
 
-        <!-- Rust Button -->
-        <div class="chat-button extra-button">
-            <a href="#">Rust</a>
-        </div>
+            <div class="chat-button">
+                <a href="#">Snaily Cad</a>
+            </div>
 
-        <!-- Web Hosting Button -->
-        <div class="chat-button extra-button">
-            <a href="#">web hosting</a>
-        </div>
+            <div class="chat-button">
+                <a href="#">Rust</a>
+            </div>
 
-        <!-- Fivem Button -->
-        <div class="chat-button extra-button">
-            <a href="fivemdocs.html"> Fivem </a>
-        </div>
+            <div class="chat-button">
+                <a href="#">Web Hosting</a>
+            </div>
 
-        <!-- Database Docs Button -->
-        <div class="database-button">
-            <a href="database.html"> Database Docs </a>
-        </div>
+            <div class="chat-button">
+                <a href="fivemdocs.html">Fivem</a>
+            </div>
 
-        <!-- Our Scripts Docs Button -->
-        <div class="database-button">
-            <a href="ourscripts.html" class="extra-button"> Our Scripts Docs </a>
-        </div>
+            <div class="database-button">
+                <a href="database.html">Database Docs</a>
+            </div>
+
+            <div class="database-button">
+                <a href="ourscripts.html">Our Scripts Docs</a>
+            </div>
+        </nav>
     </section>
 
     <footer>
@@ -216,8 +213,8 @@
             const currentHour = currentTime.getHours();
 
             // Set the start and end hour for dark mode
-            const startHour = 17; // 8 PM (24-hour format)
-            const endHour = 10; // 6 AM (24-hour format)
+            const startHour = 17; // 5 PM (24-hour format)
+            const endHour = 10; // 10 AM (24-hour format)
 
             const body = document.body;
 
@@ -236,11 +233,10 @@
         const darkModeToggle = document.querySelector('.toggle-checkbox');
         const body = document.querySelector('body');
 
-        darkModeToggle.addEventListener('change', function() {
+        darkModeToggle.addEventListener('change', function () {
             body.classList.toggle('dark-mode');
         });
     </script>
-   
 </body>
 
 </html>
