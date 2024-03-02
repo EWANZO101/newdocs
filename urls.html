@@ -74,9 +74,24 @@
       flex-direction: column; /* Added */
       align-items: flex-end; /* Added */
     }
+    .emergency-message {
+      font-size: 24px;
+      font-weight: bold;
+      color: red;
+      text-align: center;
+      animation: blinker 1s linear infinite;
+    }
+
+    @keyframes blinker {
+      50% {
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
+
+<div class="emergency-message">WARNING: Active Emergency Maintenance</div>
 
 <div class="container">
   <h2>Check out the links below</h2>
