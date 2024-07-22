@@ -1,0 +1,22 @@
+{
+    "licenseKey": "License Key Validation has been disabled for public SnailyCAD Resources. No need to enter anything here.",
+    "cadName": "SERVERNAME",
+    "cadUrl": "https://cad.",
+    "command": "cad",
+    "helpText": "Toggle the CAD",
+    "defaultKeybind": "NUMPAD1",
+    "_↑": [
+        "Please reference https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/ for keybinds.",
+        "You can leave the keybind blank to not set a default keybind, this will allow users to set one if they wish."
+    ],
+    "vehicle": {
+        "checkSpeed": true,
+        "speed": 10,
+        "exemptPassengers": true,
+        "_↑": [
+            "If checkSpeed is true, it will not allow you to open the CAD if you are going above the specified speed above.",
+            "If the vehicle goes above the specified speed, it will automatically close the CAD.",
+            "If exemptPassenger is true, it will allow the passenger to open the CAD regardless of the speed value."
+        ]
+    }
+}
