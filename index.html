@@ -1,228 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Redirecting...</title>
-<style>
-    body {
-        background-color: #222;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        text-align: center;
-    }
-    #message {
-        margin-top: 50px;
-    }
-</style>
-<script>
-    // Set this variable to true if you want to enable automatic redirection
-    var enableRedirect = false;
-
-    // Function to redirect after a specified time
-    function redirect() {
-        window.location.replace("NEW_URL_HERE"); // Replace NEW_URL_HERE with the URL you want to redirect to
-    }
-
-    // Function to display the message and start the countdown
-    function displayMessage() {
-        var messageDiv = document.getElementById("message");
-        messageDiv.innerText = "Hello there! Our document has now been changed to a different location. Please wait while we redirect you to the right place...";
-        var countdown = 30;
-        var countdownInterval = setInterval(function() {
-            countdown--;
-            if (countdown <= 0) {
-                clearInterval(countdownInterval);
-                if (enableRedirect) {
-                    redirect();
-                }
-            } else {
-                messageDiv.innerHTML = "Redirecting in " + countdown + " seconds...";
-            }
-        }, 1000); // Update every second
-    }
-
-    // Call the displayMessage function when the page loads
-    window.onload = displayMessage;
-</script>
-</head>
-<body>
-<div id="message"></div>
-</body>
-</html>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background: linear-gradient(to right, #3498db, #9b59b6);
-            color: #ffffff;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
-        }
-
-        .container {
-            max-width: 100%; /* Adjusted to 100% */
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .navbar {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            padding: 10px 20px;
-            transition: background-color 0.3s ease;
-            background-color: #154c79;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .menu {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center; /* Center the navigation items */
-        }
-
-        .menu li {
-            margin: 0 5px;
-        }
-
-        .menu li a {
-            text-decoration: none;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .menu li a:hover {
-            background-color: #423bc8;
-        }
-
-        header {
-            text-align: center;
-            margin-top: 100px;
-        }
-
-        section {
-            margin-bottom: 12px;
-            text-align: center;
-        }
-
-        .box-link {
-            display: inline-block;
-            background-color: #3498db;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 0 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        .box-link:hover {
-            background-color: #2980b9;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    
-        .redirect-button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 
-<body onload="setButtonAvailability()">
-    <div class="container">
-        <nav class="navbar">
-            <ul class="menu">
-                <li><a href="customerdocs.html">Guild Docs</a></li>
-                <li><a href="about.html">About</a></li>
-                <a href="https://store.swiftpeakhosting.co.uk/#pricing/" class="box-link">Our Services
-                <li><a href="staffdoc.html">Staff Docs</a></li>
-                <li><a href="#">Our Teams</a></li>
-                <li><a href="tnc.html">Terms&Conditions</a></li>
-                <li><a href="urls.html">Links</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Sign Up</a></li>
-                <li><a href="#">comingsoon</a></li>
-                <li><a href="Downloads.html">Download</a></li>
-               <li><a href="gitpage.html">Our Development GitHub Pages</a></li>
-               <li><a href="Maintenance.html"></a></li>
-               <li><a href="ad.html">Our AD </a></li>
-                   
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-sans">
 
-            </ul>
-        </nav>
-    </div>
+    <!-- Navbar -->
+    <nav class="bg-blue-900 shadow-lg fixed top-0 w-full py-4 px-6">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="customerdocs.html" class="hover:bg-purple-700 px-4 py-2 rounded">Guild Docs</a></li>
+            <li><a href="about.html" class="hover:bg-purple-700 px-4 py-2 rounded">About</a></li>
+            <li><a href="https://store.swiftpeakhosting.co.uk/#pricing/" class="hover:bg-purple-700 px-4 py-2 rounded">Our Services</a></li>
+            <li><a href="staffdoc.html" class="hover:bg-purple-700 px-4 py-2 rounded">Staff Docs</a></li>
+            <li><a href="#" class="hover:bg-purple-700 px-4 py-2 rounded">Our Teams</a></li>
+            <li><a href="tnc.html" class="hover:bg-purple-700 px-4 py-2 rounded">Terms & Conditions</a></li>
+            <li><a href="urls.html" class="hover:bg-purple-700 px-4 py-2 rounded">Links</a></li>
+            <li><a href="login.html" class="hover:bg-purple-700 px-4 py-2 rounded">Login</a></li>
+            <li><a href="signup.html" class="hover:bg-purple-700 px-4 py-2 rounded">Sign Up</a></li>
+            <li><a href="#" class="hover:bg-purple-700 px-4 py-2 rounded">Coming Soon</a></li>
+            <li><a href="Downloads.html" class="hover:bg-purple-700 px-4 py-2 rounded">Download</a></li>
+            <li><a href="gitpage.html" class="hover:bg-purple-700 px-4 py-2 rounded">Our Development GitHub Pages</a></li>
+            <li><a href="Maintenance.html" class="hover:bg-purple-700 px-4 py-2 rounded">Maintenance</a></li>
+            <li><a href="ad.html" class="hover:bg-purple-700 px-4 py-2 rounded">Our AD</a></li>
+        </ul>
+    </nav>
 
-    <div class="container">
+    <!-- Main Content -->
+    <div class="container mx-auto text-center mt-28">
         <header>
-            <div class="message">
-                <p>SOME SERVICES ARE UNAVAILABLE DUE TO US RELOCATION COMING SOON. THANK YOU FOR YOUR PATIENCE AND CONTINUED SUPPORT.</p>
-                <a href="services.html" class="redirect-button">See Active Services</a>
-            </div>
-            <h1 class="text-4xl font-semibold text-white">Welcome to Swift Peak Hosting Documentation</h1>
+            <h1 class="text-4xl font-bold mb-8">Welcome to Swift Peak Hosting Documentation</h1>
+            <p class="text-xl mb-6"></p>
+            <a href="services.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">See Active Services</a>
         </header>
 
-        <section>
-            <h2 class="text-2xl mb-4 text-white">Check out other servers or communities that have trusted us in the
-                past or currently</h2>
-            <section class="mb-4">
-                <a href="Trusted by Thriving Communities.html" class="box-link">Explore Trusted Servers</a>
-                <a href="https://status.swiftpeakhosting.co.uk/" class="box-link">Our Status Page</a>
-            </section>
-            <div class="mb-4">
-                <!-- Additional content goes here -->
+        <section class="mt-12">
+            <h2 class="text-2xl mb-4">Check out other servers or communities that have trusted us in the past or currently</h2>
+            <div class="space-x-4">
+                <a href="Trusted by Thriving Communities.html" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Explore Trusted Servers</a>
+                <a href="https://status.swiftpeakhosting.co.uk/" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Our Status Page</a>
             </div>
-            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1"
-                width="900" height="600">
         </section>
+
+        <div class="mt-12">
+            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" alt="Screenshot" class="w-full max-w-3xl mx-auto mt-8">
+        </div>
     </div>
 
-    <div class="container">
-        <footer>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-16">
+        <div class="text-center">
             <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
