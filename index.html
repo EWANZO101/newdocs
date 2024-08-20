@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-sans">
+<body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-sans flex flex-col min-h-screen">
 
     <!-- Navbar -->
     <nav class="bg-blue-900 shadow-lg fixed top-0 w-full py-4 px-6">
@@ -31,10 +31,10 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container mx-auto text-center mt-28">
+    <div class="container mx-auto text-center mt-28 flex-grow">
         <header>
             <h1 class="text-4xl font-bold mb-8">Welcome to Swift Peak Hosting Documentation</h1>
-            <p class="text-xl mb-6"></p>
+            <p class="text-xl mb-6">.</p>
             <a href="services.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">See Active Services</a>
         </header>
 
@@ -45,14 +45,10 @@
                 <a href="https://status.swiftpeakhosting.co.uk/" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Our Status Page</a>
             </div>
         </section>
-
-        <div class="mt-12">
-            <img src="https://cdn.discordapp.com/attachments/442981760708378625/1186098446403375114/Screenshot_2023-12-18_000938.png?ex=65920342&is=657f8e42&hm=66c7097f2ec2c228b0d23ea595ccd1b41dea4b56d725d9a3d4461350746348a1" alt="Screenshot" class="w-full max-w-3xl mx-auto mt-8">
-        </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4 mt-16">
+    <footer class="bg-gray-800 text-white py-4">
         <div class="text-center">
             <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
         </div>
