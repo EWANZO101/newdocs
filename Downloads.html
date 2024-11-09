@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Downloads</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-8 transition-all duration-300">
@@ -24,64 +25,51 @@
         <p>Last Updated on 27/01/2024</p>
         <ul class="list-none mt-4">
             <li class="mb-4">
-                <a href="/caddownloads/install.bat" class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    Download/install for the CAD currently Not Available At The Moment
-                </a>
-                <span class="ml-2">- Execute this script to install</span>
+                <a href="/caddownloads/install.bat" class="btn btn-primary w-full mb-2">Install CAD Script</a>
+                <p class="text-sm text-gray-400">- Execute this script to install the CAD. Currently unavailable.</p>
             </li>
             <li class="mb-4">
-                <a href="/caddownloads/start(2).bat" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    Download Start cad Script
-                </a>
-                <span class="ml-2">- Execute this script to start The cad</span>
+                <a href="/caddownloads/start(2).bat" download class="btn btn-primary w-full mb-2">Start CAD Script</a>
+                <p class="text-sm text-gray-400">- Use this script to start the CAD application.</p>
             </li>
             <li class="mb-4">
-                <a href="/caddownloads/update(2).bat" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    Download Update cad Script
-                </a>
-                <span class="ml-2">- Execute this script to update The cad</span>
+                <a href="/caddownloads/update(2).bat" download class="btn btn-primary w-full mb-2">Update CAD Script</a>
+                <p class="text-sm text-gray-400">- Run this script to update the CAD.</p>
             </li>
             <li class="mb-4">
-                <a href="/caddownloads/snailycadbot install .bat" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    Download and install snailycadbot
-                </a>
-                <span class="ml-2">- Execute this script to install snailycadbot</span>
+                <a href="/caddownloads/snailycadbot%20install%20.bat" download class="btn btn-primary w-full mb-2">Install SnailyCAD Bot</a>
+                <p class="text-sm text-gray-400">- Download and execute this script to install SnailyCAD Bot.</p>
             </li>
             <li class="mb-4">
-                <a href="/caddownloads/Startsnailycadbot.bat" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    Download and start snaily cad bot
-                </a>
-                <span class="ml-2">- Execute this script to start snaily cad bot</span>
+                <a href="/caddownloads/Startsnailycadbot.bat" download class="btn btn-primary w-full mb-2">Start SnailyCAD Bot</a>
+                <p class="text-sm text-gray-400">- Run this script to start the SnailyCAD Bot.</p>
             </li>
             <li class="mb-4">
-                <a href="https://cdn.discordapp.com/attachments/1140516914855149580/1198308964295770213/tablet.zip?ex=669f36f0&is=669de570&hm=7501ba639aba513203324cf71e9a799ff82a9a26322a3c5ba98f3058265b4cec&" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    IN GAME CAD/MDT
-                </a>
+                <a href="https://cdn.discordapp.com/attachments/1140516914855149580/1198308964295770213/tablet.zip?ex=669f36f0&is=669de570&hm=7501ba639aba513203324cf71e9a799ff82a9a26322a3c5ba98f3058265b4cec&" download class="btn btn-primary w-full mb-2">Download In-Game CAD/MDT</a>
+                <p class="text-sm text-gray-400">- In-game CAD/MDT for direct download.</p>
             </li>
             <li class="mb-4">
-                <a href="#" download class="inline-block px-4 py-2 bg-blue-500 rounded hover:bg-blue-700 transition">
-                    FIX Snaily Check
-                </a>
-                <span class="ml-2">- Execute in Documents\snaily-cadv4</span>
+                <a href="#" download class="btn btn-primary w-full mb-2">Fix Snaily Check</a>
+                <p class="text-sm text-gray-400">- Run in Documents\snaily-cadv4 for fixes.</p>
             </li>
         </ul>
     </div>
 
-    <h1 class="text-2xl font-bold mb-6">CAD/MDT SCRIPT</h1>
+    <h1 class="text-2xl font-bold mb-6">CAD/MDT Script</h1>
 
-    <button id="cadMdtButton" class="px-6 py-3 bg-blue-500 rounded hover:bg-blue-700 transition mb-8">
+    <button id="cadMdtButton" class="btn btn-primary w-full mb-8">
         Go To CAD/MDT Script QB & ESX
     </button>
 
-    <footer class="mt-auto text-center">
+    <footer class="mt-auto text-center text-gray-400">
         <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
         const body = document.body;
 
-        // Function to check if it's nighttime in UK (7 PM to 9 AM)
         const isNightTime = () => {
             const now = new Date();
             const ukTime = now.toLocaleString('en-GB', { timeZone: 'Europe/London' });
@@ -89,24 +77,19 @@
             return hour >= 19 || hour < 9; // 7 PM to 9 AM
         };
 
-        // Set dark mode based on the time
         const setDarkModeByTime = () => {
             const isNight = isNightTime();
             body.classList.toggle('dark-mode', isNight || darkModeToggle.checked);
         };
 
-        // Set dark mode initially
         setDarkModeByTime();
 
-        // Update dark mode when toggle changes
         darkModeToggle.addEventListener('change', () => {
             setDarkModeByTime();
         });
 
-        // Update dark mode based on time every minute
         setInterval(setDarkModeByTime, 60000);
 
-        // Button link
         document.getElementById('cadMdtButton').addEventListener('click', function () {
             window.location.href = 'https://github.com/EWANZO101/Bryan-Snaily-CAD-Integration';
         });
