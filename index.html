@@ -6,54 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Swift Peak Hosting Documentation</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.0/flowbite.min.css" rel="stylesheet">
 </head>
 
-<body class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-sans flex flex-col min-h-screen">
+<body class="bg-gradient-to-r from-blue-600 to-purple-700 text-white font-sans flex flex-col min-h-screen">
 
     <!-- Navbar -->
-    <nav class="bg-blue-900 shadow-lg fixed top-0 w-full py-4 px-6">
-        <ul class="flex justify-center space-x-4">
-            <li><a href="customerdocs.html" class="hover:bg-purple-700 px-4 py-2 rounded">Guild Docs</a></li>
-            <li><a href="about.html" class="hover:bg-purple-700 px-4 py-2 rounded">About</a></li>
-            <li><a href="https://store.swiftpeakhosting.co.uk/#pricing/" class="hover:bg-purple-700 px-4 py-2 rounded">Our Services</a></li>
-            <li><a href="staffdoc.html" class="hover:bg-purple-700 px-4 py-2 rounded">Staff Docs</a></li>
-            <li><a href="#" class="hover:bg-purple-700 px-4 py-2 rounded">Our Teams</a></li>
-            <li><a href="tnc.html" class="hover:bg-purple-700 px-4 py-2 rounded">Terms & Conditions</a></li>
-            <li><a href="urls.html" class="hover:bg-purple-700 px-4 py-2 rounded">Links</a></li>
-            <li><a href="login.html" class="hover:bg-purple-700 px-4 py-2 rounded">Login</a></li>
-            <li><a href="signup.html" class="hover:bg-purple-700 px-4 py-2 rounded">Sign Up</a></li>
-            <li><a href="#" class="hover:bg-purple-700 px-4 py-2 rounded">Coming Soon</a></li>
-            <li><a href="Downloads.html" class="hover:bg-purple-700 px-4 py-2 rounded">Download</a></li>
-            <li><a href="gitpage.html" class="hover:bg-purple-700 px-4 py-2 rounded">Our Development GitHub Pages</a></li>
-            <li><a href="Maintenance.html" class="hover:bg-purple-700 px-4 py-2 rounded">Maintenance</a></li>
-            <li><a href="ad.html" class="hover:bg-purple-700 px-4 py-2 rounded">Our AD</a></li>
-        </ul>
+    <nav class="bg-blue-800 shadow-md fixed top-0 w-full z-10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-semibold">Swift Peak Hosting</a>
+                <ul class="flex space-x-6">
+                    <li><a href="customerdocs.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Guild Docs</a></li>
+                    <li><a href="about.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">About</a></li>
+                    <li><a href="https://store.swiftpeakhosting.co.uk/#pricing/" class="hover:bg-purple-700 px-4 py-2 rounded-md">Our Services</a></li>
+                    <li><a href="staffdoc.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Staff Docs</a></li>
+                    <li><a href="ourteams.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Our Teams</a></li>
+                    <li><a href="tnc.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Terms & Conditions</a></li>
+                    <li><a href="urls.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Links</a></li>
+                    <li><a href="login.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Login</a></li>
+                    <li><a href="signup.html" class="hover:bg-purple-700 px-4 py-2 rounded-md">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mx-auto text-center mt-28 flex-grow">
+    <main class="flex-grow container mx-auto text-center mt-32 px-4">
         <header>
-            <h1 class="text-4xl font-bold mb-8">Welcome to Swift Peak Hosting Documentation</h1>
-            <p class="text-xl mb-6">.</p>
-            <a href="services.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">See Active Services</a>
+            <h1 class="text-4xl font-bold mb-6">Welcome to Swift Peak Hosting Documentation</h1>
+            <p class="text-lg mb-8">Everything you need to set up and manage your services efficiently.</p>
+            <a href="services.html" class="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md inline-block">See Active Services</a>
         </header>
 
-        <section class="mt-12">
-            <h2 class="text-2xl mb-4">Check out other servers or communities that have trusted us in the past or currently</h2>
-            <div class="space-x-4">
-                <a href="Trusted by Thriving Communities.html" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded"></a>
-                <a href="https://status.swiftpeakhosting.co.uk/" class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Our Status Page</a>
+        <!-- Trusted Communities Section -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-semibold mb-4">Trusted by Thriving Communities</h2>
+            <p class="mb-6">Explore other servers and communities that rely on our services:</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="Trusted by Thriving Communities.html" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">View Trusted Communities</a>
+                <a href="https://status.swiftpeakhosting.co.uk/" class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md">Our Status Page</a>
             </div>
         </section>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="text-center">
-            <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
+    <footer class="bg-gray-900 text-gray-300 py-6 mt-auto">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023-2024 Swift Peak Hosting. All rights reserved.</p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.4.0/flowbite.min.js"></script>
 </body>
 
 </html>
