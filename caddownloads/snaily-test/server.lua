@@ -1,7 +1,7 @@
 RegisterNetEvent('cad-911')
 AddEventHandler('cad-911', function()
 print("SnailyCad Error Code:")
-PerformHttpRequest('https://projectfallsmdc-api.snailycad.co.uk/v1/911-calls', function(err, text, headers)
+PerformHttpRequest('https://api.exmaple.com./v1/911-calls', function(err, text, headers)
 print(err)
         end, 'POST', json.encode({
             name = "Local 911 Caller",
@@ -23,7 +23,7 @@ print(err)
         }), 
 		{
             ['Content-Type'] = 'application/json',
-			['snaily-cad-api-token'] = "sng_iwjWjoKGo5z48pCOtutEsmUY03REZSnpkUJegfT_Zz36v_HhXFlAjeI-"
+			['snaily-cad-api-token'] = "REPLACE WITH YOUR API TOKEN oN CAD SETTINGS"
         })
 
 end)
