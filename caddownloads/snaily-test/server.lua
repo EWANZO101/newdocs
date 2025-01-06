@@ -1,7 +1,7 @@
 RegisterNetEvent('cad-911')
 AddEventHandler('cad-911', function()
 print("SnailyCad Error Code:")
-PerformHttpRequest('https://api.exmaple.com./v1/911-calls', function(err, text, headers)
+PerformHttpRequest('https://api.exmaple.com/v1/911-calls', function(err, text, headers)
 print(err)
         end, 'POST', json.encode({
             name = "Local 911 Caller",
