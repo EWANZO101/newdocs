@@ -13,6 +13,63 @@ SET "TARGET_LOCALES_DIR=%USERPROFILE%\Documents\snaily-cadv4\apps\client\locales
 SET "START_BAT_PATH=%USERPROFILE%\Documents\snaily-cadv4\start.bat"
 SET "LOG_FILE=%USERPROFILE%\Documents\locale-manager-log.txt"
 SET "CONFIG_FILE=%USERPROFILE%\Documents\locale-manager-config.txt"
+echo.
+echo ================================
+echo Starting SnailyCAD Project Setup
+echo ================================
+
+
+echo.
+
+REM Navigate to SnailyCAD directory
+cd /D "%USERPROFILE%\Documents\snaily-cadv4"
+IF %ERRORLEVEL% NEQ 0 (
+    echo Error: Failed to navigate to snaily-cadv4 directory.
+    PAUSE
+    EXIT /B 1
+)
+
+REM Setup environment
+echo Running copy-env.mjs for client and API...
+node scripts/copy-env.mjs --client --api
+IF %ERRORLEVEL% NEQ 0 (
+    echo Failed to run copy-env.mjs. Please ensure Node.js is installed.
+    PAUSE
+    EXIT /B 1
+)
+
+REM Pull latest changes
+echo Pulling latest updates from Git...
+git pull origin main
+git stash && git pull origin main
+IF %ERRORLEVEL% NEQ 0 (
+    echo Failed to pull from Git. Check network connection and Git status.
+    PAUSE
+    EXIT /B 1
+)
+
+REM Install dependencies
+echo Installing dependencies...
+pnpm install
+IF %ERRORLEVEL% NEQ 0 (
+    echo Failed to install dependencies. Check pnpm setup.
+    PAUSE
+    EXIT /B 1
+)
+
+REM Build project
+echo Building project...
+pnpm run build
+IF %ERRORLEVEL% NEQ 0 (
+    echo Build process failed.
+    PAUSE
+    EXIT /B 1
+)
+
+echo.
+echo SnailyCAD setup complete.
+echo.
+PAUSE
 
 REM ================================
 REM Locale Setup Section
