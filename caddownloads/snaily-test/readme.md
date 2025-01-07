@@ -24,11 +24,32 @@ Save the changes and restart the server to apply the updates.
 
 # Error Codes and Troubleshooting
 
+### Error Code 400 – BAD
+- The server could not understand the request. Verify the request format.
+
 ### Error Code 401 – BAD
-- Your API is **not reachable**.  
-- Check if the issue is caused by your **hosting provider**.  
-- If necessary, switch to a **VPS provider** that supports the **SnailyCAD scripts**.  
-- If switching providers is not an option, you may need to **proceed without these scripts**.  
+- Unauthorized - Invalid API token. Ensure the API token is correct.
+
+### Error Code 403 – BAD
+- Forbidden - Cannot connect to CAD API. Check permissions and firewall settings.
+
+### Error Code 404 – BAD
+- Endpoint does not exist. Verify the API URL.
+
+### Error Code 408 – BAD
+- Request Timeout - The server took too long to respond. Check network connectivity.
+
+### Error Code 429 – BAD
+- Too Many Requests - Rate limit exceeded. Wait before retrying.
+
+### Error Code 500 – BAD
+- Internal Server Error - Try again later or contact support.
+
+### Error Code 502 – BAD
+- Bad Gateway - Invalid response from upstream server.
+
+### Error Code 503 – BAD
+- Service Unavailable - Server might be down for maintenance. Retry later.
 
 ### Error Code 200 – GOOD
 - Your API is **working correctly** and is **reachable**.  
@@ -52,4 +73,3 @@ This script was created by **treubig** on Discord.
 
 # Need Help?
 For further assistance, ping **ewanzo101** or **treubig** in the **SnailyCAD Discord**.
-
