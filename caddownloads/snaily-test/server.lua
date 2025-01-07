@@ -9,7 +9,7 @@ AddEventHandler('cad-911', function()
         if err ~= 0 then
             print("Error: " .. err)
             if err == 400 then
-                print("Bad Request - The server could not understand the request.")
+                print("Bad Request - The cad-api could not understand the request.")
             elseif err == 401 then
                 print("Unauthorized - Invalid API token.")
             elseif err == 403 then
