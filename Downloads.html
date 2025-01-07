@@ -10,6 +10,7 @@
 </head>
 
 <body class="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center p-8 transition-all duration-300">
+    <!-- Dark Mode Toggle -->
     <div class="flex items-center justify-center mb-6">
         <span class="mr-2">Dark Mode:</span>
         <label class="relative inline-flex items-center cursor-pointer">
@@ -18,62 +19,55 @@
         </label>
     </div>
 
-    <h1 class="text-3xl font-bold mb-4">Welcome to Our Download Section</h1>
+    <!-- Header -->
+    <h1 class="text-4xl font-bold mb-6">Welcome to Our Download Section</h1>
 
+    <!-- Information Section -->
     <div class="text-center mb-8">
-        <p>Download our latest resources:</p>
-        <p>Last Updated on 27/01/2024</p>
-        <ul class="list-none mt-4">
-           <li class="mb-4 opacity-50 pointer-events-none">
-    <a href="/caddownloads/install.bat" class="btn btn-primary w-full mb-2 line-through cursor-not-allowed" tabindex="-1" aria-disabled="true">Install CAD Script</a>
-    <p class="text-sm text-gray-400 line-through">- Execute this script to install the CAD. Currently unavailable.</p>
-</li>
+        <p class="text-lg mb-2">Download our latest resources:</p>
+        <p class="text-gray-400">Last Updated on 27/01/2024</p>
 
-            <li class="mb-4">
-                <a href="/caddownloads/start(2).bat" download class="btn btn-primary w-full mb-2">Start CAD Script</a>
+        <!-- Download List -->
+        <ul class="mt-6 w-full max-w-lg">
+            <li class="mb-6">
+                <a href="/caddownloads/install.bat" class="btn btn-primary w-full opacity-50 pointer-events-none cursor-not-allowed" tabindex="-1" aria-disabled="true">Install CAD Script</a>
+                <p class="text-sm text-gray-400">- Execute this script to install the CAD. Currently unavailable.</p>
+            </li>
+            <li class="mb-6">
+                <a href="/caddownloads/start(2).bat" download class="btn btn-primary w-full">Start CAD Script</a>
                 <p class="text-sm text-gray-400">- Use this script to start the CAD application.</p>
             </li>
-            <li class="mb-4">
-                <a href="/caddownloads/update(2).bat" download class="btn btn-primary w-full mb-2">Update CAD Script</a>
+            <li class="mb-6">
+                <a href="/caddownloads/update(2).bat" download class="btn btn-primary w-full">Update CAD Script</a>
                 <p class="text-sm text-gray-400">- Run this script to update the CAD.</p>
             </li>
-            <li class="mb-4">
-                <a href="/caddownloads/snailycadbot%20install%20.bat" download class="btn btn-primary w-full mb-2">Install SnailyCAD Bot</a>
-                <p class="text-sm text-gray-400">- Download and execute this script to install SnailyCAD Bot.</p>
-            </li>
-            <li class="mb-4">
-                <a href="/caddownloads/Startsnailycadbot.bat" download class="btn btn-primary w-full mb-2">Start SnailyCAD Bot</a>
-                <p class="text-sm text-gray-400">- Run this script to start the SnailyCAD Bot.</p>
-            </li>
-            <li class="mb-4">
-                <a href="https://cdn.discordapp.com/attachments/1140516914855149580/1198308964295770213/tablet.zip?ex=669f36f0&is=669de570&hm=7501ba639aba513203324cf71e9a799ff82a9a26322a3c5ba98f3058265b4cec&" download class="btn btn-primary w-full mb-2">Download In-Game CAD/MDT</a>
+            <li class="mb-6">
+                <a href="https://cdn.discordapp.com/attachments/1140516914855149580/1198308964295770213/tablet.zip" download class="btn btn-primary w-full">Download In-Game CAD/MDT</a>
                 <p class="text-sm text-gray-400">- In-game CAD/MDT for direct download.</p>
             </li>
-
-              <li class="mb-4">
-                <a href="https://github.com/Swift-peak-hosting-dev/Token-reminder-in-game-message" download class="btn btn-primary w-full mb-2">DownloadToken-reminder-in-game-message</a>
-                <p class="text-sm text-gray-400">-Token-reminder-in-game-message</p>
+            <li class="mb-6">
+                <a href="https://github.com/Swift-peak-hosting-dev/Token-reminder-in-game-message" download class="btn btn-primary w-full">Token Reminder Message</a>
+                <p class="text-sm text-gray-400">- Reminder message for tokens in-game.</p>
             </li>
-            <li class="mb-4">
-                <a href="https://github.com/Swift-peak-hosting-dev/Token-reminder-in-game-message" download class="btn btn-primary w-full mb-2">newupdater-with-locale-change.bat</a>
-                <p class="text-sm text-gray-400">-newupdater-with-locale-change.bat</p>
-            </li>
-            <li class="mb-4">
-                <a href="#" download class="btn btn-primary w-full mb-2">Fix Snaily Check</a>
-                <p class="text-sm text-gray-400">- Run in Documents\snaily-cadv4 for fixes.</p>
+            <li class="mb-6">
+                <a href="blob:https://github.com/cb88139d-8d9b-4930-994b-66fd024dd82a" download class="btn btn-primary w-full">Locale Change Updater</a>
+                <p class="text-sm text-gray-400">- Update script with locale change support.</p>
             </li>
         </ul>
     </div>
-    <h1 class="text-2xl font-bold mb-6">CAD/MDT Script</h1>
 
+    <!-- CAD/MDT Section -->
+    <h2 class="text-3xl font-bold mb-6">CAD/MDT Script</h2>
     <button id="cadMdtButton" class="btn btn-primary w-full mb-8">
         Go To CAD/MDT Script QB & ESX
     </button>
 
+    <!-- Footer -->
     <footer class="mt-auto text-center text-gray-400">
         <p>&copy; 2023/2024 Swift Peak Hosting. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
