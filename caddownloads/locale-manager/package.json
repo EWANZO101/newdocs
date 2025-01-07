@@ -1,0 +1,19 @@
+{
+    "name": "locale-manager",
+    "version": "1.0.0",
+    "description": "A script to manage locales in your project by duplicating locale folders and updating configuration.",
+    "main": "addLocale.js",
+    "type": "module",
+    "scripts": {
+      "add-locale": "node addLocale.js"
+    },
+    "keywords": ["locale", "i18n", "localization", "script"],
+    "author": "Your Name",
+    "license": "MIT",
+    "dependencies": {
+      "fs-extra": "^11.1.1",
+      "inquirer": "^9.2.9",
+      "open": "^10.4.0"
+    }
+  }
+  
