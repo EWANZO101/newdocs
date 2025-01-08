@@ -23,7 +23,7 @@ AddEventHandler('cad-911', function()
             elseif err == 503 then
                 print("Service Unavailable - Server might be down for maintenance.")
             else
-                print("Unknown Error - Contact support.")
+                
             end
         else
             print("Success: 911 call submitted successfully.")
