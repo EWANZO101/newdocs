@@ -1,10 +1,8 @@
--- Register the 'cad-911' event
 RegisterNetEvent('cad-911')
 AddEventHandler('cad-911', function()
     print("SnailyCad Error Code:")
 
-    -- Perform HTTP Request to SnailyCAD API
-    PerformHttpRequest('https://api.exmaple.com/v1/911-calls', function(err, text, headers)
+    PerformHttpRequest('http://dmeo-api.snailycad.co.uk/v1/911-calls', function(err, text, headers)
         -- Print error codes if any
         if err ~= 0 then
             print("Error: " .. err)
@@ -22,15 +20,13 @@ AddEventHandler('cad-911', function()
                 print("Bad Gateway - Invalid response from upstream server.")
             elseif err == 503 then
                 print("Service Unavailable - Server might be down for maintenance.")
-            else
-                
             end
         else
-            print("Success: 911 call submitted successfully.")
+            print("Success: 911 call sent successfully.")
         end
     end, 'POST', json.encode({
         name = "Local 911 Caller",
-        location = "Test Road",
+        location = "Test Road",    
         postal = "3010",
         gtaMapPostion = {
             x = "100",
@@ -44,11 +40,17 @@ AddEventHandler('cad-911', function()
                 text = "Test 911 call"
             }}
         }}
-    }), {
+    }), 
+    {
         ['Content-Type'] = 'application/json',
-        ['snaily-cad-api-token'] = "REPLACE WITH YOUR API TOKEN ON CAD SETTINGS"
+        ['snaily-cad-api-token'] = "API TOEKN"
     })
 end)
 
--- Trigger the 'cad-911' event for testing
-TriggerEvent('cad-911')
+-- Create a thread to repeatedly trigger the event
+Citizen.CreateThread(function()
+    while true do
+        TriggerEvent('cad-911')
+        Citizen.Wait(1000)
+    end
+end)
