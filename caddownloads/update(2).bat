@@ -92,7 +92,7 @@ REM Check if start.bat exists
 IF NOT EXIST "%START_BAT_PATH%" (
     echo start.bat not found. Downloading from GitHub...
     REM Download start.bat using PowerShell
-    powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/EWANZO101/newdocs/main/caddownloads/start%282%29.bat' -OutFile '%START_BAT_PATH%'"
+    powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/EWANZO101/newdocs/main/caddownloads/start.bat' -OutFile '%START_BAT_PATH%'"
     IF %ERRORLEVEL% NEQ 0 (
         echo Failed to download start.bat. Please check your internet connection and try again.
         PAUSE
