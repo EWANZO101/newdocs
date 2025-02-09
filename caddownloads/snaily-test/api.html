@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAD API Configuration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">CAD API Configuration</h1>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="api-url" class="block text-sm font-medium text-gray-200 mb-2">Enter your CAD API URL</label>
+                <input 
+                    type="url" 
+                    id="api-url" 
+                    name="api-url" 
+                    placeholder="https://example.com/api"
+                    required 
+                    class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <div class="mb-4">
+                <label for="admin-token" class="block text-sm font-medium text-gray-200 mb-2">Enter your CAD Admin Token or Shared Token</label>
+                <input 
+                    type="text" 
+                    id="admin-token" 
+                    name="admin-token" 
+                    placeholder="Enter your token"
+                    required 
+                    class="w-full px-4 py-2 bg-gray-700 text-white rounded-lg border border-gray-600 focus:ring-blue-500 focus:border-blue-500">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.6.5/dist/flowbite.min.js"></script>
+</body>
+</html>
