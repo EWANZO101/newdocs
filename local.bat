@@ -10,6 +10,7 @@ set "LOCALE_CODE=pl"
 :: Step 1: Navigate to locales directory
 cd /d "%LOCALES_PATH%" || (
     echo Failed to access %LOCALES_PATH%
+    pause
     exit /b 1
 )
 
@@ -24,16 +25,34 @@ if exist "%LOCALES_PATH%\%LOCALE_CODE%" (
 :: Step 3: Modify the i18n.config.mjs file
 powershell -Command "(Get-Content '%I18N_CONFIG%') -replace 'locales: \[', 'locales: [\"pl\", ' -replace 'defaultLocale: .*', 'defaultLocale: \"pl\",' | Set-Content '%I18N_CONFIG%'" 
 
+if %errorlevel% neq 0 (
+    echo Failed to update i18n.config.mjs.
+    pause
+    exit /b 1
+)
+
 echo Updated i18n.config.mjs with Polish locale.
 
 :: Step 4: Rebuild SnailyCAD and restart
 cd /d "%SNAILY_PATH%" || (
     echo Failed to access SnailyCAD directory.
+    pause
     exit /b 1
 )
 
 pnpm run build
+if %errorlevel% neq 0 (
+    echo Failed to build SnailyCAD.
+    pause
+    exit /b 1
+)
+
 pm2 restart all
+if %errorlevel% neq 0 (
+    echo Failed to restart SnailyCAD.
+    pause
+    exit /b 1
+)
 
 echo Polish locale added successfully!
 pause
