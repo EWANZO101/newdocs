@@ -18,17 +18,15 @@
 
   <!-- Main Content -->
   <main class="max-w-7xl mx-auto px-4 py-10">
-    
+
     <!-- Downloads Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-   
-
-      <!-- Item Card 2 -->
+      <!-- Start.bat Card -->
       <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between">
         <div>
           <h2 class="text-xl font-semibold mb-2">start.bat</h2>
-          <p class="text-sm text-gray-600 mb-4">start your cad .bat .</p>
+          <p class="text-sm text-gray-600 mb-4">Use this script to start your CAD server or client easily.</p>
         </div>
         <a href="/caddownloads/start(2).bat" download class="mt-auto inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -36,14 +34,14 @@
           </svg>
           Start Script
         </a>
-        <p class="text-sm text-gray-400 mt-2">Use this script to start the CAD application.</p>
+        <p class="text-sm text-gray-400 mt-2">Double-click to start the CAD without manual steps.</p>
       </div>
 
-      <!-- Item Card 3 -->
+      <!-- Update.bat Card -->
       <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between">
         <div>
-          <h2 class="text-xl font-semibold mb-2">CAD Update Script</h2>
-          <p class="text-sm text-gray-600 mb-4">Run this script to update the CAD to the latest version.</p>
+          <h2 class="text-xl font-semibold mb-2">update.bat</h2>
+          <p class="text-sm text-gray-600 mb-4">Run this script to update your CAD to the latest version after changes.</p>
         </div>
         <a href="/caddownloads/update(2).bat" download class="mt-auto inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -51,10 +49,22 @@
           </svg>
           Update Script
         </a>
-        <p class="text-sm text-gray-400 mt-2">Run this to update your CAD installation.</p>
+        <p class="text-sm text-gray-400 mt-2">Use this after editing your .env file to apply updates safely.</p>
       </div>
 
-  
+      <!-- Usage Instructions Card -->
+      <div class="bg-indigo-50 rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between border border-indigo-200">
+        <div>
+          <h2 class="text-xl font-semibold mb-2">When to Use These Scripts?</h2>
+          <p class="text-sm text-gray-700 mb-4">
+            1️⃣ After you finish editing your <code class="bg-gray-200 px-1 rounded">.env</code> file (to set your database keys, CAD name, or ports), run <strong>update.bat</strong> to apply the updates.<br><br>
+            2️⃣ Once the update is complete, run <strong>start.bat</strong> to launch your CAD easily without using the command line manually.
+          </p>
+        </div>
+        <p class="text-sm text-gray-500 mt-2">
+          This workflow ensures your CAD updates correctly and starts smoothly.
+        </p>
+      </div>
 
     </div>
   </main>
