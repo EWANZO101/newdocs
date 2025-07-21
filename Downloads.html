@@ -5,74 +5,209 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloads - Swift Peak Hosting</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'glow': 'glow 2s ease-in-out infinite alternate',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            glow: {
+              'from': { boxShadow: '0 0 20px -5px rgba(139, 92, 246, 0.4)' },
+              'to': { boxShadow: '0 0 30px -5px rgba(139, 92, 246, 0.8)' },
+            },
+            shimmer: {
+              '0%': { transform: 'translateX(-100%)' },
+              '100%': { transform: 'translateX(100%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-900 text-gray-100 font-sans min-h-screen">
+  <!-- Animated Background -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+    <div class="absolute top-40 right-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s"></div>
+    <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 4s"></div>
+  </div>
 
   <!-- Page Header -->
-  <header class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-8 text-center">
-      <h1 class="text-4xl font-bold mb-2">Downloads</h1>
-      <p class="text-lg">Get tools, scripts, and resources provided by Swift Peak Hosting</p>
+  <header class="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white shadow-2xl overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-indigo-500/10"></div>
+    <div class="relative max-w-7xl mx-auto px-6 py-16 text-center">
+      <div class="inline-flex items-center gap-3 mb-6">
+        <div class="p-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-2xl shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+      </div>
+      <h1 class="text-6xl font-bold mb-4 bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
+        Downloads
+      </h1>
+      <p class="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        Get premium tools, scripts, and resources provided by Swift Peak Hosting to supercharge your CAD deployment
+      </p>
+      <div class="mt-8 flex justify-center">
+        <div class="h-1 w-20 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full"></div>
+      </div>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="max-w-7xl mx-auto px-4 py-10">
-
+  <main class="relative max-w-7xl mx-auto px-6 py-16">
     <!-- Downloads Grid -->
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
       <!-- Start.bat Card -->
-      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between">
-        <div>
-          <h2 class="text-xl font-semibold mb-2">start.bat</h2>
-          <p class="text-sm text-gray-600 mb-4">Use this script to start your CAD server or client easily.</p>
+      <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-700/50 hover:border-purple-500/50 overflow-hidden">
+        <!-- Shimmer effect -->
+        <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">start.bat</h2>
+          </div>
+          
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            Launch your CAD server or client effortlessly with this automated startup script. No more manual command-line hassles.
+          </p>
+          
+          <a href="/caddownloads/start(2).bat" download 
+             class="group/btn inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-full justify-center">
+            <svg class="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Download Start Script</span>
+          </a>
+          
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            💡 Double-click to start your CAD instantly
+          </p>
         </div>
-        <a href="/caddownloads/start(2).bat" download class="mt-auto inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-          </svg>
-          Start Script
-        </a>
-        <p class="text-sm text-gray-400 mt-2">Double-click to start the CAD without manual steps.</p>
       </div>
 
       <!-- Update.bat Card -->
-      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between">
-        <div>
-          <h2 class="text-xl font-semibold mb-2">update.bat</h2>
-          <p class="text-sm text-gray-600 mb-4">Run this script to update your CAD to the latest version after changes.</p>
+      <div class="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-gray-700/50 hover:border-indigo-500/50 overflow-hidden">
+        <!-- Shimmer effect -->
+        <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">update.bat</h2>
+          </div>
+          
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            Seamlessly update your CAD to the latest version after configuration changes. Smart deployment made simple.
+          </p>
+          
+          <a href="/caddownloads/update(2).bat" download 
+             class="group/btn inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 w-full justify-center">
+            <svg class="w-5 h-5 group-hover/btn:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <span>Download Update Script</span>
+          </a>
+          
+          <p class="text-sm text-gray-500 mt-4 text-center">
+            🔄 Run after editing your .env configuration
+          </p>
         </div>
-        <a href="/caddownloads/update(2).bat" download class="mt-auto inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
-          </svg>
-          Update Script
-        </a>
-        <p class="text-sm text-gray-400 mt-2">Use this after editing your .env file to apply updates safely.</p>
       </div>
 
       <!-- Usage Instructions Card -->
-      <div class="bg-indigo-50 rounded-2xl shadow hover:shadow-lg transition p-6 flex flex-col justify-between border border-indigo-200">
-        <div>
-          <h2 class="text-xl font-semibold mb-2">When to Use These Scripts?</h2>
-          <p class="text-sm text-gray-700 mb-4">
-            1️⃣ After you finish editing your <code class="bg-gray-200 px-1 rounded">.env</code> file (to set your database keys, CAD name, or ports), run <strong>update.bat</strong> to apply the updates.<br><br>
-            2️⃣ Once the update is complete, run <strong>start.bat</strong> to launch your CAD easily without using the command line manually.
-          </p>
+      <div class="group relative bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 p-8 border border-purple-500/30 hover:border-purple-400/50 overflow-hidden md:col-span-2 lg:col-span-1">
+        <!-- Glow effect -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-indigo-500/5 group-hover:from-purple-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="p-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-white">Usage Guide</h2>
+          </div>
+          
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Configure Your Environment</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Edit your <code class="bg-gray-800 text-purple-400 px-2 py-1 rounded font-mono text-xs">.env</code> file to set database keys, CAD name, or ports.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Apply Updates</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Run <strong class="text-blue-400">update.bat</strong> to safely apply your configuration changes.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
+              <div>
+                <h3 class="text-white font-semibold mb-2">Launch Your CAD</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                  Use <strong class="text-green-400">start.bat</strong> to launch your CAD without manual command-line work.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="p-4 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl border border-purple-500/20">
+            <p class="text-sm text-purple-200 text-center">
+              ⚡ This workflow ensures seamless updates and smooth deployment
+            </p>
+          </div>
         </div>
-        <p class="text-sm text-gray-500 mt-2">
-          This workflow ensures your CAD updates correctly and starts smoothly.
-        </p>
       </div>
-
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-500 py-8">
-    &copy; 2025 Swift Peak Hosting Ltd. All rights reserved.
+  <footer class="relative border-t border-gray-800 bg-gray-900/50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+      <p class="text-gray-400">
+        &copy; 2025 <span class="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent font-semibold">Swift Peak Hosting Ltd</span>. 
+        All rights reserved.
+      </p>
+    </div>
   </footer>
 
+  <!-- Scroll to top button -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+          class="fixed bottom-6 right-6 p-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 opacity-80 hover:opacity-100">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
 </body>
 </html>
