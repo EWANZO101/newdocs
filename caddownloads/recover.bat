@@ -103,7 +103,7 @@ set /p choice="Enter your choice (0-6): "
 if "%choice%"=="1" goto LIST_USERS
 if "%choice%"=="2" goto UNLINK
 if "%choice%"=="3" goto UPDATE_CAD
-if "%choice%"=="4" goto UPDATE_FEATURE
+if "%choice%"=="4" goto UPDATE_FEATURE ie re enable user login or turn off force discord
 if "%choice%"=="5" goto RESET_PASS
 if "%choice%"=="6" goto MAINTENANCE
 if "%choice%"=="0" goto CLEANUP_EXIT
