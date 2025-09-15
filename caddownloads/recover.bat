@@ -93,7 +93,7 @@ echo ===============================
 echo 1. List all users
 echo 2. Unlink Discord ID
 echo 3. Update CAD whitelist (disable all)
-echo 4. Update CadFeature settings
+echo 4. Update CadFeature settings (i.e., re-enable login via username and password, and disable Discord forced authentication).
 echo 5. Reset a user's password
 echo 6. Run maintenance commands
 echo 0. Exit
