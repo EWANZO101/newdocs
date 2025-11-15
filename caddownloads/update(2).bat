@@ -20,15 +20,18 @@ echo Starting SnailyCAD Project Setup
 echo ================================
 echo.
 
-REM Navigate to the detected snaily-cadv4 project directory
-cd /D "!SNAILYCAD_PATH!"
+REM Navigate to the snaily-cadv4 project directory
+cd /D "%USERPROFILE%\Documents\snaily-cadv4"
 IF %ERRORLEVEL% NEQ 0 (
     echo [ERROR] Failed to navigate to SnailyCAD directory.
+    echo Expected path: %USERPROFILE%\Documents\snaily-cadv4
+    echo.
+    echo Please verify that SnailyCAD v4 is installed at this location.
     PAUSE
     EXIT /B 1
 )
 
-echo Current directory: !SNAILYCAD_PATH!
+echo Current directory: %CD%
 echo.
 
 REM Execute the copy-env script for client and API
@@ -91,7 +94,7 @@ echo ================================
 echo.
 
 REM Define the path to start.bat
-SET "START_BAT_PATH=!SNAILYCAD_PATH!\start.bat"
+SET "START_BAT_PATH=%CD%\start.bat"
 
 REM Check if start.bat exists
 IF NOT EXIST "!START_BAT_PATH!" (
