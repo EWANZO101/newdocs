@@ -21,6 +21,27 @@ echo Detecting SnailyCAD v4 Installation
 echo ================================
 echo.
 
+REM First, check if this .bat file is already in a SnailyCAD v4 folder
+SET "CURRENT_DIR=%CD%"
+SET "SNAILYCAD_PATH="
+
+REM Check if current directory contains package.json with @snailycad/types
+IF EXIST "%CURRENT_DIR%\package.json" (
+    findstr /C:"@snailycad/types" "%CURRENT_DIR%\package.json" >nul 2>&1
+    IF !ERRORLEVEL! EQU 0 (
+        echo [32m[✓] This batch file is already in a SnailyCAD v4 folder![0m
+        echo     %CURRENT_DIR%
+        echo.
+        SET "SNAILYCAD_PATH=%CURRENT_DIR%"
+        GOTO :SETUP_START
+    )
+)
+
+REM If not in a SnailyCAD folder, search for installations
+echo Batch file is not in a SnailyCAD v4 folder.
+echo Searching for installations...
+echo.
+
 REM Create a temporary file to store found paths
 SET "TEMP_PATHS=%TEMP%\snailycad_paths.txt"
 IF EXIST "%TEMP_PATHS%" DEL "%TEMP_PATHS%"
@@ -115,6 +136,7 @@ IF %PATH_COUNT% GTR 1 (
 REM Clean up temp file
 DEL "%TEMP_PATHS%"
 
+:SETUP_START
 REM ================================
 REM Existing Project Setup Section
 REM ================================
